@@ -19,8 +19,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://thetopham.com/og.png",
-        width: 1920,
-        height: 1080,
+        
       },
     ],
     locale: "en-US",

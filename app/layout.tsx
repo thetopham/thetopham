@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "thetopham.com",
     images: [
       {
-        url: "https://thetopham.com/og.png",
+        url: "https://thetopham.com/og1.png",
         width: 1200,
         height: 630,
       },

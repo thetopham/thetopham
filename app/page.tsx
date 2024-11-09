@@ -9,14 +9,7 @@ const navigation = [
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      {/* Particles Background */}
-      <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={100}
-      />
-
-      {/* Navigation */}
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
@@ -30,22 +23,20 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-
-      {/* Decorative Line */}
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-
-      {/* Main Title */}
-      <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
+      <Particles
+        className="absolute inset-0 -z-10 animate-fade-in"
+        quantity={100}
+      />
+      <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
         thetopham
       </h1>
 
-      {/* Another Decorative Line */}
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-
-      {/* Additional Content */}
       <div className="my-16 text-center animate-fade-in">
-        {/* Add any additional content here */}
+        
       </div>
     </div>
   );
+
 }

@@ -1,187 +1,293 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { useMousePosition } from "@/util/mouse";
 
 interface ParticlesProps {
-	className?: string;
-	quantity?: number;
-	staticity?: number;
-	ease?: number;
-	refresh?: boolean;
+  className?: string;
+  quantity?: number;
+  staticity?: number;
+  ease?: number;
+  refresh?: boolean;
 }
 
 export default function Particles({
-	className = "",
-	quantity = 100, // Increased quantity for dense effect
-	staticity = 50,
-	ease = 50,
-	refresh = false,
+  className = "",
+  quantity = 300, // Increased quantity for denser digital rain
+  staticity = 50,
+  ease = 50,
+  refresh = false,
 }: ParticlesProps) {
-	const canvasRef = useRef<HTMLCanvasElement>(null);
-	const canvasContainerRef = useRef<HTMLDivElement>(null);
-	const context = useRef<CanvasRenderingContext2D | null>(null);
-	const circles = useRef<any[]>([]);
-	const mousePosition = useMousePosition();
-	const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-	const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
-	const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasContainerRef = useRef<HTMLDivElement>(null);
+  const context = useRef<CanvasRenderingContext2D | null>(null);
+  const particles = useRef<Particle[]>([]);
+  const mousePosition = useMousePosition();
+  const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
+  const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
 
-	useEffect(() => {
-		if (canvasRef.current) {
-			context.current = canvasRef.current.getContext("2d");
-		}
-		initCanvas();
-		animate();
-		window.addEventListener("resize", initCanvas);
+  // Array of Katakana characters for the digital rain effect
+  const katakanaChars = [
+    "ア","イ","ウ","エ","オ",
+    "カ","キ","ク","ケ","コ",
+    "サ","シ","ス","セ","ソ",
+    "タ","チ","ツ","テ","ト",
+    "ナ","ニ","ヌ","ネ","ノ",
+    "ハ","ヒ","フ","ヘ","ホ",
+    "マ","ミ","ム","メ","モ",
+    "ヤ","ユ","ヨ",
+    "ラ","リ","ル","レ","ロ",
+    "ワ","ヲ","ン",
+    "ガ","ギ","グ","ゲ","ゴ",
+    "ザ","ジ","ズ","ゼ","ゾ",
+    "ダ","ヂ","ヅ","デ","ド",
+    "バ","ビ","ブ","ベ","ボ",
+    "パ","ピ","プ","ペ","ポ"
+  ];
 
-		return () => {
-			window.removeEventListener("resize", initCanvas);
-		};
-	}, []);
+  useEffect(() => {
+    if (canvasRef.current) {
+      context.current = canvasRef.current.getContext("2d");
+    }
+    initCanvas();
+    animate();
+    window.addEventListener("resize", initCanvas);
 
-	useEffect(() => {
-		onMouseMove();
-	}, [mousePosition.x, mousePosition.y]);
+    return () => {
+      window.removeEventListener("resize", initCanvas);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-	useEffect(() => {
-		initCanvas();
-	}, [refresh]);
+  useEffect(() => {
+    onMouseMove();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mousePosition.x, mousePosition.y]);
 
-	const initCanvas = () => {
-		resizeCanvas();
-		drawParticles();
-	};
+  useEffect(() => {
+    initCanvas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [refresh]);
 
-	const onMouseMove = () => {
-		if (canvasRef.current) {
-			const rect = canvasRef.current.getBoundingClientRect();
-			const { w, h } = canvasSize.current;
-			const x = mousePosition.x - rect.left - w / 2;
-			const y = mousePosition.y - rect.top - h / 2;
-			const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
-			if (inside) {
-				mouse.current.x = x;
-				mouse.current.y = y;
-			}
-		}
-	};
+  const initCanvas = () => {
+    resizeCanvas();
+    createParticles();
+  };
 
-	type Circle = {
-		x: number;
-		y: number;
-		translateX: number;
-		translateY: number;
-		size: number;
-		alpha: number;
-		targetAlpha: number;
-		dx: number;
-		dy: number;
-		magnetism: number;
-	};
+  const onMouseMove = () => {
+    if (canvasRef.current) {
+      const rect = canvasRef.current.getBoundingClientRect();
+      const { w, h } = canvasSize.current;
+      const x = mousePosition.x - rect.left - w / 2;
+      const y = mousePosition.y - rect.top - h / 2;
+      const inside =
+        x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
+      if (inside) {
+        mouse.current.x = x;
+        mouse.current.y = y;
+      }
+    }
+  };
 
-	const resizeCanvas = () => {
-		if (canvasContainerRef.current && canvasRef.current && context.current) {
-			circles.current.length = 0;
-			canvasSize.current.w = canvasContainerRef.current.offsetWidth;
-			canvasSize.current.h = canvasContainerRef.current.offsetHeight;
-			canvasRef.current.width = canvasSize.current.w * dpr;
-			canvasRef.current.height = canvasSize.current.h * dpr;
-			canvasRef.current.style.width = `${canvasSize.current.w}px`;
-			canvasRef.current.style.height = `${canvasSize.current.h}px`;
-			context.current.scale(dpr, dpr);
-		}
-	};
+  type Particle = {
+    x: number;
+    y: number;
+    translateX: number;
+    translateY: number;
+    size: number;
+    alpha: number;
+    targetAlpha: number;
+    dx: number;
+    dy: number;
+    magnetism: number;
+    char: string;
+    color: string;
+    speed: number;
+  };
 
-	const circleParams = (): Circle => {
-		const x = Math.floor(Math.random() * canvasSize.current.w);
-		const y = Math.floor(Math.random() * canvasSize.current.h);
-		const translateX = 0;
-		const translateY = 0;
-		const size = Math.random() * 1 + 0.2; // Smaller for Matrix effect
-		const alpha = 0;
-		const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1));
-		const dx = 0;
-		const dy = Math.random() * 1 + 0.5; // Downward movement for Matrix rain
-		const magnetism = 0.1 + Math.random() * 4;
-		return {
-			x,
-			y,
-			translateX,
-			translateY,
-			size,
-			alpha,
-			targetAlpha,
-			dx,
-			dy,
-			magnetism,
-		};
-	};
+  const resizeCanvas = () => {
+    if (
+      canvasContainerRef.current &&
+      canvasRef.current &&
+      context.current
+    ) {
+      particles.current = []; // Reset particles
+      canvasSize.current.w = canvasContainerRef.current.offsetWidth;
+      canvasSize.current.h = canvasContainerRef.current.offsetHeight;
+      canvasRef.current.width = canvasSize.current.w * dpr;
+      canvasRef.current.height = canvasSize.current.h * dpr;
+      canvasRef.current.style.width = `${canvasSize.current.w}px`;
+      canvasRef.current.style.height = `${canvasSize.current.h}px`;
+      context.current.scale(dpr, dpr);
+      // Fill the background with black
+      context.current.fillStyle = "black";
+      context.current.fillRect(0, 0, canvasSize.current.w, canvasSize.current.h);
+    }
+  };
 
-	const drawCircle = (circle: Circle, update = false) => {
-		if (context.current) {
-			const { x, y, translateX, translateY, size, alpha } = circle;
-			context.current.translate(translateX, translateY);
-			context.current.beginPath();
-			context.current.arc(x, y, size, 0, 2 * Math.PI);
-			context.current.fillStyle = `rgba(0, 255, 65, ${alpha})`; // Neon green color
-			context.current.fill();
-			context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const getRandomChar = (): string => {
+    const index = Math.floor(Math.random() * katakanaChars.length);
+    return katakanaChars[index];
+  };
 
-			if (!update) {
-				circles.current.push(circle);
-			}
-		}
-	};
+  const getRandomGreen = (): string => {
+    // Generate a random green shade between #00FF00 and #007700
+    const greenIntensity = Math.floor(Math.random() * 128) + 128; // 128 to 255
+    return `rgb(0, ${greenIntensity}, 0)`;
+  };
 
-	const clearContext = () => {
-		if (context.current) {
-			context.current.clearRect(0, 0, canvasSize.current.w, canvasSize.current.h);
-		}
-	};
+  const createParticles = () => {
+    particles.current = [];
+    for (let i = 0; i < quantity; i++) {
+      const particle = createParticle();
+      particles.current.push(particle);
+      drawParticle(particle);
+    }
+  };
 
-	const drawParticles = () => {
-		clearContext();
-		for (let i = 0; i < quantity; i++) {
-			const circle = circleParams();
-			drawCircle(circle);
-		}
-	};
+  const createParticle = (): Particle => {
+    const x = Math.floor(Math.random() * canvasSize.current.w);
+    const y = Math.floor(Math.random() * canvasSize.current.h);
+    const translateX = 0;
+    const translateY = 0;
+    const size = 16; // Font size in pixels
+    const alpha = 0;
+    const targetAlpha = parseFloat((Math.random() * 0.5 + 0.3).toFixed(2));
+    const dx = (Math.random() - 0.5) * 0.5;
+    const dy = (Math.random() - 0.5) * 0.5;
+    const magnetism = 0.1 + Math.random() * 4;
+    const char = getRandomChar();
+    const color = getRandomGreen();
+    const speed = Math.random() * 1 + 0.5; // Speed between 0.5 and 1.5
 
-	const animate = () => {
-		clearContext();
-		circles.current.forEach((circle: Circle, i: number) => {
-			// Handle the alpha value
-			const remapClosestEdge = parseFloat(
-				remapValue(Math.random(), 0, 20, 0, 1).toFixed(2),
-			);
-			circle.alpha = circle.targetAlpha * remapClosestEdge;
-			circle.y += circle.dy; // Only move downward
+    return {
+      x,
+      y,
+      translateX,
+      translateY,
+      size,
+      alpha,
+      targetAlpha,
+      dx,
+      dy,
+      magnetism,
+      char,
+      color,
+      speed,
+    };
+  };
 
-			// Reset circle if it goes out of bounds
-			if (circle.y > canvasSize.current.h + circle.size) {
-				circle.y = -circle.size;
-				circle.x = Math.random() * canvasSize.current.w;
-			} else {
-				drawCircle(circle, true);
-			}
-		});
-		window.requestAnimationFrame(animate);
-	};
+  const drawParticle = (particle: Particle, update = false) => {
+    if (context.current) {
+      const { x, y, translateX, translateY, size, alpha, char, color } = particle;
+      context.current.save();
+      context.current.translate(translateX, translateY);
+      context.current.globalAlpha = alpha;
+      context.current.fillStyle = color;
+      context.current.font = `${size}px monospace`;
+      context.current.fillText(char, x, y);
+      context.current.restore();
 
-	const remapValue = (
-		value: number,
-		start1: number,
-		end1: number,
-		start2: number,
-		end2: number,
-	): number => {
-		return ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
-	};
+      if (!update) {
+        particles.current.push(particle);
+      }
+    }
+  };
 
-	return (
-		<div className={className} ref={canvasContainerRef} aria-hidden="true">
-			<canvas ref={canvasRef} />
-		</div>
-	);
+  const clearContext = () => {
+    if (context.current) {
+      // Draw a semi-transparent black rectangle to create trailing effect
+      context.current.fillStyle = "rgba(0, 0, 0, 0.05)";
+      context.current.fillRect(
+        0,
+        0,
+        canvasSize.current.w,
+        canvasSize.current.h
+      );
+    }
+  };
+
+  const createParticlesTrail = () => {
+    // Initial creation is handled in createParticles
+  };
+
+  const remapValue = (
+    value: number,
+    start1: number,
+    end1: number,
+    start2: number,
+    end2: number
+  ): number => {
+    const remapped =
+      ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
+    return remapped > 0 ? remapped : 0;
+  };
+
+  const animate = () => {
+    clearContext();
+    particles.current.forEach((particle: Particle, i: number) => {
+      // Handle the alpha value
+      const edge = [
+        particle.x + particle.translateX - particle.size, // distance from left edge
+        canvasSize.current.w - particle.x - particle.translateX - particle.size, // distance from right edge
+        particle.y + particle.translateY - particle.size, // distance from top edge
+        canvasSize.current.h - particle.y - particle.translateY - particle.size, // distance from bottom edge
+      ];
+      const closestEdge = edge.reduce((a, b) => Math.min(a, b));
+      const remapClosestEdge = parseFloat(
+        remapValue(closestEdge, 0, 20, 0, 1).toFixed(2)
+      );
+      if (remapClosestEdge > 1) {
+        particle.alpha += 0.02;
+        if (particle.alpha > particle.targetAlpha) {
+          particle.alpha = particle.targetAlpha;
+        }
+      } else {
+        particle.alpha = particle.targetAlpha * remapClosestEdge;
+      }
+
+      // Update position
+      particle.x += particle.dx * particle.speed;
+      particle.y += particle.dy * particle.speed;
+
+      // Update translation based on mouse position
+      particle.translateX +=
+        (mouse.current.x / (staticity / particle.magnetism) - particle.translateX) /
+        ease;
+      particle.translateY +=
+        (mouse.current.y / (staticity / particle.magnetism) - particle.translateY) /
+        ease;
+
+      // Update character periodically to simulate changing code
+      if (Math.random() < 0.01) { // 1% chance each frame
+        particle.char = getRandomChar();
+      }
+
+      // Boundary conditions: if particle goes out of the canvas, reset it
+      if (
+        particle.x < -particle.size ||
+        particle.x > canvasSize.current.w + particle.size ||
+        particle.y < -particle.size ||
+        particle.y > canvasSize.current.h + particle.size
+      ) {
+        // Reset particle to a new position
+        particles.current[i] = createParticle();
+      }
+
+      // Draw the updated particle
+      drawParticle(particle, true);
+    });
+    window.requestAnimationFrame(animate);
+  };
+
+  return (
+    <div
+      className={`${className} relative overflow-hidden bg-black`}
+      ref={canvasContainerRef}
+      aria-hidden="true"
+    >
+      <canvas ref={canvasRef} className="w-full h-full" />
+    </div>
+  );
 }

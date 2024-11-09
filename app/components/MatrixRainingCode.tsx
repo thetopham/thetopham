@@ -15,7 +15,7 @@ const MatrixRainingCode: React.FC = () => {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
     let columns = Math.floor(width / 20);
-    const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+    const characters = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     const charArray = characters.split("");
     let drops: number[] = Array(columns).fill(1);
 

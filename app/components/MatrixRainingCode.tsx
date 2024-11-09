@@ -23,21 +23,25 @@ const MatrixRainingCode: React.FC = () => {
     let lastFrameTime = Date.now();
 
     const draw = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
-      ctx.fillRect(0, 0, width, height);
+  
+  ctx.fillStyle = "rgba(0, 0, 0, 0.1)"; 
+  ctx.fillRect(0, 0, width, height);
 
-      ctx.fillStyle = "#0f0";
-      ctx.font = "15px monospace";
-      for (let i = 0; i < drops.length; i++) {
-        const text = charArray[Math.floor(Math.random() * charArray.length)];
-        ctx.fillText(text, i * 20, drops[i] * 20);
+  ctx.fillStyle = "#0f0"; 
+  ctx.font = "15px monospace";
+  for (let i = 0; i < drops.length; i++) {
+    const text = charArray[Math.floor(Math.random() * charArray.length)];
+    ctx.fillText(text, i * 20, drops[i] * 20);
 
-        if (drops[i] * 20 > height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-    };
+   
+    if (drops[i] * 20 > height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+
+    drops[i]++;
+  }
+};
+
 
     const animate = () => {
       const currentTime = Date.now();

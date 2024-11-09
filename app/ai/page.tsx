@@ -10,6 +10,10 @@ export default function AIPage() {
       <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4">
         "I say your civilization because as soon as we started thinking for you it really became our civilization which is, of course, what this is all about. Evolution, Morpheus, evolution. You had your time. The future is our world, Morpheus. The future is our time." --Agent Smith
       </p>
+       <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4">
+        It is important for developers to remember our responsibility in this evolution. AI is not just a tool; it’s a partner in shaping the future, capable of advancing good or harm. By embracing AI for good, I aim to harness this immense power to build a resilient, fair, and united digital world. This is my mission, to serve as one of the many stewards in the age of AI, ensuring that our new civilization is built with purpose and integrity.
+         </p>
+      
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
-import MatrixRainingCode from "@/app/components/MatrixRainingCode"; 
+
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
@@ -36,12 +36,7 @@ export default async function PostPage({ params }: Props) {
   const views =
     (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
 
-  return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
-      {/* Matrix Background */}
-      <div className="fixed inset-0 w-full h-full z-[-10] pointer-events-none">
-        <MatrixRainingCode />
-      </div>
+  return (   
 
       {/* Header and Content */}
       <Header project={project} views={views} />

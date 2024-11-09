@@ -5,6 +5,7 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
+import MatrixRainingCode from "@/app/components/MatrixRainingCode"; // Assuming this is your component for the Matrix effect
 
 export const revalidate = 60;
 
@@ -36,7 +37,10 @@ export default async function PostPage({ params }: Props) {
     (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
 
   return (
-    <div className="bg-zinc-50 min-h-screen">
+    <div className="relative min-h-screen bg-black overflow-hidden">
+      {/* Matrix background effect */}
+      <MatrixRainingCode className="fixed inset-0 z-[-1]" />
+
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
 

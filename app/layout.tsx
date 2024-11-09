@@ -4,7 +4,8 @@ import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import MatrixRainingCode from './MatrixRainingCode'; // Import the Matrix component
+import MatrixRainingCode from './components/MatrixRainingCode';
+
 
 export const metadata: Metadata = {
   // Metadata remains the same as before

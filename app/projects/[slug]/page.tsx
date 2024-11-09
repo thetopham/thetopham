@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
+import MatrixRainingCode from "@/app/components/MatrixRainingCode";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
-import MatrixRainingCode from "@/app/components/MatrixRainingCode"; // Assuming this is your component for the Matrix effect
 
 export const revalidate = 60;
 
@@ -38,11 +38,12 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
-      <div className="fixed inset-0 z-[-1]">
-  <MatrixRainingCode />
-</div>
+      {/* Matrix Background */}
+      <div className="fixed inset-0 z-[-10]">
+        <MatrixRainingCode className="w-full h-full" />
+      </div>
 
-
+      {/* Header and Content */}
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
 

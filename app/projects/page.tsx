@@ -1,3 +1,4 @@
+// projects/page.tsx
 import Link from "next/link";
 import React from "react";
 import { allProjects } from "contentlayer/generated";
@@ -10,6 +11,7 @@ import { Eye } from "lucide-react";
 const redis = Redis.fromEnv();
 
 export const revalidate = 60;
+
 export default async function ProjectsPage() {
   const views = (
     await redis.mget<number[]>(
@@ -22,14 +24,13 @@ export default async function ProjectsPage() {
 
   const featured = allProjects.find((project) => project.slug === "Summerboard")!;
   const top2 = allProjects.find((project) => project.slug === "thetophamcom")!;
-  //const top3 = allProjects.find((project) => project.slug === "Summerboard")!;
+
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
       (project) =>
         project.slug !== featured.slug &&
         project.slug !== top2.slug,
-        //project.slug !== top3.slug,
     )
     .sort(
       (a, b) =>
@@ -40,58 +41,21 @@ export default async function ProjectsPage() {
   return (
     <div className="relative pb-16">
       <Navigation />
-      // projects/page.tsx
-<div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-  <div className="max-w-2xl mx-auto lg:mx-0">
-    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
-      Projects
-    </h2>
-    <p className="mt-4 text-lg text-zinc-400">
-      Some of the projects are from school and some are on my own time.
-    </p>
-  </div>
-</div>
-
+      <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
+        <div className="max-w-2xl mx-auto lg:mx-0 text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
+            Projects
+          </h2>
+          <p className="mt-4 text-lg text-zinc-400">
+            Some of the projects are from school and some are on my own time.
+          </p>
+        </div>
+        <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
             <Link href={`/projects/${featured.slug}`}>
-              <article className="relative w-full h-full p-4 md:p-8">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="text-xs text-zinc-100">
-                    {featured.date ? (
-                      <time dateTime={new Date(featured.date).toISOString()}>
-                        {Intl.DateTimeFormat(undefined, {
-                          dateStyle: "medium",
-                        }).format(new Date(featured.date))}
-                      </time>
-                    ) : (
-                      <span>SOON</span>
-                    )}
-                  </div>
-                  <span className="flex items-center gap-1 text-xs text-zinc-500">
-                    <Eye className="w-4 h-4" />{" "}
-                    {Intl.NumberFormat("en-US", { notation: "compact" }).format(
-                      views[featured.slug] ?? 0,
-                    )}
-                  </span>
-                </div>
-
-                <h2
-                  id="featured-post"
-                  className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
-                >
-                  {featured.title}
-                </h2>
-                <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                  {featured.description}
-                </p>
-                <div className="absolute bottom-4 md:bottom-8">
-                  <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </p>
-                </div>
-              </article>
+              <Article project={featured} views={views[featured.slug] ?? 0} />
             </Link>
           </Card>
 

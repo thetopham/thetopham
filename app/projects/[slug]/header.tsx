@@ -44,7 +44,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
   return (
     <header
   ref={ref}
-  className="relative isolate overflow-hidden bg-black/20" // Reduced opacity for visibility
+  className="relative isolate overflow-hidden" // Reduced opacity for visibility
 >
   <div
     className={`fixed inset-x-0 top-0 z-20 backdrop-blur lg:backdrop-blur-none duration-200 border-b lg:bg-transparent ${

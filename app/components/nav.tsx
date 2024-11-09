@@ -32,7 +32,7 @@ export const Navigation: React.FC = () => {
 							href="/projects"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Projects
+							projects
 						</Link>
 						<Link
 							href="/ai"
@@ -44,7 +44,7 @@ export const Navigation: React.FC = () => {
 							href="/contact"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Contact
+							contact
 						</Link>
 					</div>
 

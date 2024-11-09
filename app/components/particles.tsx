@@ -1,8 +1,6 @@
 "use client";
-
 import React, { useRef, useEffect, useState } from "react";
 import { useMousePosition } from "@/util/mouse";
-
 interface ParticlesProps {
 	className?: string;
 	quantity?: number;
@@ -10,7 +8,6 @@ interface ParticlesProps {
 	ease?: number;
 	refresh?: boolean;
 }
-
 export default function Particles({
 	className = "",
 	quantity = 30,
@@ -26,7 +23,6 @@ export default function Particles({
 	const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
 	const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
 	const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
-
 	useEffect(() => {
 		if (canvasRef.current) {
 			context.current = canvasRef.current.getContext("2d");
@@ -34,25 +30,20 @@ export default function Particles({
 		initCanvas();
 		animate();
 		window.addEventListener("resize", initCanvas);
-
 		return () => {
 			window.removeEventListener("resize", initCanvas);
 		};
 	}, []);
-
 	useEffect(() => {
 		onMouseMove();
 	}, [mousePosition.x, mousePosition.y]);
-
 	useEffect(() => {
 		initCanvas();
 	}, [refresh]);
-
 	const initCanvas = () => {
 		resizeCanvas();
 		drawParticles();
 	};
-
 	const onMouseMove = () => {
 		if (canvasRef.current) {
 			const rect = canvasRef.current.getBoundingClientRect();
@@ -66,7 +57,6 @@ export default function Particles({
 			}
 		}
 	};
-
 	type Circle = {
 		x: number;
 		y: number;
@@ -79,7 +69,6 @@ export default function Particles({
 		dy: number;
 		magnetism: number;
 	};
-
 	const resizeCanvas = () => {
 		if (canvasContainerRef.current && canvasRef.current && context.current) {
 			circles.current.length = 0;
@@ -87,12 +76,11 @@ export default function Particles({
 			canvasSize.current.h = canvasContainerRef.current.offsetHeight;
 			canvasRef.current.width = canvasSize.current.w * dpr;
 			canvasRef.current.height = canvasSize.current.h * dpr;
-			canvasRef.current.style.width = ${canvasSize.current.w}px;
-			canvasRef.current.style.height = ${canvasSize.current.h}px;
+			canvasRef.current.style.width = `${canvasSize.current.w}px`;
+			canvasRef.current.style.height = `${canvasSize.current.h}px`;
 			context.current.scale(dpr, dpr);
 		}
 	};
-
 	const circleParams = (): Circle => {
 		const x = Math.floor(Math.random() * canvasSize.current.w);
 		const y = Math.floor(Math.random() * canvasSize.current.h);
@@ -117,23 +105,20 @@ export default function Particles({
 			magnetism,
 		};
 	};
-
 	const drawCircle = (circle: Circle, update = false) => {
 		if (context.current) {
 			const { x, y, translateX, translateY, size, alpha } = circle;
 			context.current.translate(translateX, translateY);
 			context.current.beginPath();
 			context.current.arc(x, y, size, 0, 2 * Math.PI);
-			context.current.fillStyle = rgba(255, 255, 255, ${alpha});
+			context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
 			context.current.fill();
 			context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
-
 			if (!update) {
 				circles.current.push(circle);
 			}
 		}
 	};
-
 	const clearContext = () => {
 		if (context.current) {
 			context.current.clearRect(
@@ -144,7 +129,6 @@ export default function Particles({
 			);
 		}
 	};
-
 	const drawParticles = () => {
 		clearContext();
 		const particleCount = quantity;
@@ -153,7 +137,6 @@ export default function Particles({
 			drawCircle(circle);
 		}
 	};
-
 	const remapValue = (
 		value: number,
 		start1: number,
@@ -165,7 +148,6 @@ export default function Particles({
 			((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
 		return remapped > 0 ? remapped : 0;
 	};
-
 	const animate = () => {
 		clearContext();
 		circles.current.forEach((circle: Circle, i: number) => {
@@ -225,7 +207,6 @@ export default function Particles({
 		});
 		window.requestAnimationFrame(animate);
 	};
-
 	return (
 		<div className={className} ref={canvasContainerRef} aria-hidden="true">
 			<canvas ref={canvasRef} />

@@ -24,7 +24,7 @@ const MatrixRainingCode: React.FC = () => {
 
     const draw = () => {
   
-  ctx.fillStyle = "rgba(0, 0, 0, 0.1)"; 
+  ctx.fillStyle = "rgba(0, 0, 0, 0.04)"; 
   ctx.fillRect(0, 0, width, height);
 
   ctx.fillStyle = "#0f0"; 

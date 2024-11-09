@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
-import MatrixRainingCode from "../components/MatrixRainingCode"; // Adjusted path
+import MatrixRainingCode from "/components/MatrixRainingCode"; 
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";

@@ -8,7 +8,45 @@ import MatrixRainingCode from './components/MatrixRainingCode';
 
 
 export const metadata: Metadata = {
-  // Metadata remains the same as before
+   title: {
+    default: "thetopham.com",
+    template: "%s | thetopham.com",
+  },
+  description: "Computer Science Student",
+  openGraph: {
+    title: "thetopham.com",
+    description:
+      "Computer Science Student ",
+    url: "https://thetopham.com",
+    siteName: "thetopham.com",
+    images: [
+      {
+        url: "https://thetopham.com/og1.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "thetopham",
+    card: "summary_large_image",
+  },
+  icons: {
+    shortcut: "/favicon.png",
+  },
 };
 
 const inter = Inter({
@@ -33,7 +71,7 @@ export default function RootLayout({
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
-        <MatrixRainingCode /> {/* Add MatrixRainingCode here for background effect */}
+        <MatrixRainingCode /> 
         {children}
         <Analytics />
         <SpeedInsights />

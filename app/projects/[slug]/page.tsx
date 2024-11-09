@@ -39,8 +39,8 @@ export default async function PostPage({ params }: Props) {
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Matrix Background */}
-      <div className="fixed inset-0 z-[-10]">
-        <MatrixRainingCode className="w-full h-full" />
+      <div className="fixed inset-0 w-full h-full z-[-10]">
+        <MatrixRainingCode />
       </div>
 
       {/* Header and Content */}

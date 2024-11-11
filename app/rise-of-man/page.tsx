@@ -101,18 +101,18 @@ export default function RiseOfManPage() {
          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
           The Anthropocene is the newest geological age defined by man’s introduction of the industrial revolution to our small planet we all call home and will be defined even further by what we do in the years to come.
           </p>
-          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
+          <blockquote className="my-6 pl-4 border-l-4 border-zinc-500 italic text-zinc-400">
           “Adopting the Anthropocene may reverse this trend by asserting that humans are not passive observers of Earth’s functioning. To a large extent the future of the only place where life is known to exist is being determined by the actions of humans. Yet, the power that humans wield is unlike any other force of nature because it is reflexive and therefore can be used, withdrawn or modified. More widespread recognition that human actions are driving far-reaching changes to the life-supporting infrastructure of Earth may well have increasing philosophical, social, economic, and political implications over the coming decades.” (Lewis and Maslin 178).
-          </p>
+          </blockquote>
           <p className="mb-6" style={{ textIndent: '1.5rem' }}>
           In my research, I was most influenced by an article from the 1980’s by Richard Allen in the magazine Environment and titled “The Impact of CO2 on World Climate.” I was amazed that this issue has been known about since the 1980’s and the accuracy of the article that was so relevant decades later in today’s modern world. Below are some of the most influential quotes from the article. 
           </p>
-          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
+          <blockquote className="my-6 pl-4 border-l-4 border-zinc-500 italic text-zinc-400">
           “If present trends continue, the carbon dioxide in the Earth’s atmosphere will double in about 50 years. Scientists predict that an increase in CO2 of this magnitude will produce a “greenhouse effect” leading to a significant rise in global temperatures. Such temperature changed could be as great as those which separated the different geologic epochs, seriously upsetting an already precarious world ecology and threatening the world’s food supply. The atmospheric accumulation of CO2 poses a unique political problem. Society in its present form is a phenomenon of only the last century. Our institutions and culture developed within a period of nearly absolute climatic stability. As a society we have tended to push our natural resources to the limit, taking the stability of the physical and biological environment for granted. We are now coming to realize that such an attitude is no longer tenable. However, because the CO2 problem is rooted in the most fundamental global energy use and land management practices and because of the inherent uncertainties involved, the international cooperation needed to deal effectively with this issue will be exceedingly difficult to achieve.” (Allen 6) 
-          </p>
-          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
+          </blockquote>
+          <blockquote className="my-6 pl-4 border-l-4 border-zinc-500 italic text-zinc-400">
           “The challenge of responding to the CO2 greenhouse effect poses the question of whether human society can respond to any problem beyond the most immediate and potentially catastrophic- the question of whether we can truly determine the course of our own future.” (Allen 38)
-          </p>
+          </blockquote>
           <p className="mb-6" style={{ textIndent: '1.5rem' }}>
           Since the rise of the industrial revolution, the global population has increased by 7 billion people accelerated by fossil fuels creating advances in industry, productivity, and efficiency. In a relatively short amount of time compared to geological timescales, the amount of carbon dioxide in the atmosphere has grown significantly as a byproduct of the industrial revolution. "The amount of CO₂ in the atmosphere has increased more than 20% in less than 40 years, owing largely to human activities, and representing well over 50% of the total increase in atmospheric carbon dioxide since the onset of the industrial revolution (1750)." (Atmospheric Carbon Dioxide).
           </p>
@@ -137,9 +137,9 @@ export default function RiseOfManPage() {
          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
            Our way of life is made possible by fossil fuels and industry. Global transportation, food production, and many global industries are heavily dependent on fossil fuels. How can we provide for a growing population with a society built upon a limited resource with an estimated 41 years of oil reserves remaining?  
            </p>
-           <p className="mb-6" style={{ textIndent: '1.5rem' }}>
+           <blockquote className="my-6 pl-4 border-l-4 border-zinc-500 italic text-zinc-400">
            “At the dawn of agriculture, about 8000 B.C., the population of the world was approximately 5 million. Over the 8,000-year period up to 1 A.D. it grew to 200 million (some estimate 300 million or even 600, suggesting how imprecise population estimates of early historical periods can be), with a growth rate of under 0.05% per year. A tremendous change occurred with the industrial revolution: whereas it had taken all of human history until around 1800 for world population to reach one billion, the second billion was achieved in only 130 years (1930), the third billion in 30 years (1960), the fourth billion in 15 years (1974), and the fifth billion in only 13 years (1987). During the 20th century alone, the population in the world has grown from 1.65 billion to 6 billion. In 1970, there were roughly half as many people in the world as there are now. Because of declining growth rates, it will now take over 200 years to double again.”  (Current World Population).
-           </p>
+           </blockquote>
           
            </section>
         

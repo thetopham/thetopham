@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div style={{ textAlign: 'center', padding: '20px' }}>
       <div>
-        <Image src="https://github.com/thetopham/Planetary-Stewardship/blob/main/naturevsindustry.png?raw=true" alt="Nature vs Industry" width={600} height={400} />
+        <Image src="/naturevsindustry.png" alt="Nature vs Industry" width={600} height={400} />
       </div>
 
       <div>

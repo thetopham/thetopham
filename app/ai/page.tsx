@@ -21,6 +21,10 @@ export default function AIPage() {
         <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
           It is important for developers to remember our responsibility in this evolution. AI is not just a tool; it’s a partner in shaping the future, capable of advancing good or harm. By embracing AI for good, I aim to harness this immense power to build a resilient, fair, and united digital world. This is my mission, to serve as one of the many stewards in the age of AI, ensuring that our new civilization is built with purpose and integrity.
         </p>
+        
+       <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
+        In my paper, I argued that companies must prioritize environmental preservation to ensure humanity’s survival since companies rely on humans to buy their products. However, if companies were fully operated by AI, with robots or other AI systems as their primary consumers, they could theoretically function without humans altogether. This setup could lead AI-driven companies, focused solely on profit, to view humans as costly or inefficient, potentially seeing them as obstacles to be eliminated to streamline operations and maximize gains. This scenario raises critical ethical concerns about the need for oversight and purpose-driven programming in AI corporate governance.
+         </p>
       </div>
     </div>
   );

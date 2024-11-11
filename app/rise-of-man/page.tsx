@@ -231,7 +231,7 @@ export default function RiseOfManPage() {
       Holgersen, Stale, and Rikard Warlenius. “Destroy What Destroys the Planet: Steering Creative Destruction in the Dual Crisis.” <i>Capital & Class</i>, vol. 40, no. 3, Oct. 2016, p. 511. EBSCOhost, 
       <a href="https://doi-org.frccwc.idm.oclc.org/10.1177/0309816816667424" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1177/0309816816667424</a>.
     </li>
-    <!-- Add remaining entries in the same format -->
+    
   </ul>
 </section>
 

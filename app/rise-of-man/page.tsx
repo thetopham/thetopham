@@ -180,111 +180,111 @@ export default function RiseOfManPage() {
           
            </section>
 
-       <section class="mt-8 text-left text-zinc-300 max-w-4xl leading-8 px-8 py-6 bg-black/30 rounded-lg shadow-lg">
-  <h2 class="text-2xl font-bold mb-4">Works Cited</h2>
-  <ul class="list-disc list-inside">
+       <section className="mt-8 text-left text-zinc-300 max-w-4xl leading-8 px-8 py-6 bg-black/30 rounded-lg shadow-lg">
+  <h2 className="text-2xl font-bold mb-4">Works Cited</h2>
+  <ul className="list-disc list-inside">
     <li>
       “A 500-Million-Year Survey of Earth's Climate Reveals Dire Warning for Humanity.” <i>Science</i>, 
-      <a href="https://www.science.org/content/article/500-million-year-survey-earths-climate-reveals-dire-warning-humanity" target="_blank" class="text-blue-400">https://www.science.org/content/article/500-million-year-survey-earths-climate-reveals-dire-warning-humanity</a>.
+      <a href="https://www.science.org/content/article/500-million-year-survey-earths-climate-reveals-dire-warning-humanity" target="_blank" className="text-blue-400">https://www.science.org/content/article/500-million-year-survey-earths-climate-reveals-dire-warning-humanity</a>.
     </li>
     <li>
       Allen, Richard. “The Impact of CO2 on World Climate.” <i>Environment</i>, vol. 22, no. 10, Dec. 1980, p. 6. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/00139157.1980.9933100" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/00139157.1980.9933100</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/00139157.1980.9933100" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/00139157.1980.9933100</a>.
     </li>
     <li>
       “Atmospheric Carbon Dioxide.” <i>GlobalChange.gov</i>, 
-      <a href="https://www.globalchange.gov/browse/indicators/atmospheric-carbon-dioxide" target="_blank" class="text-blue-400">https://www.globalchange.gov/browse/indicators/atmospheric-carbon-dioxide</a>.
+      <a href="https://www.globalchange.gov/browse/indicators/atmospheric-carbon-dioxide" target="_blank" className="text-blue-400">https://www.globalchange.gov/browse/indicators/atmospheric-carbon-dioxide</a>.
     </li>
     <li>
       Berlin, Michael. “How the World Really Ends: Adorno on Working through Catastrophes to Come.” <i>Cultural Critique</i>, no. 109, Sept. 2020, p. 112. EBSCOhost, 
-      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A638127835&site=eds-live" target="_blank" class="text-blue-400">frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A638127835&site=eds-live</a>.
+      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A638127835&site=eds-live" target="_blank" className="text-blue-400">frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A638127835&site=eds-live</a>.
     </li>
     <li>
       Bhuyan, Chhandashree. “The Environment: Then and Now.” <i>Clarion: International Multidisciplinary Journal</i>, vol. 9, no. 1, Feb. 2020, pp. 44–51. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.5958/2277-937X.2020.00008.8" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.5958/2277-937X.2020.00008.8</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.5958/2277-937X.2020.00008.8" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.5958/2277-937X.2020.00008.8</a>.
     </li>
     <li>
       Bray, Anna J. “The Ice Age Cometh.” <i>Policy Review</i>, no. 58, Fall 1991, p. 82. EBSCOhost, 
-      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=9608042173&site=eds-live" target="_blank" class="text-blue-400">frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=9608042173&site=eds-live</a>.
+      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=9608042173&site=eds-live" target="_blank" className="text-blue-400">frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=9608042173&site=eds-live</a>.
     </li>
     <li>
       Chen, Mei‐Fang. “The Impacts of Perceived Moral Obligation and Sustainability Self‐identity on Sustainability Development...” <i>Business Strategy & the Environment</i> (John Wiley & Sons, Inc), vol. 29, no. 6, Sept. 2020, pp. 2404–17. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1002/bse.2510" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1002/bse.2510</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1002/bse.2510" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1002/bse.2510</a>.
     </li>
     <li>
       Clark, William C., and Jill Jager. “The Science of Climate Change.” <i>Environment</i>, vol. 39, no. 9, Nov. 1997, p. 23. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/00139159709604766" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/00139159709604766</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/00139159709604766" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/00139159709604766</a>.
     </li>
     <li>
       “Current World Population.” <i>Worldometer</i>, 
-      <a href="https://www.worldometers.info/world-population/" target="_blank" class="text-blue-400">https://www.worldometers.info/world-population/</a>.
+      <a href="https://www.worldometers.info/world-population/" target="_blank" className="text-blue-400">https://www.worldometers.info/world-population/</a>.
     </li>
     <li>
       Douglas, Richard McNeill. “The ‘Glass Ceiling’ of the Environmental State and the Social Denial of Mortality.” <i>Environmental Politics</i>, vol. 29, no. 1, Jan. 2020, pp. 58–75. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/09644016.2019.1685218" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/09644016.2019.1685218</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/09644016.2019.1685218" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/09644016.2019.1685218</a>.
     </li>
     <li>
       Dylan, Arielle. “Rethinking Sustainability on Planet Earth: A Time for New Framings.” <i>Electronic Green Journal</i>, vol. 1, no. 34, July 2012, pp. 1–16. EBSCOhost, 
-      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=f5h&AN=87645212&site=eds-live" target="_blank" class="text-blue-400">frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=f5h&AN=87645212&site=eds-live</a>.
+      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=f5h&AN=87645212&site=eds-live" target="_blank" className="text-blue-400">frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=f5h&AN=87645212&site=eds-live</a>.
     </li>
     <li>
       Holgersen, Stale, and Rikard Warlenius. “Destroy What Destroys the Planet: Steering Creative Destruction in the Dual Crisis.” <i>Capital & Class</i>, vol. 40, no. 3, Oct. 2016, p. 511. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1177/0309816816667424" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1177/0309816816667424</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1177/0309816816667424" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1177/0309816816667424</a>.
     </li>
     <li>
       Joachim, Hans, et al. “EARTH SYSTEM ANALYSIS for SUSTAINABILITY. (Cover Story).” 
       <i>Environment</i>, vol. 47, no. 8, Oct. 2005, p. 10. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.3200/ENVT.47.8.10-25" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.3200/ENVT.47.8.10-25</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.3200/ENVT.47.8.10-25" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.3200/ENVT.47.8.10-25</a>.
     </li>
     <li>
       Larrabee, David A. “Climate Change and Conflicting Future Visions.” 
       <i>Zygon: Journal of Religion & Science</i>, vol. 53, no. 2, June 2018, pp. 515–44. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12399" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12399</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12399" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12399</a>.
     </li>
     <li>
       Levine, Mark D., and Robert V. Steele. “Climate Change: What We Know and What Is to Be Done.” 
       <i>WIREs: Energy & Environment</i>, vol. 10, no. 1, Jan. 2021, pp. 1–12. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1002/wene.388" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1002/wene.388</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1002/wene.388" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1002/wene.388</a>.
     </li>
     <li>
       Lewis, Simon L., and Mark A. Maslin. “Defining the Anthropocene.” 
       <i>Nature</i>, vol. 519, no. 7542, Mar. 2015, pp. 171–80. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1038/nature14258" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1038/nature14258</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1038/nature14258" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1038/nature14258</a>.
     </li>
     <li>
       Lindsey, Rebecca. “Climate Change: Incoming Sunlight.” 
       <i>Climate Change: Incoming Sunlight | NOAA Climate.gov</i>, 
-      <a href="https://www.climate.gov/news-features/understanding-climate/climate-change-incoming-sunlight" target="_blank" class="text-blue-400">https://www.climate.gov/news-features/understanding-climate/climate-change-incoming-sunlight</a>.
+      <a href="https://www.climate.gov/news-features/understanding-climate/climate-change-incoming-sunlight" target="_blank" className="text-blue-400">https://www.climate.gov/news-features/understanding-climate/climate-change-incoming-sunlight</a>.
     </li>
     <li>
       Moynihan, Thomas. “Can Intelligence Escape Its Terrestrial Past?: Anticipations of Existential Catastrophe & Existential Hope from Haldane to Cirkovic.” 
       <i>Cosmos and History: The Journal of Natural and Social Philosophy</i>, vol. 16, no. 1, Jan. 2020, p. 71. EBSCOhost, 
-      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A628849648&site=eds-live" target="_blank" class="text-blue-400">https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A628849648&site=eds-live</a>.
+      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A628849648&site=eds-live" target="_blank" className="text-blue-400">https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A628849648&site=eds-live</a>.
     </li>
     <li>
       Nkrumah, Bright. “Beyond Tokenism: The ‘Born Frees’ and Climate Change in South Africa.” 
       <i>International Journal of Ecology</i>, Feb. 2021, pp. 1–10. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1155/2021/8831677" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1155/2021/8831677</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1155/2021/8831677" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1155/2021/8831677</a>.
     </li>
     <li>
       Nuccitelli, Dana. “How We Know the Earth Is Warming and Humans Are Responsible.” 
       <i>Bulletin of the Atomic Scientists</i>, vol. 76, no. 3, May 2020, pp. 140–44. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/00963402.2020.1751969" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/00963402.2020.1751969</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/00963402.2020.1751969" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/00963402.2020.1751969</a>.
     </li>
     <li>
       Pelt, James Clement. “Climate Change in Context: Stress, Shock, and the Crucible of Livingkind.” 
       <i>Zygon: Journal of Religion & Science</i>, vol. 53, no. 2, June 2018, pp. 462–95. EBSCOhost, 
-      <a href="https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12418" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12418</a>.
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12418" target="_blank" className="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12418</a>.
     </li>
     <li>
       “Real Time World Statistics.” 
       <i>Worldometer</i>, 
-      <a href="https://www.worldometers.info/" target="_blank" class="text-blue-400">https://www.worldometers.info/</a>.
+      <a href="https://www.worldometers.info/" target="_blank" className="text-blue-400">https://www.worldometers.info/</a>.
     </li>
     <li>
       Wise, Jacob. “Climate Change Loss and Damage Litigation: Infeasible or a Useful Shadow?” 
       <i>Wisconsin International Law Journal</i>, vol. 38, no. 3, Summer 2021, pp. 687–711. EBSCOhost, 
-      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=151987367&site=eds-live" target="_blank" class="text-blue-400">https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=151987367&site=eds-live</a>.
+      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=151987367&site=eds-live" target="_blank" className="text-blue-400">https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=151987367&site=eds-live</a>.
     </li>
   </ul>
 </section>

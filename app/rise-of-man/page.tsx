@@ -35,7 +35,7 @@ export default function RiseOfManPage() {
         <h3 className="text-lg">April 24th, 2022</h3>
 
         {/* Audience */}
-        <h4 className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
+        <h4 className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-3xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
           Audience: Corporate entities and people of the earth who care about the planet and our future as a species.
         </h4>
 
@@ -138,7 +138,7 @@ export default function RiseOfManPage() {
            Our way of life is made possible by fossil fuels and industry. Global transportation, food production, and many global industries are heavily dependent on fossil fuels. How can we provide for a growing population with a society built upon a limited resource with an estimated 41 years of oil reserves remaining?  
            </p>
            <blockquote className="my-6 pl-4 border-l-4 border-zinc-500 italic text-zinc-400">
-           “At the dawn of agriculture, about 8000 B.C., the population of the world was approximately 5 million. Over the 8,000-year period up to 1 A.D. it grew to 200 million (some estimate 300 million or even 600, suggesting how imprecise population estimates of early historical periods can be), with a growth rate of under 0.05% per year. A tremendous change occurred with the industrial revolution: whereas it had taken all of human history until around 1800 for world population to reach one billion, the second billion was achieved in only 130 years (1930), the third billion in 30 years (1960), the fourth billion in 15 years (1974), and the fifth billion in only 13 years (1987). During the 20th century alone, the population in the world has grown from 1.65 billion to 6 billion. In 1970, there were roughly half as many people in the world as there are now. Because of declining growth rates, it will now take over 200 years to double again.”  (Current World Population).
+           “At the dawn of agriculture, about 8000 B.C., the population of the world was approximately 5 million. Over the 8,000-year period up to 1 A.D. it grew to 200 million (some estimate 300 million or even 600, suggesting how imprecise population estimates of early historical periods can be), with a growth rate of under 0.05% per year. A tremendous change occurred with the industrial revolution: whereas <b>it had taken all of human history until around 1800 for world population to reach one billion</b>, the second billion was achieved in only 130 years (1930), the third billion in 30 years (1960), the fourth billion in 15 years (1974), and the fifth billion in only 13 years (1987). During the 20th century alone, the population in the world has grown from 1.65 billion to 6 billion. In 1970, there were roughly half as many people in the world as there are now. Because of declining growth rates, it will now take over 200 years to double again.”  (Current World Population).
            </blockquote>
           
            </section>

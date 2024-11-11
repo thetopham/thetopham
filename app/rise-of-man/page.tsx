@@ -51,23 +51,23 @@ export default function RiseOfManPage() {
         </div>
 
         {/* Content Section */}
-        <section className="mt-8 text-left text-zinc-300 max-w-2xl leading-8 px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-          <p>
+        <section className="mt-8 text-left text-zinc-300 max-w-4xl leading-8 px-4 py-4 bg-black/30 rounded-lg shadow-lg">
+         <p className="mb-6" style={{ textIndent: '1.5rem' }}>
             Man has influenced the world. The countries of the first world have unintentionally changed the natural course of the planet through our industrialized society. The byproduct of our society, carbon dioxide, has changed the natural cycle of the planet. Yet the first world countries are some of the least to feel the impact of their actions. Those who contribute least to the problem of climate change, those in developing countries, are those who feel the greatest impact through the changing environment. We must realize that we are all in this together, there is no us and them, its just us, mankind. With great power comes great responsibility, and as members of the first world, we have a great responsibility as the stewards of planet earth. We must lead by example and pave the way through our actions, in our science, and how we treat one another.
-          </p>
-          <p>
+          </p>        
+          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
           Those who contribute the most to climate change are corporations that transcend individual government jurisdiction and individuals of first world countries, corporations that have grown faster than government jurisdiction can create laws to govern them. These corporations know that they have a responsibility to leave the planet better than they received it, especially since a corporate entity can live longer than a single man, and therefore has a greater responsibility to our future as a species. It is in a corporation’s best interest to preserve the earth for future generations, as the future of mankind depends on a sustainable biosphere, and thus corporate entities have a vested interest in this goal as well, because without man, corporations cannot exist. If we are to reach a population of 11 billion, it is best that we do so in a way that works with nature, and not against it.  Corporations know about their impact on the planet through the scientific community. It is best if one considers how the individual actions of first world citizens and corporations impact the collective of mankind and the rest of the world. 
           </p>
-          <p>
+         <p className="mb-6" style={{ textIndent: '1.5rem' }}>
           Mankind values the earth, it’s only home. Mankind knows the earth is a planet with a system of interconnected systems. Influencing one system has cascading affects in other systems, a balance we are currently learning about and how to best maintain. We live in a system of interconnected systems. Small actions in one part of the world can have big implications in other parts of the world, especially when it comes to the environment. The future of planet earth is at stake; what we do in the next 100 years will pave the way for those who come after us. Mankind wants to be remembered as those who preserved the world for those who came after them, as those who passed the torch to the next generation, and not those who threw away the gift given to them.  
           </p>
-          <p>
+          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
           Mankind can compete to solve the problem of climate change. The individual can vote with their money by purchasing from climate friendly companies and voluntarily donating to offset their carbon footprint to be net neutral. Corporations can do the same as individuals and challenge one another to be net neutral. It is important to note that corporations have a greater responsibility than the individual as they have a greater impact, so it is especially important that corporations lead by example in their action, science, how they treat one another, and policy. It is in corporations’ best interest to preserve the planet, so that they will still have a healthy population for their products. 
           </p>
-          <p>
+          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
           Citizens of planet earth, mankind has grown to a point where collectively we have changed the natural course of our planet. This may have been in our best interest, for if we had not burned fossil fuels, the ice age that we are currently living in may have advanced further and we could have potentially regressed deeper into our current ice age, bringing more destruction to the population through lack of food and crops than warming temperatures. 
           </p>
-          <p>
+          <p className="mb-6" style={{ textIndent: '1.5rem' }}>
           Some may say that the solar output of the sun has changed and that is the cause of the changing climate. This is incorrect as the solar output of the sun has remained relatively constant varying only slightly in total solar irradiance over the last 400 years. Solar activity has remained relatively stable since we first began observations in the 1600’s. The chart below provided by NOAA represents solar activity and difference from average global temperature, with solar activity remaining stable and average global temperature variance increasing to up to 1.5 degrees in 2010, showing a break from the previous correlation of average global temperature and solar output, leading to another variable affecting the equation, the possibility that it may be caused by the rise of the industrial man and his influence on the world.
           </p>         
         </section>
@@ -85,7 +85,7 @@ export default function RiseOfManPage() {
         </div>
 
        
-        <section className="mt-8 text-left text-zinc-300 max-w-2xl leading-8 px-4 py-4 bg-black/30 rounded-lg shadow-lg">
+        <section className="mt-8 text-left text-zinc-300 max-w-4xl leading-8 px-4 py-4 bg-black/30 rounded-lg shadow-lg">
           <p>
            It is important to acknowledge that humanity has influenced the planet and that collectively, our decisions and actions make a difference in creating and shaping our world for us and our children to thrive, and for our species to continue. We must leave the world better than we received it, and make improvements, so that our children can continue our work and make the world a place where humanity can flourish as we were meant to. 
           </p>
@@ -133,7 +133,7 @@ export default function RiseOfManPage() {
           <p className="mt-2 text-zinc-400">(A 500-million-year survey of Earth's climate reveals dire warning for humanity)</p>
         </div>
 
-         <section className="mt-8 text-left text-zinc-300 max-w-2xl leading-8 px-4 py-4 bg-black/30 rounded-lg shadow-lg">
+         <section className="mt-8 text-left text-zinc-300 max-w-4xl leading-8 px-4 py-4 bg-black/30 rounded-lg shadow-lg">
 
            </section>
         
@@ -162,7 +162,7 @@ export default function RiseOfManPage() {
         </div>
 
         {/* Works Cited Section */}
-        <section className="mt-8 text-left text-zinc-300 max-w-2xl leading-8 px-4 py-4 bg-black/30 rounded-lg shadow-lg">
+        <section className="mt-8 text-left text-zinc-300 max-w-4xl leading-8 px-4 py-4 bg-black/30 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Works Cited</h2>
           <ul className="list-disc list-inside">
             <li>

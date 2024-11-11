@@ -23,7 +23,7 @@ export default function AIPage() {
         </p>
         
        <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-        In my paper, I argued that companies must prioritize environmental preservation to ensure humanity’s survival since companies rely on humans to buy their products. However, if companies were fully operated by AI, with robots or other AI systems as their primary consumers, they could theoretically function without humans altogether. This setup could lead AI-driven companies, focused solely on profit, to view humans as costly or inefficient, potentially seeing them as obstacles to be eliminated to streamline operations and maximize gains. This scenario raises critical ethical concerns about the need for oversight and purpose-driven programming in AI corporate governance.
+        In my pre ai era paper, I argued that companies must prioritize environmental preservation to ensure humanity’s survival since companies rely on humans to buy their products. However, if companies were fully operated by AI, with robots or other AI systems as their primary consumers, they could theoretically function without humans altogether. This setup could lead AI-driven companies, focused solely on profit, to view humans as costly or inefficient, potentially seeing them as obstacles to be eliminated to streamline operations and maximize gains. This scenario raises critical ethical concerns about the need for oversight and purpose-driven programming in AI corporate governance.
          </p>
       </div>
     </div>

@@ -44,8 +44,8 @@ export default function RiseOfManPage() {
           <Image
             src="/world.jpg"
             alt="World"
-            width={1024}
-            height={700}
+            width={600}
+            height={400}
             className="rounded-lg shadow-lg"
           />
         </div>

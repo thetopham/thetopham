@@ -14,8 +14,8 @@ export default function RiseOfManPage() {
           <Image
             src="/naturevsindustry.png"
             alt="Nature vs Industry"
-            width={600}
-            height={400}
+            width={1024}
+            height={717}
             className="rounded-lg shadow-lg"
           />
         </div>
@@ -231,7 +231,61 @@ export default function RiseOfManPage() {
       Holgersen, Stale, and Rikard Warlenius. “Destroy What Destroys the Planet: Steering Creative Destruction in the Dual Crisis.” <i>Capital & Class</i>, vol. 40, no. 3, Oct. 2016, p. 511. EBSCOhost, 
       <a href="https://doi-org.frccwc.idm.oclc.org/10.1177/0309816816667424" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1177/0309816816667424</a>.
     </li>
-    
+    <li>
+      Joachim, Hans, et al. “EARTH SYSTEM ANALYSIS for SUSTAINABILITY. (Cover Story).” 
+      <i>Environment</i>, vol. 47, no. 8, Oct. 2005, p. 10. EBSCOhost, 
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.3200/ENVT.47.8.10-25" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.3200/ENVT.47.8.10-25</a>.
+    </li>
+    <li>
+      Larrabee, David A. “Climate Change and Conflicting Future Visions.” 
+      <i>Zygon: Journal of Religion & Science</i>, vol. 53, no. 2, June 2018, pp. 515–44. EBSCOhost, 
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12399" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12399</a>.
+    </li>
+    <li>
+      Levine, Mark D., and Robert V. Steele. “Climate Change: What We Know and What Is to Be Done.” 
+      <i>WIREs: Energy & Environment</i>, vol. 10, no. 1, Jan. 2021, pp. 1–12. EBSCOhost, 
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1002/wene.388" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1002/wene.388</a>.
+    </li>
+    <li>
+      Lewis, Simon L., and Mark A. Maslin. “Defining the Anthropocene.” 
+      <i>Nature</i>, vol. 519, no. 7542, Mar. 2015, pp. 171–80. EBSCOhost, 
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1038/nature14258" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1038/nature14258</a>.
+    </li>
+    <li>
+      Lindsey, Rebecca. “Climate Change: Incoming Sunlight.” 
+      <i>Climate Change: Incoming Sunlight | NOAA Climate.gov</i>, 
+      <a href="https://www.climate.gov/news-features/understanding-climate/climate-change-incoming-sunlight" target="_blank" class="text-blue-400">https://www.climate.gov/news-features/understanding-climate/climate-change-incoming-sunlight</a>.
+    </li>
+    <li>
+      Moynihan, Thomas. “Can Intelligence Escape Its Terrestrial Past?: Anticipations of Existential Catastrophe & Existential Hope from Haldane to Cirkovic.” 
+      <i>Cosmos and History: The Journal of Natural and Social Philosophy</i>, vol. 16, no. 1, Jan. 2020, p. 71. EBSCOhost, 
+      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A628849648&site=eds-live" target="_blank" class="text-blue-400">https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsglr&AN=edsglr.A628849648&site=eds-live</a>.
+    </li>
+    <li>
+      Nkrumah, Bright. “Beyond Tokenism: The ‘Born Frees’ and Climate Change in South Africa.” 
+      <i>International Journal of Ecology</i>, Feb. 2021, pp. 1–10. EBSCOhost, 
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1155/2021/8831677" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1155/2021/8831677</a>.
+    </li>
+    <li>
+      Nuccitelli, Dana. “How We Know the Earth Is Warming and Humans Are Responsible.” 
+      <i>Bulletin of the Atomic Scientists</i>, vol. 76, no. 3, May 2020, pp. 140–44. EBSCOhost, 
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1080/00963402.2020.1751969" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1080/00963402.2020.1751969</a>.
+    </li>
+    <li>
+      Pelt, James Clement. “Climate Change in Context: Stress, Shock, and the Crucible of Livingkind.” 
+      <i>Zygon: Journal of Religion & Science</i>, vol. 53, no. 2, June 2018, pp. 462–95. EBSCOhost, 
+      <a href="https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12418" target="_blank" class="text-blue-400">https://doi-org.frccwc.idm.oclc.org/10.1111/zygo.12418</a>.
+    </li>
+    <li>
+      “Real Time World Statistics.” 
+      <i>Worldometer</i>, 
+      <a href="https://www.worldometers.info/" target="_blank" class="text-blue-400">https://www.worldometers.info/</a>.
+    </li>
+    <li>
+      Wise, Jacob. “Climate Change Loss and Damage Litigation: Infeasible or a Useful Shadow?” 
+      <i>Wisconsin International Law Journal</i>, vol. 38, no. 3, Summer 2021, pp. 687–711. EBSCOhost, 
+      <a href="https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=151987367&site=eds-live" target="_blank" class="text-blue-400">https://frccwc.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=151987367&site=eds-live</a>.
+    </li>
   </ul>
 </section>
 

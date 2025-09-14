@@ -4,7 +4,7 @@ Robotics • AR/VR • AI/Finance — building clean, useful tools and learning 
 
 - 🌐 Portfolio: https://thetopham.github.io/
 - 💼 Resume: https://thetopham.github.io/submission/views/resume.html
-- 🧰 Currently: Pursuing Computer Science Bachelor of Arts at Boulder
+- 🧰 Currently: Pursuing Computer Science Bachelor of Arts at Boulder 
 
 ## Highlights
 - **School of the Ancients VR** — TS/Unity/UX prototyping · [repo](https://github.com/thetopham/school-of-the-ancients-vr)

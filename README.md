@@ -3,7 +3,7 @@
 Robotics • AR/VR • AI/Finance — building clean, useful tools and learning in public.
 
 - 🌐 Portfolio: https://thetopham.github.io/
-- 💼 Resume: https://thetopham.github.io/submission/views/resume.html
+- 💼 Resume: https://thetopham.github.io/views/resume.html
 - 🧰 Currently: Pursuing Computer Science Bachelor of Arts at Boulder 
 
 ## Highlights

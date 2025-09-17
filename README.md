@@ -1,16 +1,17 @@
-# Matt Topham
+# matt topham
 
-Robotics • AR/VR • AI/Finance — building clean, useful tools and learning in public.
+robotics • ar/vr • ai/finance — building clean, useful tools and learning in public.
 
-- 🌐 Portfolio: https://thetopham.github.io/
-- 💼 Resume: https://thetopham.github.io/views/resume.html
-- 🧰 Currently: Pursuing Computer Science Bachelor of Arts at Boulder 
+- 🌐 portfolio: https://thetopham.github.io/
+- 💼 resume: https://thetopham.github.io/views/resume.html
+- 🧰 currently: pursuing computer science bachelor of arts at boulder 
 
-## Highlights
-- **School of the Ancients VR** — TS/Unity/UX prototyping · [repo](https://github.com/thetopham/school-of-the-ancients-vr)
-- **TradingView Bot** — Python, automation & alerts · [repo](https://github.com/thetopham/tradingview-bot)
-- **CU Robotics** — hardware + embedded experiments · [org](https://github.com/CU-Robotics)
-- **Planetary Stewardship** — static site + data viz · [repo](https://github.com/thetopham/Planetary-Stewardship)
+## highlights
+- **school of the ancients vr** — ts/unity/ux prototyping · [repo](https://github.com/thetopham/school-of-the-ancients-vr)
+- **tradingview bot** — python, automation & alerts · [repo](https://github.com/thetopham/tradingview-bot)
+- **cu robotics** — hardware + embedded experiments · [org](https://github.com/CU-Robotics)
+- **ai news** — rss news feed summarizer · [repo](https://github.com/thetopham/ai-radar)
+- **planetary stewardship** — static site + data viz · [repo](https://github.com/thetopham/Planetary-Stewardship)
 
 ## Stack
 ![C++](https://img.shields.io/badge/C++-00599C?logo=c%2B%2B&logoColor=white)

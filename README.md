@@ -7,7 +7,7 @@ robotics • ar/vr • ai/finance — building clean, useful tools and learning 
 - 🧰 currently: pursuing computer science bachelor of arts at boulder 
 
 ## highlights
-- **school of the ancients vr** — ts/unity/ux prototyping · [repo](https://github.com/thetopham/school-of-the-ancients-vr)
+- **school of the ancients vr** — vr + ai historical figures · [repo](https://github.com/thetopham/school-of-the-ancients-vr)
 - **tradingview bot** — python, automation & alerts · [repo](https://github.com/thetopham/tradingview-bot)
 - **cu robotics** — hardware + embedded experiments · [org](https://github.com/CU-Robotics)
 - **ai news** — rss news feed summarizer · [repo](https://github.com/thetopham/ai-radar)

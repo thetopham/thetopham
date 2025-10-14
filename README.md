@@ -1,4 +1,4 @@
-### 👋 Hi, I’m Matt Topham
+### Matt Topham
 
 **Robotics • AR/VR • AI/Finance**  
 Building clean, useful tools — and learning in public.  

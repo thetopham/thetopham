@@ -1,4 +1,4 @@
-# 🧠 Matthew Topham
+#  Matthew Topham
 
 **Robotics • AR/VR • AI/Finance**  
 Building clean, useful tools — and learning in public.

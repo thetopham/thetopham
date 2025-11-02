@@ -1,16 +1,21 @@
 // projects/page.tsx
 import Link from "next/link";
 import React from "react";
-import { allProjects } from "contentlayer/generated";
+import { allProjects, type Project } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
-import { Eye } from "lucide-react";
 
 const redis = Redis.fromEnv();
 
 export const revalidate = 60;
+
+const highlightSlugs = [
+  "school-of-the-ancients",
+  "ai-radar",
+  "tradingview-bot",
+];
 
 export default async function ProjectsPage() {
   const views = (
@@ -22,15 +27,22 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "Summerboard")!;
-  const top2 = allProjects.find((project) => project.slug === "thetophamcom")!;
+  const highlights = highlightSlugs
+    .map((slug) => allProjects.find((project) => project.slug === slug))
+    .filter((project): project is Project => Boolean(project));
+
+  const [featured, ...secondary] =
+    highlights.length > 0
+      ? highlights
+      : allProjects.filter((project) => project.published);
 
   const sorted = allProjects
     .filter((p) => p.published)
-    .filter(
-      (project) =>
-        project.slug !== featured.slug &&
-        project.slug !== top2.slug,
+    .filter((project) =>
+      featured
+        ? project.slug !== featured.slug &&
+          !secondary.some((item) => item.slug === project.slug)
+        : true,
     )
     .sort(
       (a, b) =>
@@ -47,20 +59,22 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Some of the projects are from school and some are on my own time.
+            Experiments in robotics, mixed reality, and agentic AI — spanning lab research, class builds, and late-night tinkering.
           </p>
         </div>
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
-          <Card>
-            <Link href={`/projects/${featured.slug}`}>
-              <Article project={featured} views={views[featured.slug] ?? 0} />
-            </Link>
-          </Card>
+          {featured ? (
+            <Card>
+              <Link href={`/projects/${featured.slug}`}>
+                <Article project={featured} views={views[featured.slug] ?? 0} />
+              </Link>
+            </Card>
+          ) : null}
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2].map((project) => (
+            {secondary.map((project) => (
               <Card key={project.slug}>
                 <Article project={project} views={views[project.slug] ?? 0} />
               </Card>

@@ -1,0 +1,16 @@
+---
+title: tradingview bot
+description: Automated TradingView assistant that listens for alerts, manages orders, and logs strategy performance in real time.
+date: "2023-11-08"
+url: https://github.com/thetopham/tradingview-bot
+published: true
+repository: thetopham/tradingview-bot
+---
+
+TradingView Bot connects scripted strategies with live brokerage actions. It listens for webhook alerts, evaluates guardrails, and places orders through brokerage APIs so strategies can run unattended.
+
+- **Safe automation:** Every alert is validated through a compliance checklist before hitting the brokerage, preventing accidental or duplicate orders.
+- **Analytics-ready logs:** Trades, fills, and balance updates stream into Supabase for dashboards and backtesting reviews.
+- **Stack built for iteration:** Python FastAPI backend, Redis task queue, and typed strategy configs to drop in new playbooks.
+
+The bot started on campus as a tool for a quantitative finance study group and now powers my own experiments in systematic trading.

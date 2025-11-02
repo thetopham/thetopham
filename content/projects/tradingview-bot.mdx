@@ -1,0 +1,16 @@
+---
+title: TradingView Bot
+description: Python automation that listens for TradingView alerts, executes decisions, and routes updates to the right trading tools.
+date: "2023-11-01"
+url: https://github.com/thetopham/tradingview-bot
+published: true
+repository: thetopham/tradingview-bot
+---
+
+TradingView Bot acts as an always-on execution partner for my trading experiments. The system ingests webhook alerts from TradingView, normalizes the payloads, and triggers the right downstream automation — from updating spreadsheets to pinging brokers and Discord rooms. Secrets live in Vault, and every action is logged for post-trade review.
+
+Highlights:
+
+- Built a resilient webhook listener with retry logic and signature validation.
+- Added pluggable strategy modules so I can test new ideas without rewriting the core service.
+- Wired up notification bridges for SMS, email, and Discord to keep collaborators in the loop.

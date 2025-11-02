@@ -1,0 +1,21 @@
+---
+title: TradingView Bot
+description: Automation framework that listens to TradingView alerts, executes broker-safe playbooks, and keeps humans in the loop with realtime messaging.
+date: "2023-12-10"
+url: https://github.com/thetopham/tradingview-bot
+published: true
+repository: thetopham/tradingview-bot
+---
+
+The TradingView Bot is a modular Python service that connects TradingView alerts to real-world trading actions. Instead of brittle scripts, the bot orchestrates reusable “playbooks” that can log insights, notify teammates, and execute orders through exchange APIs.
+
+### Highlights
+
+- **Event-driven architecture.** Webhooks flow through FastAPI and land on a queue so multiple bots can collaborate without dropping signals.
+- **Safety rails.** Every strategy can require human acknowledgement, throttle order size, or send dry-run messages before touching capital.
+- **Transparent history.** Executions, alerts, and diagnostics pipe into Supabase/PostgreSQL so it’s easy to audit decisions or retrain models.
+- **Messaging hooks.** Slack/Discord integrations broadcast context-rich updates so collaborators see what the agents are doing in real time.
+
+### Why it matters
+
+I wanted tooling that made automated trading understandable. The bot keeps traders in the loop, documents every move, and gives me a sandbox for experimenting with reinforcement learning policies without risking funds.

@@ -12,6 +12,9 @@ const redis = Redis.fromEnv();
 
 export const revalidate = 60;
 
+const featuredSlug = "school-of-the-ancients";
+const secondarySlugs = ["ai-radar", "tradingview-bot"];
+
 export default async function ProjectsPage() {
   const views = (
     await redis.mget<number[]>(
@@ -22,15 +25,23 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "Summerboard")!;
-  const top2 = allProjects.find((project) => project.slug === "thetophamcom")!;
+  const featured =
+    allProjects.find((project) => project.slug === featuredSlug) ??
+    allProjects.find((project) => project.published) ??
+    allProjects[0];
+
+  const secondary = secondarySlugs
+    .map((slug) =>
+      allProjects.find((project) => project.slug === slug && project.slug !== featured.slug),
+    )
+    .filter((project): project is (typeof allProjects)[number] => Boolean(project));
 
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
       (project) =>
         project.slug !== featured.slug &&
-        project.slug !== top2.slug,
+        !secondary.some((item) => item.slug === project.slug),
     )
     .sort(
       (a, b) =>
@@ -47,20 +58,22 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Some of the projects are from school and some are on my own time.
+            A mix of robotics, immersive computing, automation, and AI experiments shipped for class, research, and real-world collaborations.
           </p>
         </div>
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
-          <Card>
-            <Link href={`/projects/${featured.slug}`}>
-              <Article project={featured} views={views[featured.slug] ?? 0} />
-            </Link>
-          </Card>
+          {featured && (
+            <Card>
+              <Link href={`/projects/${featured.slug}`}>
+                <Article project={featured} views={views[featured.slug] ?? 0} />
+              </Link>
+            </Card>
+          )}
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2].map((project) => (
+            {secondary.map((project) => (
               <Card key={project.slug}>
                 <Article project={project} views={views[project.slug] ?? 0} />
               </Card>

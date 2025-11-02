@@ -34,12 +34,12 @@ export const Navigation: React.FC = () => {
 						>
 							projects
 						</Link>
-						<Link
-							href="/rise-of-man"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
-						>
-							rise of man
-						</Link>
+                                                <Link
+                                                        href="/rise-of-man"
+                                                        className="duration-200 text-zinc-400 hover:text-zinc-100"
+                                                >
+                                                        writing
+                                                </Link>
 						<Link
 							href="/ai"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"

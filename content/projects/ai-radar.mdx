@@ -1,0 +1,24 @@
+---
+title: AI Radar
+description: An RSS → GPT pipeline that curates AI news, summarizes the signal, and ships to the web with daily digests.
+date: "2024-06-20"
+url: https://github.com/thetopham/ai-radar
+published: true
+repository: thetopham/ai-radar
+---
+
+AI Radar keeps me — and a handful of collaborators — grounded in the pace of AI research. The system ingests dozens of RSS feeds, scores the stories, and routes the best ones through GPT for structured summaries that land in a searchable Supabase database.
+
+### System overview
+
+1. **Ingestion.** Cron jobs pull new articles from research labs, newsletters, and product teams, then de-duplicate via embeddings.
+2. **Summarisation.** Articles are chunked and summarised through GPT with a style guide focused on clarity and actionable takeaways.
+3. **Delivery.** Summaries surface in a Next.js dashboard with filters for topic, impact, and required reading time. A daily digest ships out via email.
+
+### What I learned
+
+- Prompt engineering alone isn’t enough — deterministic pipelines and evaluation harnesses keep summaries trustworthy.
+- Lightweight visualisations (spark lines, release timelines) help translate dense papers into actionable insights for stakeholders.
+- Supabase storage + edge functions make it painless to keep latency low while fan-out to multiple front-ends.
+
+AI Radar is my sandbox for building AI-native news products that balance automation with editorial intent.

@@ -1,0 +1,17 @@
+---
+title: TradingView Bot
+description: Production-ready TradingView automation with human safeguards and detailed telemetry.
+date: "2024-02-02"
+url: https://github.com/thetopham/tradingview-bot
+published: true
+repository: thetopham/tradingview-bot
+---
+
+TradingView Bot connects TradingView alerts, Alpaca brokerage APIs, and a notification mesh so discretionary traders can safely test automated strategies.
+
+- Created a rule engine that validates every signal against position sizing, risk, and cooldown constraints before execution.
+- Streamed executions and errors into Supabase for dashboards that keep the human trader in control.
+- Deployed the bot inside Docker with health checks, rotating secrets, and Slack/Pushover notifications.
+- Added a paper-trading mode to compare automated performance against manual trades.
+
+It’s a pragmatic take on algorithmic trading: automation that never forgets there is a person accountable for each order.

@@ -4,65 +4,60 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Navigation: React.FC = () => {
-	const ref = useRef<HTMLElement>(null);
-	const [isIntersecting, setIntersecting] = useState(true);
+        const ref = useRef<HTMLElement>(null);
+        const [isIntersecting, setIntersecting] = useState(true);
 
-	useEffect(() => {
-		if (!ref.current) return;
-		const observer = new IntersectionObserver(([entry]) =>
-			setIntersecting(entry.isIntersecting),
-		);
+        useEffect(() => {
+                if (!ref.current) return;
+                const observer = new IntersectionObserver(([entry]) =>
+                        setIntersecting(entry.isIntersecting),
+                );
 
-		observer.observe(ref.current);
-		return () => observer.disconnect();
-	}, []);
+                observer.observe(ref.current);
+                return () => observer.disconnect();
+        }, []);
 
-	return (
-		<header ref={ref}>
-			<div
-				className={`fixed inset-x-0 top-0 z-50 backdrop-blur  duration-200 border-b  ${
-					isIntersecting
-						? "bg-zinc-900/0 border-transparent"
-						: "bg-zinc-900/500  border-zinc-800 "
-				}`}
-			>
-				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
-					<div className="flex justify-between gap-8">
-						<Link
-							href="/projects"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
-						>
-							projects
-						</Link>
-						<Link
-							href="/rise-of-man"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
-						>
-							rise of man
-						</Link>
-						<Link
-							href="/ai"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
-						>
-							ai
-						</Link>
-						<Link
-							href="/contact"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
-						>
-							contact
-						</Link>
-						
-					</div>
+        const links = [
+                { href: "/projects", label: "Projects" },
+                { href: "/rise-of-man", label: "Rise of Man" },
+                { href: "/ai", label: "AI" },
+                { href: "/contact", label: "Contact" },
+        ];
 
-					<Link
-						href="/"
-						className="duration-200 text-zinc-300 hover:text-zinc-100"
-					>
-						<ArrowLeft className="w-6 h-6 " />
-					</Link>
-				</div>
-			</div>
-		</header>
-	);
+        return (
+                <header ref={ref}>
+                        <div
+                                className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur duration-200 ${
+                                        isIntersecting
+                                                ? "bg-zinc-900/0 border-transparent"
+                                                : "bg-zinc-950/80 border-zinc-800"
+                                }`}
+                        >
+                                <div className="container mx-auto flex flex-row-reverse items-center justify-between px-4 py-4 sm:px-6">
+                                        <nav aria-label="Primary">
+                                                <ul className="flex items-center gap-5 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">
+                                                        {links.map((link) => (
+                                                                <li key={link.href}>
+                                                                        <Link
+                                                                                href={link.href}
+                                                                                className="transition-colors duration-200 hover:text-white"
+                                                                        >
+                                                                                {link.label}
+                                                                        </Link>
+                                                                </li>
+                                                        ))}
+                                                </ul>
+                                        </nav>
+
+                                        <Link
+                                                href="/"
+                                                className="text-zinc-300 transition-colors duration-200 hover:text-white"
+                                                aria-label="Back to home"
+                                        >
+                                                <ArrowLeft className="h-6 w-6" aria-hidden="true" />
+                                        </Link>
+                                </div>
+                        </div>
+                </header>
+        );
 };

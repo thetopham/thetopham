@@ -1,0 +1,18 @@
+---
+title: TradingView Bot
+description: Automation layer for TradingView alerts that routes signals into executable strategies and status updates.
+date: "2024-03-15"
+url: https://github.com/thetopham/tradingview-bot
+published: true
+repository: thetopham/tradingview-bot
+---
+
+A Python toolkit that watches TradingView webhooks and translates alerts into real trade actions. The bot pipes
+signals through FastAPI, normalizes payloads, and fans them out to messaging, logging, and optional brokerage
+integrations.
+
+- Built a webhook ingestion service with FastAPI that handles authentication, replay protection, and structured logging.
+- Added templated Discord and email updates so the trading team can see positions open, close, and trail in real time.
+- Wrapped common brokerage actions (paper trading, risk checks, exit management) behind a clean strategy interface.
+
+The result is a resilient automation layer that lets new strategies ship fast while staying observable and auditable.

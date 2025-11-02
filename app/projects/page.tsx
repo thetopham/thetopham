@@ -22,15 +22,26 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "Summerboard")!;
-  const top2 = allProjects.find((project) => project.slug === "thetophamcom")!;
+  const fallback = allProjects.find((project) => project.published) ?? allProjects[0];
+  if (!fallback) {
+    return null;
+  }
+  const featured =
+    allProjects.find((project) => project.slug === "school-of-the-ancients") ??
+    fallback;
+  const spotlightSlugs = ["ai-radar", "tradingview-bot"];
+  const spotlight = spotlightSlugs
+    .map((slug) => allProjects.find((project) => project.slug === slug))
+    .filter((project): project is (typeof allProjects)[number] => Boolean(project));
+
+  const spotlightSlugsSet = new Set(spotlight.map((project) => project.slug));
 
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
       (project) =>
         project.slug !== featured.slug &&
-        project.slug !== top2.slug,
+        !spotlightSlugsSet.has(project.slug),
     )
     .sort(
       (a, b) =>
@@ -47,7 +58,8 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Some of the projects are from school and some are on my own time.
+            A sampling of mixed-reality experiments, autonomous agents, and robotics
+            work — the projects I talk about the most right now.
           </p>
         </div>
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
@@ -60,7 +72,7 @@ export default async function ProjectsPage() {
           </Card>
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2].map((project) => (
+            {spotlight.map((project) => (
               <Card key={project.slug}>
                 <Article project={project} views={views[project.slug] ?? 0} />
               </Card>

@@ -1,28 +1,40 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { FileText, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
 const socials = [
-	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/thetopham",
-		label: "Twitter",
-		handle: "@thetopham",
-	},
-	{
-		icon: <Mail size={20} />,
-		href: "mailto:dev@thetopham.com",
-		label: "Email",
-		handle: "dev@thetopham.com",
-	},
-	{
-		icon: <Github size={20} />,
-		href: "https://github.com/thetopham",
-		label: "Github",
-		handle: "thetopham",
-	},
+        {
+                icon: <Twitter size={20} />,
+                href: "https://twitter.com/thetopham",
+                label: "Twitter",
+                handle: "@thetopham",
+        },
+        {
+                icon: <Linkedin size={20} />,
+                href: "https://www.linkedin.com/in/mrtopham",
+                label: "LinkedIn",
+                handle: "mrtopham",
+        },
+        {
+                icon: <Github size={20} />,
+                href: "https://github.com/thetopham",
+                label: "GitHub",
+                handle: "thetopham",
+        },
+        {
+                icon: <Mail size={20} />,
+                href: "mailto:dev@thetopham.com",
+                label: "Email",
+                handle: "dev@thetopham.com",
+        },
+        {
+                icon: <FileText size={20} />,
+                href: "https://thetopham.github.io/views/resume.html",
+                label: "Resume",
+                handle: "Download CV",
+        },
 ];
 
 export default function Example() {
@@ -30,11 +42,11 @@ export default function Example() {
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
-				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
-					{socials.map((s) => (
-						<Card>
-							<Link
-								href={s.href}
+                                <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
+                                        {socials.map((s) => (
+                                                <Card key={s.label}>
+                                                        <Link
+                                                                href={s.href}
 								target="_blank"
 								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
 							>

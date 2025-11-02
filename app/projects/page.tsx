@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { allProjects } from "contentlayer/generated";
+import type { Project } from "@/.contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
@@ -22,15 +23,18 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "Summerboard")!;
-  const top2 = allProjects.find((project) => project.slug === "thetophamcom")!;
+  const featuredSlug = "nasa-suits-2026";
+  const spotlightSlugs = ["school-of-the-ancients-vr", "tradingview-bot"];
+
+  const featured = allProjects.find((project) => project.slug === featuredSlug)!;
+  const spotlights = spotlightSlugs
+    .map((slug) => allProjects.find((project) => project.slug === slug))
+    .filter((project): project is Project => Boolean(project));
 
   const sorted = allProjects
     .filter((p) => p.published)
-    .filter(
-      (project) =>
-        project.slug !== featured.slug &&
-        project.slug !== top2.slug,
+    .filter((project) =>
+      project.slug !== featured.slug && !spotlightSlugs.includes(project.slug),
     )
     .sort(
       (a, b) =>
@@ -47,7 +51,7 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Some of the projects are from school and some are on my own time.
+            A mix of NASA challenges, robotics stewardship, financial AI, and immersive learning tools — all documented and open.
           </p>
         </div>
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
@@ -60,7 +64,7 @@ export default async function ProjectsPage() {
           </Card>
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2].map((project) => (
+            {spotlights.map((project) => (
               <Card key={project.slug}>
                 <Article project={project} views={views[project.slug] ?? 0} />
               </Card>

@@ -12,11 +12,11 @@ export const metadata: Metadata = {
     default: "thetopham.com",
     template: "%s | thetopham.com",
   },
-  description: "Computer Science Student",
+  description: "Robotics • AR/VR • AI/Finance | CS @ CU Boulder",
   openGraph: {
     title: "thetopham.com",
     description:
-      "Computer Science Student ",
+      "Robotics • AR/VR • AI/Finance | CS @ CU Boulder",
     url: "https://thetopham.com",
     siteName: "thetopham.com",
     images: [

@@ -11,7 +11,7 @@ Building clean, useful tools — and learning in public.
 #### 🧩 Highlights  
 
 <details>
-<summary>🛰️ <b>NASA SUITS 2026 — <i>TUXEDO AI/AGR System</i></b></summary>
+<summary>🛰️ <b>NASA SUITS 2026 — <i>TUXEDO AI/VR System</i></b></summary>
 
 **Role:** Proposal Lead & AI/VR Systems Architect  
 **Focus:** Integrating offline AI, rover autonomy, and AR overlays for EVA safety.  

@@ -1,0 +1,23 @@
+---
+title: AI Radar
+description: GPT-powered radar that digests 200+ RSS feeds and ships a daily intelligence brief to builders and researchers.
+date: "2024-07-10"
+url: https://github.com/thetopham/ai-radar
+published: true
+repository: thetopham/ai-radar
+---
+
+AI Radar watches the firehose of technical news so humans can stay focused.
+
+## Pipeline
+
+1. **Ingestion.** Cron workers fan out across 200+ RSS feeds, normalize the payloads, and store embeddings in Supabase.
+2. **Filtering.** A scoring agent ranks stories by novelty, domain relevance, and overlap with recent briefs.
+3. **Summaries.** GPT-4o-mini drafts concise blurbs with citations and tags so readers can follow up quickly.
+4. **Delivery.** A Next.js dashboard and email digest ship each morning with a “need-to-know” view.
+
+## Notes
+
+- Heavily typed TypeScript codebase with background jobs running on Vercel Cron + Supabase Edge Functions.
+- Built custom evaluation harnesses to keep hallucinations low and highlight uncertain summaries.
+- Adopted automated screenshot previews to make the reading experience visual and scannable.

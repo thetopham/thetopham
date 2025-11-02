@@ -1,0 +1,21 @@
+---
+title: TradingView Bot
+description: Automation that turns TradingView alerts into disciplined trades with built-in risk controls and journaling.
+date: "2023-11-05"
+url: https://github.com/thetopham/tradingview-bot
+published: true
+repository: thetopham/tradingview-bot
+---
+
+Algo tooling that keeps emotions out of the loop.
+
+## Features
+
+- Listens to TradingView webhooks, enriches the payload, and routes them into structured orders.
+- Enforces risk parameters (max loss, stop placement, exposure) before any action is sent to the broker.
+- Streams executions to a Supabase warehouse for journaling, tags, and performance dashboards.
+- Ships alerts to Telegram and Discord so human teammates can monitor in real time.
+
+## Tech stack
+
+Python, FastAPI, Docker, Supabase, Redis, and a sprinkle of lightweight React for control panels.

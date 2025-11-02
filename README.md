@@ -13,9 +13,9 @@ Building clean, useful tools — and learning in public.
 <details>
 <summary>🛰️ <b>NASA SUITS 2026 — <i>TUXEDO AI/AGR System</i></b></summary>
 
-**Role:** Proposal Lead & AI/AGR Systems Architect  
+**Role:** Proposal Lead & AI/VR Systems Architect  
 **Focus:** Integrating offline AI, rover autonomy, and AR overlays for EVA safety.  
-**Tech:** TypeScript • Node.js • Unity • WebSocket • Offline LLMs  
+**Tech:** AI • VR • Unreal • WebSocket • Offline LLMs  
 🔗 [View Project](https://github.com/nasa-suits-challenge/suits-2026)
 </details>
 
@@ -24,7 +24,7 @@ Building clean, useful tools — and learning in public.
 
 Voice-driven Socratic mentor platform blending philosophy, dialogue, and spatial learning.  
 **Goal:** Build an immersive academy where users converse with historical mentors like Socrates and Galileo.  
-**Tech:** Unity • C# • Whisper • GPT-4-Turbo • XR Interaction Toolkit  
+**Tech:** MetaHorizon • TypeScript • Gemini-2.5-flash-native-audio • XR Interaction Toolkit  
 🔗 [Repo](https://github.com/thetopham/school-of-the-ancients-vr)
 </details>
 
@@ -33,16 +33,17 @@ Voice-driven Socratic mentor platform blending philosophy, dialogue, and spatial
 
 Python automation that reads TradingView charts, analyzes trends, and logs ai decisions.  
 **Goal:** Assist futures traders with AI-driven strategy and alert pipelines.  
-**Tech:** Python • FastAPI • Supabase • Webhooks • n8n  
+**Tech:** Python • gpt-5/gemini-2.5/claude-opus-4.1/grok-4/deepseek-v3.1 • Supabase • TradingView • n8n  
 🔗 [Repo](https://github.com/thetopham/tradingview-bot)
 </details>
 
 <details>
 <summary>🔧 <b>CU Robotics</b></summary>
 
-Hardware and embedded experiments exploring autonomy, perception, and actuation.  
-**Goal:** Develop sensor-fusion pipelines and control systems for small-scale robotic platforms.  
-**Tech:** C++ • ROS2 • ESP32 • LIDAR • OpenCV  
+RoboMaster competition team focused on autonomous robotics and embedded systems.  
+**Contribution:** Authored organizational documentation for new members and technical guides across multiple repos — `hive-rs`, `swarm`, `waggle`, and `firmware`.  
+**Goal:** Standardize onboarding and ensure long-term maintainability of team software and hardware systems.  
+**Tech:** Python • Rust • TypeScript • C • JupyterNotebook • C++  
 🔗 [Org](https://github.com/CU-Robotics)
 </details>
 
@@ -51,7 +52,7 @@ Hardware and embedded experiments exploring autonomy, perception, and actuation.
 
 RSS → GPT pipeline that summarizes daily AI research and news feeds.  
 **Goal:** Create a minimal daily brief powered by LLM summarization and content filtering.  
-**Tech:** Python • Feedparser • OpenAI API • Supabase  
+**Tech:** Python • Feedparser • GithubActions
 🔗 [Repo](https://github.com/thetopham/ai-radar)
 </details>
 

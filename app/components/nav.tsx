@@ -46,14 +46,22 @@ export const Navigation: React.FC = () => {
 						>
 							ai
 						</Link>
-						<Link
-							href="/contact"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
-						>
-							contact
-						</Link>
-						
-					</div>
+                                                <Link
+                                                        href="/contact"
+                                                        className="duration-200 text-zinc-400 hover:text-zinc-100"
+                                                >
+                                                        contact
+                                                </Link>
+                                                <Link
+                                                        href="https://thetopham.github.io/views/resume.html"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="duration-200 text-zinc-400 hover:text-zinc-100"
+                                                >
+                                                        resume
+                                                </Link>
+
+                                        </div>
 
 					<Link
 						href="/"

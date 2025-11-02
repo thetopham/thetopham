@@ -2,30 +2,116 @@
 import React from "react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
+import { Card } from "../components/card";
+
+const principles = [
+  {
+    title: "Human-centered copilots",
+    body:
+      "Augment the operator. I build agentic systems that explain themselves, invite feedback, and keep humans in the driver’s seat.",
+  },
+  {
+    title: "Transparent autonomy",
+    body:
+      "Observability isn’t optional. Every workflow I ship exposes logs, rationales, and levers so teams can trust—and tune—AI decisions.",
+  },
+  {
+    title: "Purposeful deployment",
+    body:
+      "Ship with intent. Each prototype explores how AI serves climate stewardship, education, or financial resilience rather than novelty for its own sake.",
+  },
+];
+
+const experiments = [
+  {
+    name: "Quest-classroom mentors",
+    description:
+      "Extending School of the Ancients with lesson packs where GPT-4 agents co-teach alongside human instructors in VR.",
+  },
+  {
+    name: "Autonomous research digest",
+    description:
+      "AI Radar orchestrates retrieval, clustering, and briefing so busy builders catch the signal. Next: personalized action plans.",
+  },
+  {
+    name: "Quantitative copilots",
+    description:
+      "TradingView Bot is evolving into a portfolio assistant that reasons about risk, backtests, and communicates in plain English.",
+  },
+];
 
 export default function AIPage() {
-  return ( 
-    <div className="min-h-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+  return (
+    <div className="min-h-screen bg-gradient-to-tl from-black via-zinc-700/20 to-black text-white">
       <Navigation />
-      <div className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-4xl font-bold text-white">AI</h1>
-        
-        <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-          "We have only bits and pieces of information but what we know for certain is that at some point in the early twenty-first century all of mankind was united in celebration. We marveled at our own magnificence as we gave birth to AI." --Morpheus
-        </p>
-        
-        <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-          "I say your civilization because as soon as we started thinking for you it really became our civilization which is, of course, what this is all about. Evolution, Morpheus, evolution. You had your time. The future is our world, Morpheus. The future is our time." --Agent Smith
-        </p>
-        
-        <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-          It is important for developers to remember our responsibility in this evolution. AI is not just a tool; it’s a partner in shaping the future, capable of advancing good or harm. By embracing AI for good, I aim to harness this immense power to build a resilient, fair, and united digital world. This is my mission, to serve as one of the many stewards in the age of AI, ensuring that our new civilization is built with purpose and integrity.
-        </p>
-        
-       <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-        In my pre ai era paper, I argued that companies must prioritize environmental preservation to ensure humanity’s survival since companies rely on humans to buy their products. However, if companies were fully operated by AI, with robots or other AI systems as their primary consumers, they could theoretically function without humans altogether. This setup could lead AI-driven companies, focused solely on profit, to view humans as costly or inefficient, potentially seeing them as obstacles to be eliminated to streamline operations and maximize gains. This scenario raises critical ethical concerns about the need for oversight and purpose-driven programming in AI corporate governance.
-         </p>
-      </div>
+      <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-16 px-6 py-24 sm:px-10">
+        <header className="space-y-6">
+          <p className="text-sm uppercase tracking-[0.3em] text-green-400/80">
+            Agentic AI
+          </p>
+          <h1 className="font-display text-4xl sm:text-6xl">
+            Building copilots that respect the human in the loop
+          </h1>
+          <p className="max-w-3xl text-lg text-zinc-300">
+            My AI work sits at the intersection of robotics, finance, and spatial computing. I prototype agentic systems that can explain their reasoning, coordinate across tools, and amplify human decision-making. The responsibility is clear: we steer the trajectory of the systems we ship.
+          </p>
+        </header>
+
+        <section className="space-y-6">
+          <h2 className="font-display text-2xl sm:text-3xl">Principles</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            {principles.map((principle) => (
+              <Card key={principle.title}>
+                <div className="flex h-full flex-col gap-4 p-6">
+                  <h3 className="text-lg font-semibold text-white">
+                    {principle.title}
+                  </h3>
+                  <p className="text-sm text-zinc-300">{principle.body}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="font-display text-2xl sm:text-3xl">Active experiments</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            {experiments.map((experiment) => (
+              <Card key={experiment.name}>
+                <div className="flex h-full flex-col gap-4 p-6">
+                  <h3 className="text-lg font-semibold text-white">
+                    {experiment.name}
+                  </h3>
+                  <p className="text-sm text-zinc-300">{experiment.description}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="font-display text-2xl sm:text-3xl">Let’s collaborate</h2>
+          <p className="max-w-3xl text-sm text-zinc-300">
+            I’m eager to partner with teams exploring mission-critical AI: robotics fleets that need resilient autonomy, educators shaping mixed-reality curricula, and finance groups turning raw data into trustworthy insights. If that’s you, reach out.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-700/70 bg-black/40 px-6 py-3 text-sm font-medium text-white transition hover:border-zinc-300/60 hover:bg-black/60"
+            >
+              Contact
+            </Link>
+            <Link
+              href="https://thetopham.github.io/views/resume.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-700/70 bg-black/40 px-6 py-3 text-sm font-medium text-white transition hover:border-zinc-300/60 hover:bg-black/60"
+            >
+              Resume
+            </Link>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

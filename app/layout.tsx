@@ -12,11 +12,11 @@ export const metadata: Metadata = {
     default: "thetopham.com",
     template: "%s | thetopham.com",
   },
-  description: "Computer Science Student",
+  description: "Matt Topham – Robotics • AR/VR • AI/Finance",
   openGraph: {
     title: "thetopham.com",
     description:
-      "Computer Science Student ",
+      "Matt Topham – Robotics • AR/VR • AI/Finance",
     url: "https://thetopham.com",
     siteName: "thetopham.com",
     images: [
@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "thetopham",
+    description: "Matt Topham – Robotics • AR/VR • AI/Finance",
     card: "summary_large_image",
   },
   icons: {

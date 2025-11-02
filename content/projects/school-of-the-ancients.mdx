@@ -1,0 +1,32 @@
+---
+title: School of the Ancients (VR + AI)
+description: Voice-driven Socratic mentor for Quest headsets that pairs spatial storytelling with GPT-4 agents to coach students through philosophy and problem-solving drills.
+date: "2024-03-01"
+url: https://github.com/thetopham/school-of-the-ancients-vr
+published: true
+repository: thetopham/school-of-the-ancients-vr
+---
+
+![School of the Ancients VR](https://raw.githubusercontent.com/thetopham/school-of-the-ancients-vr/main/docs/ancients-hero.jpg)
+
+## Overview
+School of the Ancients is a virtual reality learning space that lets students sit with Socrates and Plato inside a stylized agora. Built with Unity for Meta Quest headsets, the project combines spatial storytelling with GPT-4 powered mentors that guide learners through Socratic dialogues and reflective prompts.
+
+The experience is designed to feel more like a live seminar than a static VR scene. Each mentor agent remembers the conversation, adapts its prompts, and references artifacts in the environment to keep the student engaged. I tuned custom GPT-4 system prompts, handled streaming speech-to-text, and orchestrated responses with expressive avatars that breathe, gesture, and react in time with the dialogue.
+
+## Why it matters
+Traditional VR learning apps often rely on scripted narration. School of the Ancients flips that script by treating AI as a co-instructor. The agentic stack supports:
+
+- **Conversational tutoring** with dynamic follow-up questions and corrective feedback.
+- **Context-aware cues** that highlight relevant scrolls, statues, and diagrams around the learner.
+- **Session logging** so teachers can review transcripts and tailor future lessons.
+
+The prototype debuted in class demos, where it became a launchpad for discussing how embodied AI mentors might coexist with human instructors.
+
+## Tech highlights
+- Unity, C#, and the XR Interaction Toolkit for world building and interaction design.
+- OpenAI GPT-4 + Whisper for on-device speech capture, transcription, and response generation.
+- Custom middleware that synchronizes LLM output with avatar animation, mouth movement, and haptic events.
+
+## Next steps
+I'm exploring lesson packs for astronomy and robotics labs, plus multiplayer cohorts so students can collaborate with AI mentors in the same spatial session.

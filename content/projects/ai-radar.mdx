@@ -1,0 +1,28 @@
+---
+title: AI Radar
+description: Daily AI briefing pipeline that converts RSS feeds into GPT summaries, surfacing the most actionable updates for builders.
+date: "2024-06-15"
+url: https://github.com/thetopham/ai-radar
+published: true
+repository: thetopham/ai-radar
+---
+
+![AI Radar](https://raw.githubusercontent.com/thetopham/ai-radar/main/docs/ai-radar-dashboard.png)
+
+## Overview
+AI Radar is a personal intelligence feed that keeps me informed without doomscrolling. The system monitors dozens of AI research, product, and policy sources via RSS. Each article is deduplicated, scored, and summarized with GPT so I can skim the signal instead of parsing every headline.
+
+A lightweight UI groups stories by theme and importance. Summaries include direct quotes, context on why it matters, and suggested follow-up actions (ship something, explore an API, share with collaborators). I can triage from mobile or desktop and archive noteworthy updates into my knowledge base.
+
+## Pipeline
+- **Fetch**: Scheduled workers ingest new RSS items and normalize metadata.
+- **Enrich**: GPT embeddings power semantic clustering while GPT-4 produces concise summaries.
+- **Deliver**: Results render in a Next.js dashboard and push to email digests for mornings when I'm away from my desk.
+
+## Tech highlights
+- Next.js, Tailwind, and Supabase for the dashboard and storage.
+- Python workers running on Fly.io with Redis for caching.
+- OpenAI GPT-4 + tiktoken for summarization and cost control.
+
+## Why it matters
+Building in AI means the landscape shifts daily. AI Radar is my co-pilot for staying sharp, and a proving ground for agentic research assistants I'm sharing with the community.

@@ -1,0 +1,28 @@
+---
+title: TradingView Bot
+description: Automated TradingView alert listener that routes signals into brokerage APIs, tracks performance, and keeps humans in the loop with transparent dashboards.
+date: "2024-05-10"
+url: https://github.com/thetopham/tradingview-bot
+published: true
+repository: thetopham/tradingview-bot
+---
+
+![TradingView Bot](https://raw.githubusercontent.com/thetopham/tradingview-bot/main/docs/tradingview-bot.png)
+
+## Overview
+TradingView Bot is my automation backbone for testing algorithmic strategies without staring at charts all day. It ingests TradingView webhooks, validates payloads, and translates them into actionable orders against supported broker APIs. When a signal fires, the bot executes the trade, annotates context, and posts a structured update to my monitoring stack.
+
+I leaned into reliability: queueing, retries, and guardrails prevent duplicate executions, while a notification layer pushes summaries to Discord and email. The bot also stores every decision in a Postgres warehouse so I can review win rates, drawdowns, and per-strategy performance at a glance.
+
+## Capabilities
+- **Multi-strategy orchestration** with per-symbol risk settings and capital allocation rules.
+- **Paper & live trading modes** so I can graduate strategies gradually.
+- **Pluggable analytics** that export CSVs, dashboards, and weekly recaps for accountability.
+
+## Tech highlights
+- Python, FastAPI, and Celery for asynchronous job handling.
+- TradingView webhooks + Alpaca Brokerage API integration.
+- Postgres, SQLModel, and Supabase for persistence and visualization.
+
+## Why it matters
+Automated execution frees me to focus on research while maintaining discipline. The system has evolved alongside my finance coursework, giving me a sandbox to test quantitative ideas safely before touching real capital.

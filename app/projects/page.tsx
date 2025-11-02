@@ -6,7 +6,6 @@ import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
-import { Eye } from "lucide-react";
 
 const redis = Redis.fromEnv();
 
@@ -22,15 +21,22 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "Summerboard")!;
-  const top2 = allProjects.find((project) => project.slug === "thetophamcom")!;
+  const featuredSlug = "school-of-the-ancients";
+  const spotlightSlugs = ["tradingview-bot", "ai-radar"];
+
+  const featured = allProjects.find((project) => project.slug === featuredSlug)!;
+  const spotlight = spotlightSlugs
+    .map((slug) => allProjects.find((project) => project.slug === slug))
+    .filter(
+      (project): project is typeof allProjects[number] => Boolean(project),
+    );
 
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
       (project) =>
         project.slug !== featured.slug &&
-        project.slug !== top2.slug,
+        !spotlightSlugs.includes(project.slug),
     )
     .sort(
       (a, b) =>
@@ -60,9 +66,11 @@ export default async function ProjectsPage() {
           </Card>
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2].map((project) => (
+            {spotlight.map((project) => (
               <Card key={project.slug}>
-                <Article project={project} views={views[project.slug] ?? 0} />
+                <Link href={`/projects/${project.slug}`}>
+                  <Article project={project} views={views[project.slug] ?? 0} />
+                </Link>
               </Card>
             ))}
           </div>

@@ -3,28 +3,98 @@ import React from "react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 
+const pillars = [
+  {
+    title: "North star",
+    description:
+      "Treat AI as a cofounder, not a bolt-on feature. Every experiment starts with a real operator workflow—astronauts in EVA suits, traders staring at heatmaps, students debating Socrates—and ends with software that lightens their load.",
+  },
+  {
+    title: "Agentic tooling",
+    description:
+      "I prototype systems that perceive, reason, and act. That means chaining speech, vision, simulation, and planning models, then instrumenting them with telemetry so we can trust the outcomes.",
+  },
+  {
+    title: "Responsible deployment",
+    description:
+      "Safety is a product requirement. I map failure modes, build human-in-the-loop controls, and make sure the models can run offline when the mission—spacewalks, field robotics, or finance—demands resilience.",
+  },
+];
+
+const experiments = [
+  "EVA copilots that blend computer vision, natural language planning, and heads-up displays.",
+  "Multimodal trading agents that read order flow, summarize edge, and journal decisions.",
+  "Spatial learning mentors that let students interrogate primary sources inside VR.",
+];
+
 export default function AIPage() {
-  return ( 
+  return (
     <div className="min-h-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <Navigation />
-      <div className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-4xl font-bold text-white">AI</h1>
-        
-        <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-          "We have only bits and pieces of information but what we know for certain is that at some point in the early twenty-first century all of mankind was united in celebration. We marveled at our own magnificence as we gave birth to AI." --Morpheus
-        </p>
-        
-        <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-          "I say your civilization because as soon as we started thinking for you it really became our civilization which is, of course, what this is all about. Evolution, Morpheus, evolution. You had your time. The future is our world, Morpheus. The future is our time." --Agent Smith
-        </p>
-        
-        <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-          It is important for developers to remember our responsibility in this evolution. AI is not just a tool; it’s a partner in shaping the future, capable of advancing good or harm. By embracing AI for good, I aim to harness this immense power to build a resilient, fair, and united digital world. This is my mission, to serve as one of the many stewards in the age of AI, ensuring that our new civilization is built with purpose and integrity.
-        </p>
-        
-       <p className="mt-6 text-center text-lg leading-8 text-zinc-300 max-w-2xl px-4 py-4 bg-black/30 rounded-lg shadow-lg">
-        In my pre ai era paper, I argued that companies must prioritize environmental preservation to ensure humanity’s survival since companies rely on humans to buy their products. However, if companies were fully operated by AI, with robots or other AI systems as their primary consumers, they could theoretically function without humans altogether. This setup could lead AI-driven companies, focused solely on profit, to view humans as costly or inefficient, potentially seeing them as obstacles to be eliminated to streamline operations and maximize gains. This scenario raises critical ethical concerns about the need for oversight and purpose-driven programming in AI corporate governance.
-         </p>
+      <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-16 px-6 pb-20 pt-32">
+        <header className="space-y-6 text-center md:text-left">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-300/80">
+            The AI Lab
+          </p>
+          <h1 className="text-4xl font-semibold text-white sm:text-5xl">
+            Building agentic systems that work in the real world.
+          </h1>
+          <p className="text-lg text-zinc-300 md:max-w-3xl">
+            This is where I document the experiments that connect robotics, finance, and mixed reality. Each prototype pairs frontier models with disciplined engineering so the humans in the loop stay informed, in control, and inspired.
+          </p>
+        </header>
+
+        <section className="grid gap-6 md:grid-cols-3">
+          {pillars.map((pillar) => (
+            <div
+              key={pillar.title}
+              className="rounded-3xl border border-white/10 bg-black/40 p-6 shadow-lg backdrop-blur"
+            >
+              <h2 className="text-lg font-semibold text-white">{pillar.title}</h2>
+              <p className="mt-3 text-sm text-zinc-300">{pillar.description}</p>
+            </div>
+          ))}
+        </section>
+
+        <section className="rounded-3xl border border-white/5 bg-black/30 p-8 shadow-lg backdrop-blur">
+          <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+            What I’m exploring now
+          </h2>
+          <p className="mt-3 text-base text-zinc-300">
+            Pull requests, lab notes, and research threads currently on the bench.
+          </p>
+          <ul className="mt-6 space-y-4 text-sm text-zinc-200">
+            {experiments.map((experiment) => (
+              <li key={experiment} className="flex gap-3">
+                <span className="mt-1 inline-block h-2 w-2 flex-shrink-0 rounded-full bg-emerald-400" aria-hidden />
+                <span>{experiment}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-3xl border border-white/5 bg-black/40 p-6 shadow-lg backdrop-blur">
+            <h2 className="text-lg font-semibold text-white">Guiding principles</h2>
+            <ul className="mt-4 space-y-3 text-sm text-zinc-300">
+              <li>Measure everything—latency, accuracy, and operator trust.</li>
+              <li>Keep humans in the loop with reversible actions and clear audit trails.</li>
+              <li>Prefer open, portable stacks so teams can deploy offline and own their data.</li>
+            </ul>
+          </div>
+          <div className="rounded-3xl border border-white/5 bg-black/20 p-6 backdrop-blur">
+            <h2 className="text-lg font-semibold text-white">Let’s team up</h2>
+            <p className="mt-4 text-sm text-zinc-300">
+              I collaborate with research labs, robotics teams, and funds who want to blend AI reasoning with real-world hardware or market workflows. If that’s you, reach out and let’s scope a build.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex items-center rounded-full border border-emerald-400/60 px-5 py-2 text-xs font-semibold uppercase tracking-wide text-emerald-200 transition hover:border-emerald-300 hover:text-emerald-100"
+            >
+              Start a conversation
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   );

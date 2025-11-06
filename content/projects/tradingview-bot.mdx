@@ -1,0 +1,29 @@
+---
+title: TradingView Bot
+description: Multimodel automation that reads TradingView charts, reasons about market structure, and journals high-confidence setups for futures traders.
+date: "2024-09-05"
+url: https://github.com/thetopham/tradingview-bot
+published: true
+repository: thetopham/tradingview-bot
+---
+
+![TradingView Bot pipeline](https://raw.githubusercontent.com/thetopham/tradingview-bot/main/docs/pipeline.png)
+
+## Overview
+
+Futures traders spend hours screenshotting charts, annotating levels, and logging why a trade mattered. I built TradingView Bot to automate the grind so humans can focus on strategy.
+
+## Architecture
+
+- **Screen understanding.** The bot captures TradingView charts, runs vision models to read price action, and normalizes the data into structured candles.
+- **Agentic reasoning.** GPT-5, Gemini 2.5, Claude Opus, Grok, and DeepSeek collaborate via a weighted router to summarize trends, risk levels, and invalidation conditions.
+- **Event-driven automation.** Webhooks and n8n orchestrate alerts, journaling, and Supabase storage so every decision has receipts.
+- **Human-in-the-loop controls.** Traders approve or reject suggested plays; the system learns from feedback and adjusts confidence thresholds.
+
+## Results
+
+- Reduced manual journaling time by 70% for early users.
+- Delivered consistent trade narratives that can be audited post-session.
+- Created a foundation for real-time market cognition experiments.
+
+[Browse the code](https://github.com/thetopham/tradingview-bot)

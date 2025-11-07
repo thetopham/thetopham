@@ -8,30 +8,64 @@ module.exports = {
 		"content/**/*.mdx",
 	],
 
-	theme: {
-		extend: {
-			typography: {
-				DEFAULT: {
-					css: {
-						"code::before": {
-							content: '""',
-						},
-						"code::after": {
-							content: '""',
-						},
-					},
-				},
-				quoteless: {
-					css: {
-						"blockquote p:first-of-type::before": { content: "none" },
-						"blockquote p:first-of-type::after": { content: "none" },
-					},
-				},
-			},
-			fontFamily: {
-				sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
-				display: ["var(--font-calsans)"],
-			},
+        theme: {
+                extend: {
+                        typography: ({ theme }) => ({
+                                DEFAULT: {
+                                        css: {
+                                                "code::before": {
+                                                        content: '""',
+                                                },
+                                                "code::after": {
+                                                        content: '""',
+                                                },
+                                                a: {
+                                                        color: theme("colors.emerald.600"),
+                                                        fontWeight: "600",
+                                                        textDecoration: "underline",
+                                                        textDecorationColor: theme("colors.emerald.400"),
+                                                        textDecorationThickness: "2px",
+                                                        textUnderlineOffset: "4px",
+                                                        transitionProperty: "color, text-decoration-color",
+                                                        transitionTimingFunction: theme("transitionTimingFunction.out"),
+                                                        transitionDuration: theme("transitionDuration.150"),
+                                                        "&:hover": {
+                                                                color: theme("colors.emerald.700"),
+                                                                textDecorationColor: theme("colors.emerald.500"),
+                                                        },
+                                                },
+                                        },
+                                },
+                                invert: {
+                                        css: {
+                                                a: {
+                                                        color: theme("colors.emerald.300"),
+                                                        fontWeight: "600",
+                                                        textDecoration: "underline",
+                                                        textDecorationColor: theme("colors.emerald.400"),
+                                                        textDecorationThickness: "2px",
+                                                        textUnderlineOffset: "4px",
+                                                        transitionProperty: "color, text-decoration-color",
+                                                        transitionTimingFunction: theme("transitionTimingFunction.out"),
+                                                        transitionDuration: theme("transitionDuration.150"),
+                                                        "&:hover": {
+                                                                color: theme("colors.emerald.200"),
+                                                                textDecorationColor: theme("colors.emerald.300"),
+                                                        },
+                                                },
+                                        },
+                                },
+                                quoteless: {
+                                        css: {
+                                                "blockquote p:first-of-type::before": { content: "none" },
+                                                "blockquote p:first-of-type::after": { content: "none" },
+                                        },
+                                },
+                        }),
+                        fontFamily: {
+                                sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+                                display: ["var(--font-calsans)"],
+                        },
 			backgroundImage: {
 				"gradient-radial":
 					"radial-gradient(50% 50% at 50% 50%, var(--tw-gradient-stops))",

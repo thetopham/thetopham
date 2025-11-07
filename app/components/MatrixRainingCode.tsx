@@ -2,7 +2,11 @@
 
 import React, { useEffect, useRef } from "react";
 
-const MatrixRainingCode: React.FC = () => {
+type MatrixRainingCodeProps = {
+  className?: string;
+};
+
+const MatrixRainingCode: React.FC<MatrixRainingCodeProps> = ({ className }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -23,25 +27,23 @@ const MatrixRainingCode: React.FC = () => {
     let lastFrameTime = Date.now();
 
     const draw = () => {
-  
-  ctx.fillStyle = "rgba(0, 0, 0, 0.1)"; 
-  ctx.fillRect(0, 0, width, height);
+      ctx.fillStyle = "rgba(0, 0, 0, 0.28)";
+      ctx.fillRect(0, 0, width, height);
 
-  ctx.fillStyle = "#0f0"; 
-  ctx.font = "15px monospace";
-  for (let i = 0; i < drops.length; i++) {
-    const text = charArray[Math.floor(Math.random() * charArray.length)];
-    ctx.fillText(text, i * 20, drops[i] * 20);
+      ctx.fillStyle = "rgba(34, 197, 94, 0.45)";
+      ctx.font = "15px monospace";
 
-   
-    if (drops[i] * 20 > height && Math.random() > 0.975) {
-      drops[i] = 0;
-    }
+      for (let i = 0; i < drops.length; i++) {
+        const text = charArray[Math.floor(Math.random() * charArray.length)];
+        ctx.fillText(text, i * 20, drops[i] * 20);
 
-    drops[i]++;
-  }
-};
+        if (drops[i] * 20 > height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
 
+        drops[i]++;
+      }
+    };
 
     const animate = () => {
       const currentTime = Date.now();
@@ -76,7 +78,21 @@ const MatrixRainingCode: React.FC = () => {
     };
   }, []);
 
-  return <canvas className="matrix-canvas fixed top-0 left-0 z-[-1]" ref={canvasRef}></canvas>;
+  const classes = [
+    "matrix-canvas",
+    "fixed",
+    "inset-0",
+    "w-full",
+    "h-full",
+    "pointer-events-none",
+    "z-0",
+    "opacity-20",
+    className,
+  ]
+    .filter((cls): cls is string => Boolean(cls))
+    .join(" ");
+
+  return <canvas ref={canvasRef} className={classes}></canvas>;
 };
 
 export default MatrixRainingCode;

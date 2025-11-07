@@ -6,10 +6,17 @@ export default function ProjectsLayout({
   children,
 }: { children: React.ReactNode }) {
   return (
-    <div className="relative min-h-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black overflow-x-hidden">
-      <MatrixRainingCode /> {/* Matrix rain effect */}
-      <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
-      {children}
+    <div className="relative min-h-screen overflow-hidden bg-black">
+      <MatrixRainingCode />
+      <Particles
+        className="pointer-events-none fixed inset-0 z-10 animate-fade-in"
+        quantity={100}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 z-20 bg-gradient-to-tl from-black/95 via-zinc-950/75 to-black/95"
+      />
+      <div className="relative z-30">{children}</div>
     </div>
   );
 }

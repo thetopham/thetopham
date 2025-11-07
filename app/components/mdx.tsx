@@ -62,15 +62,15 @@ const components = {
 			{...props}
 		/>
 	),
-	a: ({ className, ...props }) => (
-		<Link
-			className={clsx(
-				"font-medium text-zinc-900 underline underline-offset-4",
-				className,
-			)}
-			{...props}
-		/>
-	),
+        a: ({ className, ...props }) => (
+                <Link
+                        className={clsx(
+                                "font-medium text-blue-400 underline underline-offset-4 transition-colors hover:text-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400",
+                                className,
+                        )}
+                        {...props}
+                />
+        ),
 	p: ({ className, ...props }) => (
 		<p
 			className={clsx("leading-7 [&:not(:first-child)]:mt-6", className)}

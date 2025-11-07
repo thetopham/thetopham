@@ -5,21 +5,43 @@ import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
-import { Redis } from "@upstash/redis";
-
-const redis = Redis.fromEnv();
+import { getRedisClient } from "@/util/redis";
 
 export const revalidate = 60;
 
 export default async function ProjectsPage() {
-  const views = (
-    await redis.mget<number[]>(
-      ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
-    )
-  ).reduce((acc, v, i) => {
-    acc[allProjects[i].slug] = v ?? 0;
+  const redis = getRedisClient();
+  const slugs = allProjects.map((project) => project.slug);
+
+  const views = slugs.reduce((acc, slug) => {
+    acc[slug] = 0;
     return acc;
   }, {} as Record<string, number>);
+
+  if (redis && slugs.length > 0) {
+    try {
+      const values = await Promise.all(
+        slugs.map(async (slug) => {
+          try {
+            return await redis.get<number>(
+              ["pageviews", "projects", slug].join(":"),
+            );
+          } catch (error) {
+            console.error("Failed to load view count", { slug, error });
+            return null;
+          }
+        }),
+      );
+
+      values.forEach((value, index) => {
+        const slug = slugs[index];
+        if (!slug) return;
+        views[slug] = value ?? 0;
+      });
+    } catch (error) {
+      console.error("Failed to load project view counts", error);
+    }
+  }
 
   const pinnedSlugs = [
     "nasa-suits-2026",

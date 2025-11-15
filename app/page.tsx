@@ -20,22 +20,61 @@ const navigation: {
 const highlights = [
   {
     title: "NASA SUITS 2026 — TUXEDO AI/VR System",
-    description:
-      "Proposal lead building an offline EVA copilot that fuses rover autonomy, AI copilots, and mixed-reality overlays for astronaut safety.",
-    href: "/projects/nasa-suits-2026",
+    role: "Proposal Lead & AI/VR Systems Architect",
+    focus:
+      "Integrating offline AI, rover autonomy, and AR overlays for EVA safety.",
+    tech: "AI • VR • Unreal • WebSocket • Offline LLMs",
+    cta: "View Project",
+    href: "https://github.com/nasa-suits-challenge/suits-2026",
   },
   {
     title: "School of the Ancients (VR + AI)",
-    description:
-      "Voice-driven Socratic mentors built in VR so learners can debate history’s great thinkers using real-time spatial interfaces.",
-    href: "/projects/school-of-the-ancients",
+    role: "Founder / Builder",
+    focus:
+      "Voice-driven Socratic mentor platform blending philosophy, dialogue, and spatial learning.",
+    tech: "MetaHorizon • TypeScript • Gemini-2.5-native-audio • XR Toolkit",
+    cta: "View Repo",
+    href: "https://github.com/thetopham/school-of-the-ancients-vr",
   },
   {
     title: "TradingView Bot",
-    description:
-      "Multimodel agentic pipeline that reads charts, reasons about market structure, and logs high-confidence trade setups.",
-    href: "/projects/tradingview-bot",
+    role: "Automation & Agentic Research",
+    focus:
+      "Python automation that reads TradingView charts, analyzes trends, and logs AI decisions for futures traders.",
+    tech:
+      "Python • gpt-5/gemini-2.5/claude-opus-4.1/grok-4/deepseek-v3.1 • Supabase • TradingView • n8n",
+    cta: "View Repo",
+    href: "https://github.com/thetopham/tradingview-bot",
   },
+  {
+    title: "CU Robotics",
+    role: "Documentation & Systems",
+    focus:
+      "Authored onboarding and technical guides for RoboMaster teams across hive-rs, swarm, waggle, and firmware repos.",
+    tech: "Python • Rust • TypeScript • C • C++ • Jupyter",
+    cta: "View Org",
+    href: "https://github.com/CU-Robotics",
+  },
+  {
+    title: "AI Radar",
+    role: "Builder",
+    focus: "RSS → GPT pipeline summarizing daily AI research and news feeds.",
+    tech: "Python • Feedparser • GitHub Actions",
+    cta: "View Repo",
+    href: "https://github.com/thetopham/ai-radar",
+  },
+];
+
+const stack = [
+  "Python",
+  "TypeScript",
+  "React",
+  "Supabase",
+  "Node.js",
+  "Docker",
+  "Unity",
+  "Vercel",
+  "PostgreSQL",
 ];
 
 const focusAreas = [
@@ -121,9 +160,9 @@ export default function Home() {
         <section className="mx-auto w-full max-w-5xl px-6 pb-24">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="text-3xl font-semibold text-white sm:text-4xl">Featured builds</h2>
+              <h2 className="text-3xl font-semibold text-white sm:text-4xl">Highlights</h2>
               <p className="mt-3 max-w-2xl text-base text-zinc-400">
-                A snapshot of the systems I’m actively shipping—spanning EVA operations, immersive education, and autonomous finance tooling.
+                Pulled directly from my GitHub profile README—these are the agentic systems, immersive learning experiments, and robotics teams I actively support.
               </p>
             </div>
             <Link
@@ -133,26 +172,45 @@ export default function Home() {
               Browse all projects
             </Link>
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
             {highlights.map((item) => (
-              <Link
+              <a
                 key={item.title}
                 href={item.href}
+                target="_blank"
+                rel="noreferrer"
                 className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-black/40 p-6 shadow-lg backdrop-blur transition hover:border-emerald-400/60 hover:shadow-emerald-500/10"
               >
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-white group-hover:text-emerald-200">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-zinc-400 group-hover:text-zinc-200">
-                    {item.description}
-                  </p>
+                <div className="space-y-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200/70">{item.role}</p>
+                  <h3 className="text-2xl font-semibold text-white group-hover:text-emerald-200">{item.title}</h3>
+                  <p className="text-sm text-zinc-400 group-hover:text-zinc-200">{item.focus}</p>
+                  <p className="text-xs text-zinc-500">{item.tech}</p>
                 </div>
                 <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wide text-emerald-300/80">
-                  View case study →
+                  {item.cta} →
                 </span>
-              </Link>
+              </a>
             ))}
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-5xl px-6 pb-24">
+          <div className="rounded-3xl border border-white/5 bg-black/40 p-8 shadow-lg backdrop-blur">
+            <h2 className="text-2xl font-semibold text-white sm:text-3xl">Stack</h2>
+            <p className="mt-3 text-base text-zinc-400">
+              Tools I reach for most days—matching the shield badges from the README.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {stack.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-200"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -173,6 +231,44 @@ export default function Home() {
               ))}
             </ul>
           </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-5xl px-6 pb-24">
+          <div className="rounded-3xl border border-white/5 bg-black/40 p-8 shadow-lg backdrop-blur">
+            <h2 className="text-2xl font-semibold text-white sm:text-3xl">GitHub signal</h2>
+            <p className="mt-3 text-base text-zinc-400">
+              The same cards embedded on my README so you can skim commits, languages, and streaks without leaving the site.
+            </p>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=thetopham&show_icons=true&theme=tokyonight&hide_border=true"
+                alt="Matt's GitHub stats"
+                className="w-full rounded-xl border border-white/5 bg-black/40"
+              />
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=thetopham&layout=compact&theme=tokyonight&hide_border=true"
+                alt="Top languages"
+                className="w-full rounded-xl border border-white/5 bg-black/40"
+              />
+              <img
+                src="https://streak-stats.demolab.com?user=thetopham&theme=tokyonight&hide_border=true"
+                alt="GitHub streak"
+                className="w-full rounded-xl border border-white/5 bg-black/40"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-4xl px-6 pb-24 text-center">
+          <p className="text-sm uppercase tracking-[0.3em] text-emerald-200/70">Visitors</p>
+          <img
+            src="https://komarev.com/ghpvc/?username=thetopham&color=blueviolet&style=flat-square"
+            alt="Visitor count"
+            className="mx-auto mt-4"
+          />
+          <blockquote className="mt-8 text-xl text-zinc-200">
+            “Understanding people. Building things they want. Getting those things in front of them.”
+          </blockquote>
         </section>
       </main>
 

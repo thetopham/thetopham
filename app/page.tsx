@@ -21,7 +21,7 @@ const highlights = [
   {
     title: "NASA SUITS 2026 — TUXEDO AI/VR System",
     description:
-      "Proposal lead building an offline EVA copilot that fuses rover autonomy, AI copilots, and mixed-reality overlays for astronaut safety.",
+      "Authored the technical specifications section of the proposal that fuses rover autonomy, AI copilots, and mixed-reality overlays for astronaut safety.",
     href: "/projects/nasa-suits-2026",
   },
   {
@@ -39,7 +39,7 @@ const highlights = [
 ];
 
 const focusAreas = [
-  "Agentic AI systems that plan, reason, and build autonomously",
+  "Agentic AI systems",
   "Mixed-reality interfaces for robotics, space, and education",
   "Financial AI with real-time market cognition",
   "Pipelines that connect vision, voice, and reasoning across devices",
@@ -88,10 +88,10 @@ export default function Home() {
               Robotics • AI/Finance • AR/VR
             </p>
             <h1 className="text-4xl font-semibold text-zinc-100 sm:text-5xl md:text-6xl">
-              Building clean, useful tools — and learning in public.
+              Building clean, useful tools, and learning in public.
             </h1>
             <p className="max-w-2xl text-lg text-zinc-300">
-              I’m a Boulder-based engineer focused on agentic AI, robotics, and mixed reality. I lead teams that merge hardware, software, and design to build systems people trust—from EVA copilots to immersive learning environments.
+              I’m a Boulder-based engineer focused on agentic AI, robotics, and mixed reality. I work on projects that merge hardware, software, and design to build systems, from NASA projects to immersive learning environments.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -123,7 +123,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">Featured builds</h2>
               <p className="mt-3 max-w-2xl text-base text-zinc-400">
-                A snapshot of the systems I’m actively shipping—spanning EVA operations, immersive education, and autonomous finance tooling.
+                A snapshot of the systems I’m actively shipping, spanning NASA operations, immersive education, and autonomous finance bots.
               </p>
             </div>
             <Link

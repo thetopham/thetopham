@@ -1,7 +1,7 @@
 ### Matt Topham  
 
 **🤖 Robotics • 🧠 AI/Finance • 🕶️ AR/VR**  
-Building clean, useful tools — and learning in public.  
+Building clean, useful tools, and learning in public.  
 🎓 CS @ CU Boulder | Agentic AI & Mixed-Reality Interfaces  
 
 🌐 [Portfolio](https://thetopham.github.io) • 💼 [Resume](https://thetopham.github.io/views/resume.html) • 🛰️ [NASA SUITS 2026](https://github.com/nasa-suits-challenge/suits-2026)
@@ -72,7 +72,7 @@ RSS → GPT pipeline that summarizes daily AI research and news feeds.
 ---
 
 #### 🚀 Current Focus  
-- Agentic AI systems that plan, reason, and build autonomously  
+- Agentic AI systems 
 - Mixed-reality interfaces for robotics, space, and education  
 - Financial AI with real-time market cognition  
 - Building modular pipelines that connect vision, voice, and reasoning  

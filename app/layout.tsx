@@ -8,16 +8,15 @@ import MatrixRainingCode from './components/MatrixRainingCode';
 
 
 export const metadata: Metadata = {
-  title: {
+   title: {
     default: "thetopham.com",
     template: "%s | thetopham.com",
   },
-  description:
-    "Matt Topham – Robotics, AI/Finance, and AR/VR engineer building human-centered systems.",
+  description: "Computer Science Student",
   openGraph: {
     title: "thetopham.com",
     description:
-      "Matt Topham – Robotics, AI/Finance, and AR/VR engineer building human-centered systems.",
+      "Computer Science Student ",
     url: "https://thetopham.com",
     siteName: "thetopham.com",
     images: [

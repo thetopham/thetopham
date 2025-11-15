@@ -26,42 +26,29 @@ export const Navigation: React.FC = () => {
 						: "bg-zinc-900/500  border-zinc-800 "
 				}`}
 			>
-                                <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
-                                        <div className="flex flex-wrap items-center gap-6">
-                                                <Link
-                                                        href="/projects"
-                                                        className="uppercase tracking-wide text-xs text-zinc-400 transition hover:text-zinc-100"
-                                                >
-                                                        projects
-                                                </Link>
-                                                <Link
-                                                        href="/ai"
-                                                        className="uppercase tracking-wide text-xs text-zinc-400 transition hover:text-zinc-100"
-                                                >
-                                                        ai lab
-                                                </Link>
-                                                <Link
-                                                        href="/rise-of-man"
-                                                        className="uppercase tracking-wide text-xs text-zinc-400 transition hover:text-zinc-100"
-                                                >
-                                                        writing
-                                                </Link>
-                                                <Link
-                                                        href="/contact"
-                                                        className="uppercase tracking-wide text-xs text-zinc-400 transition hover:text-zinc-100"
-                                                >
-                                                        contact
-                                                </Link>
-                                                <a
-                                                        href="https://thetopham.github.io/views/resume.html"
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                        className="uppercase tracking-wide text-xs text-zinc-400 transition hover:text-zinc-100"
-                                                >
-                                                        resume
-                                                </a>
-
-                                        </div>
+				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
+					<div className="flex justify-between gap-8">
+					
+						<Link
+							href="/rise-of-man"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							rise of man
+						</Link>
+						<Link
+							href="/ai"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							ai
+						</Link>
+						<Link
+							href="/contact"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							contact
+						</Link>
+						
+					</div>
 
 					<Link
 						href="/"

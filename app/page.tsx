@@ -20,22 +20,56 @@ const navigation: {
 const highlights = [
   {
     title: "NASA SUITS 2026 — TUXEDO AI/VR System",
-    description:
-      "Proposal lead building an offline EVA copilot that fuses rover autonomy, AI copilots, and mixed-reality overlays for astronaut safety.",
-    href: "/projects/nasa-suits-2026",
+    role: "Proposal Lead & AI/VR Systems Architect",
+    focus:
+      "Integrating offline AI, rover autonomy, and AR overlays so astronauts get EVA copilots they can trust.",
+    tech: "AI • VR • Unreal • WebSocket • Offline LLMs",
+    href: "https://github.com/nasa-suits-challenge/suits-2026",
   },
   {
     title: "School of the Ancients (VR + AI)",
-    description:
-      "Voice-driven Socratic mentors built in VR so learners can debate history’s great thinkers using real-time spatial interfaces.",
-    href: "/projects/school-of-the-ancients",
+    role: "Founder & Prototyper",
+    focus:
+      "Voice-driven Socratic mentors that blend philosophy, dialogue, and spatial learning for immersive study.",
+    tech: "MetaHorizon • TypeScript • Gemini-2.5-flash-native-audio • XR Interaction Toolkit",
+    href: "https://github.com/thetopham/school-of-the-ancients-vr",
   },
   {
     title: "TradingView Bot",
-    description:
-      "Multimodel agentic pipeline that reads charts, reasons about market structure, and logs high-confidence trade setups.",
-    href: "/projects/tradingview-bot",
+    role: "Creator",
+    focus:
+      "Python automation that reads TradingView charts, reasons about market structure, and logs AI decisions for futures traders.",
+    tech: "Python • gpt-5/gemini-2.5/claude-opus-4.1/grok-4/deepseek-v3.1 • Supabase • TradingView • n8n",
+    href: "https://github.com/thetopham/tradingview-bot",
   },
+  {
+    title: "CU Robotics",
+    role: "Documentation & Systems",
+    focus:
+      "Organizational guides, firmware docs, and onboarding playbooks for RoboMaster autonomous robotics teams.",
+    tech: "Python • Rust • TypeScript • C • C++ • Jupyter",
+    href: "https://github.com/CU-Robotics",
+  },
+  {
+    title: "AI Radar",
+    role: "Builder",
+    focus:
+      "RSS → GPT pipeline that summarizes daily AI research, news feeds, and filters the noise for busy teams.",
+    tech: "Python • Feedparser • GitHub Actions",
+    href: "https://github.com/thetopham/ai-radar",
+  },
+];
+
+const stackBadges = [
+  "Python",
+  "TypeScript",
+  "React",
+  "Supabase",
+  "Node.js",
+  "Docker",
+  "Unity",
+  "Vercel",
+  "Postgres",
 ];
 
 const focusAreas = [
@@ -85,13 +119,13 @@ export default function Home() {
         <section className="mx-auto flex min-h-[60vh] w-full max-w-5xl flex-col justify-center gap-10 px-6 pt-16 pb-24">
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-300/80">
-              Robotics • AI/Finance • AR/VR
+              🤖 Robotics • 🧠 AI/Finance • 🕶️ AR/VR
             </p>
             <h1 className="text-4xl font-semibold text-zinc-100 sm:text-5xl md:text-6xl">
               Building clean, useful tools — and learning in public.
             </h1>
-            <p className="max-w-2xl text-lg text-zinc-300">
-              I’m a Boulder-based engineer focused on agentic AI, robotics, and mixed reality. I lead teams that merge hardware, software, and design to build systems people trust—from EVA copilots to immersive learning environments.
+            <p className="max-w-3xl text-lg text-zinc-300">
+              I’m Matt, a Boulder-based engineer focused on agentic AI, robotics, and mixed reality. I study CS @ CU Boulder and prototype systems that blend hardware, software, and interface design so people can trust the copilots, labs, and trading tools they depend on.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -133,25 +167,32 @@ export default function Home() {
               Browse all projects
             </Link>
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {highlights.map((item) => (
-              <Link
+              <a
                 key={item.title}
                 href={item.href}
+                target="_blank"
+                rel="noreferrer"
                 className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-black/40 p-6 shadow-lg backdrop-blur transition hover:border-emerald-400/60 hover:shadow-emerald-500/10"
               >
-                <div className="space-y-4">
+                <div className="space-y-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300/80">
+                    {item.role}
+                  </p>
                   <h3 className="text-xl font-semibold text-white group-hover:text-emerald-200">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-zinc-400 group-hover:text-zinc-200">
-                    {item.description}
-                  </p>
+                  <p className="text-sm text-zinc-400 group-hover:text-zinc-200">{item.focus}</p>
+                </div>
+                <div className="mt-6 text-xs text-zinc-400">
+                  <p className="font-mono uppercase tracking-wide text-zinc-500">Stack</p>
+                  <p className="text-zinc-300">{item.tech}</p>
                 </div>
                 <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wide text-emerald-300/80">
-                  View case study →
+                  View build →
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         </section>
@@ -172,6 +213,74 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-5xl px-6 pb-24">
+          <div className="rounded-3xl border border-white/5 bg-black/40 p-8 shadow-lg backdrop-blur">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <h2 className="text-2xl font-semibold text-white sm:text-3xl">Stack</h2>
+                <p className="mt-3 text-base text-zinc-400">
+                  Tools I reach for when shipping AI copilots, VR classrooms, and data-heavy dashboards.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {stackBadges.map((badge) => (
+                  <span
+                    key={badge}
+                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-zinc-200"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-5xl px-6 pb-24">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="rounded-3xl border border-white/5 bg-black/40 p-8 shadow-lg backdrop-blur">
+              <h2 className="text-2xl font-semibold text-white sm:text-3xl">GitHub pulse</h2>
+              <p className="mt-3 text-base text-zinc-400">
+                Building in public keeps me honest—here’s the rolling snapshot from the README board.
+              </p>
+              <div className="mt-6 flex flex-col gap-4">
+                <img
+                  src="https://github-readme-stats.vercel.app/api?username=thetopham&show_icons=true&theme=tokyonight&hide_border=true"
+                  alt="Matt's GitHub stats"
+                  className="w-full rounded-2xl border border-white/10"
+                />
+                <img
+                  src="https://github-readme-stats.vercel.app/api/top-langs/?username=thetopham&layout=compact&theme=tokyonight&hide_border=true"
+                  alt="Top languages"
+                  className="w-full rounded-2xl border border-white/10"
+                />
+                <img
+                  src="https://streak-stats.demolab.com?user=thetopham&theme=tokyonight&hide_border=true"
+                  alt="GitHub streak"
+                  className="w-full rounded-2xl border border-white/10"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-6">
+              <div className="rounded-3xl border border-white/5 bg-black/40 p-8 shadow-lg backdrop-blur">
+                <h2 className="text-2xl font-semibold text-white sm:text-3xl">Visitors</h2>
+                <p className="mt-3 text-base text-zinc-400">Thanks for stopping by—here’s the live counter.</p>
+                <img
+                  src="https://komarev.com/ghpvc/?username=thetopham&color=blueviolet&style=flat-square"
+                  alt="Visitor count"
+                  className="mt-6 w-48"
+                />
+              </div>
+              <div className="rounded-3xl border border-white/5 bg-black/40 p-8 shadow-lg backdrop-blur">
+                <p className="text-xl font-medium text-zinc-100">
+                  “Understanding people. Building things they want. Getting those things in front of them.”
+                </p>
+                <p className="mt-4 text-sm uppercase tracking-[0.2em] text-emerald-300/80">Operating mantra</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>

@@ -13,16 +13,16 @@ Building clean, useful tools, and learning in public.
 <details>
 <summary>🛰️ <b>NASA SUITS 2026 — <i>TUXEDO AI/VR System</i></b></summary>
 
-**Role:** Proposal Lead & AI/VR Systems Architect  
-**Focus:** Integrating offline AI, rover autonomy, and AR overlays for EVA safety.  
-**Tech:** AI • VR • Unreal • WebSocket • Offline LLMs  
+**Role:** AI/VR Systems Architect  
+**Focus:** Prototype AI assistant, rover autonomy, and AR overlays.  
+**Tech:** AI • VR • Unreal • WebSocket 
 🔗 [View Project](https://github.com/nasa-suits-challenge/suits-2026)
 </details>
 
 <details>
 <summary>🏛️ <b>School of the Ancients (VR + AI)</b></summary>
 
-Voice-driven Socratic mentor platform blending philosophy, dialogue, and spatial learning.  
+Socratic mentor platform blending philosophy, dialogue, and spatial learning.  
 **Goal:** Build an immersive academy where users converse with historical mentors like Socrates and Galileo.  
 **Tech:** MetaHorizon • TypeScript • Gemini-2.5-flash-native-audio • XR Interaction Toolkit  
 🔗 [Repo](https://github.com/thetopham/school-of-the-ancients-vr)
@@ -31,8 +31,8 @@ Voice-driven Socratic mentor platform blending philosophy, dialogue, and spatial
 <details>
 <summary>📈 <b>TradingView Bot</b></summary>
 
-Python automation that reads TradingView charts, analyzes trends, and logs ai decisions.  
-**Goal:** Assist futures traders with AI-driven strategy and alert pipelines.  
+Python and n8n automation that reads TradingView charts, analyzes trends, and logs ai decisions.  
+**Goal:** Automate the entire process of daytrading: hypothesis, action, results, logging, with AI and programming.  
 **Tech:** Python • gpt-5/gemini-2.5/claude-opus-4.1/grok-4/deepseek-v3.1 • Supabase • TradingView • n8n  
 🔗 [Repo](https://github.com/thetopham/tradingview-bot)
 </details>
@@ -41,7 +41,7 @@ Python automation that reads TradingView charts, analyzes trends, and logs ai de
 <summary>🔧 <b>CU Robotics</b></summary>
 
 RoboMaster competition team focused on autonomous robotics and embedded systems.  
-**Contribution:** Authored organizational documentation for new members and technical guides across multiple repos — `hive-rs`, `swarm`, `waggle`, and `firmware`.  
+**Contribution:** Created organizational documentation for new members and technical guides across multiple repos — `hive-rs`, `swarm`, `waggle`, and `firmware`.  
 **Goal:** Standardize onboarding and ensure long-term maintainability of team software and hardware systems.  
 **Tech:** Python • Rust • TypeScript • C • JupyterNotebook • C++  
 🔗 [Org](https://github.com/CU-Robotics)

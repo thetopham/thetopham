@@ -83,11 +83,12 @@ RSS → GPT pipeline that summarizes daily AI research and news feeds.
 
 <div align="center">
 
-![Matt's GitHub stats](https://github-readme-stats.vercel.app/api?username=thetopham&show_icons=true&theme=tokyonight&hide_border=true)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=thetopham&layout=compact&theme=tokyonight&hide_border=true)  
-![GitHub Streak](https://streak-stats.demolab.com?user=thetopham&theme=tokyonight&hide_border=true)
+![Matt's GitHub stats](https://github-readme-stats.vercel.app/api?username=thetopham&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=21600&v=1)  
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=thetopham&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=21600&v=1)  
+![GitHub Streak](https://streak-stats.demolab.com?user=thetopham&theme=tokyonight&hide_border=true&v=1)
 
 </div>
+
 
 ---
 

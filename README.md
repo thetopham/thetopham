@@ -29,12 +29,12 @@ Socratic mentor platform blending philosophy, dialogue, and spatial learning.
 </details>
 
 <details>
-<summary>📈 <b>TradingView Bot (pvt repo)</b></summary>
+<summary>📈 <b>TradingView Bot (private repo)</b></summary>
 
 Python and n8n automation that reads TradingView charts, analyzes trends, and logs ai decisions.  
 **Goal:** Automate the entire process of daytrading: hypothesis, action, results, logging, with AI and programming.  
 **Tech:** Python • gpt-5/gemini-2.5/claude-opus-4.1/grok-4/deepseek-v3.1 • Supabase • TradingView • n8n  
-🔗 [Pvt Repo](https://github.com/thetopham/tradingview-bot)
+🔗 [private repo](https://github.com/thetopham/tradingview-bot)
 </details>
 
 <details>

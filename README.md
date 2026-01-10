@@ -25,7 +25,7 @@ Building clean, useful tools, and learning in public.
 Socratic mentor platform blending philosophy, dialogue, and spatial learning.  
 **Goal:** Build an immersive academy where users converse with historical mentors like Socrates and Galileo.  
 **Tech:** MetaHorizon • TypeScript • Gemini-2.5-flash-native-audio • XR Interaction Toolkit  
-🔗 [Repo](https://github.com/thetopham/school-of-the-ancients-vr)
+🔗 [Repo](https://github.com/School-of-the-Ancients)
 </details>
 
 <details>

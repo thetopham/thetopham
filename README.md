@@ -1,100 +1,56 @@
-### Matt Topham  
+# Matthew Topham
 
-**🤖 Robotics • 🧠 AI/Finance • 🕶️ AR/VR**  
-Building clean, useful tools, and learning in public.  
-🎓 CS @ CU Boulder | Agentic AI & Mixed-Reality Interfaces  
+### AI Systems Architect · Full-Stack Software Engineer
 
-🌐 [Portfolio](https://thetopham.github.io) • 💼 [Resume](https://thetopham.github.io/views/resume.html) • 🛰️ [NASA SUITS 2026](https://github.com/nasa-suits-challenge/suits-2026)
+I build interactive storytelling systems, multimodal AI pipelines, and local-first agent applications. I’m an active developer on **[Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine)** and a computer science student at the University of Colorado Boulder.
 
----
+[![Portfolio](https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=githubpages&logoColor=white)](https://thetopham.github.io)
+[![Resume](https://img.shields.io/badge/Resume-FACC15?style=for-the-badge&logo=readthedocs&logoColor=111827)](https://thetopham.github.io/views/resume.html)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mrtopham)
+[![Email](https://img.shields.io/badge/Email-374151?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thetopham@gmail.com)
 
-#### 🧩 Highlights  
+> Open to AI engineering, full-stack software, and interactive-media opportunities.
 
-<details>
-<summary>🛰️ <b>NASA SUITS 2026 — <i>TUXEDO AI/VR System</i></b></summary>
+## 🍝 Marinara Engine
 
-**Role:** AI/VR Systems Architect  
-**Focus:** Prototype AI assistant, rover autonomy, and AR overlays.  
-**Tech:** AI • VR • Unreal • WebSocket 
-🔗 [View Project](https://github.com/nasa-suits-challenge/suits-2026)
-</details>
+**Role:** AI Systems Architect & Open-Source Developer  
+**Stack:** TypeScript · React · Node.js · pnpm · local AI · image/video generation
 
-<details>
-<summary>🏛️ <b>School of the Ancients (VR + AI)</b></summary>
+Marinara is a local-first AI chat, roleplay, and game engine. I have authored **15+ merged pull requests** across the client, server, shared contracts, persistence, prompt orchestration, documentation, testing, and release-facing product workflows.
 
-Socratic mentor platform blending philosophy, dialogue, and spatial learning.  
-**Goal:** Build an immersive academy where users converse with historical mentors like Socrates and Galileo.  
-**Tech:** MetaHorizon • TypeScript • Gemini-2.5-flash-native-audio • XR Interaction Toolkit  
-🔗 [Repo](https://github.com/School-of-the-Ancients)
-</details>
+### Selected shipped work
 
-<details>
-<summary>📈 <b>TradingView Bot (private repo)</b></summary>
+- **[Game Mode storyboards and scene-video workflows](https://github.com/Pasta-Devs/Marinara-Engine/pull/3192)** — built the narrative-to-keyframe pipeline, image/video generation flow, galleries, and responsive storyboard viewer.
+- **[Provider-aware multi-character prompting](https://github.com/Pasta-Devs/Marinara-Engine/pull/3414)** — added structured NovelAI character captions, prompt controls, request serialization, regressions, and documentation.
+- **[Anime-oriented generation pipeline](https://github.com/Pasta-Devs/Marinara-Engine/pull/3460)** — introduced separate narration, storyboard-planning, still-image, and video prompt presets with setup-time controls.
+- **[Deterministic completed-session replay](https://github.com/Pasta-Devs/Marinara-Engine/pull/3466)** — reconstructed narration, choices, media cues, and read-only playback without invoking the model again.
+- **[Editable media-prompt review and queue reliability](https://github.com/Pasta-Devs/Marinara-Engine/pull/3544)** — added preflight prompt review, timeout/re-entry protection, negative-prompt preservation, and per-provider request queues.
 
-Python and n8n automation that reads TradingView charts, analyzes trends, and logs ai decisions.  
-**Goal:** Automate the entire process of daytrading: hypothesis, action, results, logging, with AI and programming.  
-**Tech:** Python • gpt-5/gemini-2.5/claude-opus-4.1/grok-4/deepseek-v3.1 • Supabase • TradingView • n8n  
-🔗 [private repo](https://github.com/thetopham/tradingview-bot)
-</details>
+**Currently building:** [hierarchical maps and bounded spatial context](https://github.com/Pasta-Devs/Marinara-Engine/pull/3565) plus a clearer separation between storyboard planning and final provider prompts.
 
-<details>
-<summary>🔧 <b>CU Robotics</b></summary>
+[View all Marinara pull requests →](https://github.com/Pasta-Devs/Marinara-Engine/pulls?q=is%3Apr+author%3Athetopham)
 
-RoboMaster competition team focused on autonomous robotics and embedded systems.  
-**Contribution:** Created organizational documentation for new members and technical guides across multiple repos — `hive-rs`, `swarm`, `waggle`, and `firmware`.  
-**Goal:** Standardize onboarding and ensure long-term maintainability of team software and hardware systems.  
-**Tech:** Python • Rust • TypeScript • C • JupyterNotebook • C++  
-🔗 [Org](https://github.com/CU-Robotics)
-</details>
+## Other projects
 
-<details>
-<summary>🧭 <b>AI Radar</b></summary>
+### [School of the Ancients](https://github.com/School-of-the-Ancients)
+Voice-driven Socratic learning across web and VR. Built with React, TypeScript, Supabase/Postgres, Node.js, real-time voice AI, and Unity XR prototypes.
 
-RSS → GPT pipeline that summarizes daily AI research and news feeds.  
-**Goal:** Create a minimal daily brief powered by LLM summarization and content filtering.  
-**Tech:** Python • Feedparser • GithubActions
-🔗 [Repo](https://github.com/thetopham/ai-radar)
-</details>
+### [AI Radar](https://github.com/thetopham/ai-radar)
+Python and GitHub Actions pipeline that ingests RSS feeds, filters and summarizes AI research/news with LLMs, and publishes a concise daily brief.
 
----
+### [NASA SUITS 2026](https://github.com/nasa-suits-challenge/suits-2026)
+Contributed to an AI/VR system prototype involving assistant workflows, rover autonomy concepts, and AR overlays.
 
-#### 🧰 Stack  
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/-React-20232A?logo=react&logoColor=61DAFB)
-![Supabase](https://img.shields.io/badge/-Supabase-3FCF8E?logo=supabase&logoColor=white)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-![Unity](https://img.shields.io/badge/-Unity-000?logo=unity&logoColor=white)
-![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white)
-![Postgres](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+## Technical focus
 
----
+- **Languages:** TypeScript, JavaScript, Python, SQL, Bash
+- **Frontend:** React, Vite, Tailwind CSS, responsive web apps, PWAs
+- **Backend & data:** Node.js, Express, Supabase, Postgres, REST, WebSockets, SignalR
+- **AI systems:** LLM integrations, prompt architecture, agents, multimodal image/video pipelines, local AI
+- **Delivery:** Git, GitHub Actions, Docker, Linux, pnpm, Vercel, regression testing
 
-#### 🚀 Current Focus  
-- Agentic AI systems 
-- Mixed-reality interfaces for robotics, space, and education  
-- Financial AI with real-time market cognition  
-- Building modular pipelines that connect vision, voice, and reasoning  
+## Education
 
----
-
-#### 📊 GitHub Stats  
-
-<div align="center">
-
-![Matt's GitHub stats](https://github-readme-stats.vercel.app/api?username=thetopham&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=21600&v=2)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=thetopham&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=21600&v=2)  
-![GitHub Streak](https://streak-stats.demolab.com?user=thetopham&theme=tokyonight&hide_border=true&v=2)
-
-</div>
-
-
----
-
-#### 🪄 Visitors  
-![Visitor Count](https://komarev.com/ghpvc/?username=thetopham&color=blueviolet&style=flat-square)
-
----
-
-> “Understanding people. Building things they want. Getting those things in front of them.”
+- **University of Colorado Boulder** — B.A. Computer Science, expected May 2027
+- **Front Range Community College** — A.S. Computer Science, 2025
+- **NVIDIA-Certified Associate** — AI Infrastructure & Operations, 2025

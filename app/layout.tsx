@@ -1,22 +1,20 @@
 import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { Metadata } from "next";
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import MatrixRainingCode from './components/MatrixRainingCode';
-
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import MatrixRainingCode from "./components/MatrixRainingCode";
 
 export const metadata: Metadata = {
-   title: {
+  title: {
     default: "thetopham.com",
     template: "%s | thetopham.com",
   },
   description: "Computer Science Student",
   openGraph: {
     title: "thetopham.com",
-    description:
-      "Computer Science Student ",
+    description: "Computer Science Student ",
     url: "https://thetopham.com",
     siteName: "thetopham.com",
     images: [
@@ -54,7 +52,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const calSans = LocalFont({
+const calSans = localFont({
   src: "../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
 });
@@ -66,12 +64,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-      <head></head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
-        <MatrixRainingCode /> 
+        <MatrixRainingCode />
         {children}
         <Analytics />
         <SpeedInsights />

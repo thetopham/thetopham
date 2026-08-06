@@ -2,6 +2,9 @@
   "name": "thetopham.com",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,8 +12,8 @@
     "fmt": "pnpm rome check . --apply-unsafe && pnpm rome format . --write"
   },
   "dependencies": {
-    "@next/font": "^13.5.4",
-    "@next/mdx": "^13.5.4",
+    "@next/font": "13.5.6",
+    "@next/mdx": "13.5.6",
     "@upstash/redis": "^1.23.3",
     "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.7",
@@ -18,7 +21,7 @@
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.284.0",
     "markdown-wasm": "^1.2.0",
-    "next": "^13.5.4",
+    "next": "13.5.6",
     "next-contentlayer": "^0.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -29,8 +32,12 @@
     "remark-gfm": "3.0.1",
     "typescript": "^5.2.2"
   },
+  "optionalDependencies": {
+    "@next/swc-linux-x64-gnu": "13.5.6",
+    "@next/swc-linux-x64-musl": "13.5.6"
+  },
   "devDependencies": {
-    "@opentelemetry/api": "1.6.0",
+    "@opentelemetry/api": "1.4.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.8.4",
@@ -43,15 +50,13 @@
     "tailwindcss": "^3.3.3",
     "tailwindcss-debug-screens": "^2.2.1"
   },
-  "pnpm": {
-    "overrides": {
-      "@opentelemetry/api": "1.4.1",
-      "@opentelemetry/core": "1.13.0",
-      "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
-      "@opentelemetry/resources": "1.13.0",
-      "@opentelemetry/sdk-trace-base": "1.13.0",
-      "@opentelemetry/sdk-trace-node": "1.13.0",
-      "@opentelemetry/semantic-conventions": "1.13.0"
-    }
+  "overrides": {
+    "@opentelemetry/api": "1.4.1",
+    "@opentelemetry/core": "1.13.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
+    "@opentelemetry/resources": "1.13.0",
+    "@opentelemetry/sdk-trace-base": "1.13.0",
+    "@opentelemetry/sdk-trace-node": "1.13.0",
+    "@opentelemetry/semantic-conventions": "1.13.0"
   }
 }

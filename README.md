@@ -16,7 +16,7 @@ I build **interactive AI products, persistent world systems, and multimodal stor
 **Role:** AI Systems Architect & Open-Source Developer  
 **Stack:** TypeScript · React · Node.js · pnpm · local AI · multimodal generation · persistent world state
 
-Marinara is a local-first AI chat, roleplay, and game engine. I’ve authored **30+ merged pull requests** spanning client and server architecture, shared contracts, transactional persistence, downloadable capability APIs, prompt orchestration, multimodal media, responsive UI, regression testing, and documentation.
+Marinara is a local-first AI chat, roleplay, and game engine. I’ve authored **100+ merged pull requests** spanning client and server architecture, shared contracts, transactional persistence, downloadable capability APIs, prompt orchestration, multimodal media, responsive UI, regression testing, and documentation.
 
 ### Selected systems I’ve shipped
 

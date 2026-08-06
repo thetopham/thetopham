@@ -2,7 +2,7 @@
 
 ### AI Systems Architect · Full-Stack Software Engineer
 
-I build interactive storytelling systems, multimodal AI pipelines, and local-first agent applications. I’m an active developer on **[Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine)** and a computer science student at the University of Colorado Boulder.
+I build **interactive AI products, persistent world systems, and multimodal storytelling pipelines** across the full stack. I’m an active developer on **[Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine)** and a computer science student at the University of Colorado Boulder.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=githubpages&logoColor=white)](https://thetopham.github.io)
 [![Resume](https://img.shields.io/badge/Resume-FACC15?style=for-the-badge&logo=readthedocs&logoColor=111827)](https://thetopham.github.io/views/resume.html)
@@ -14,40 +14,39 @@ I build interactive storytelling systems, multimodal AI pipelines, and local-fir
 ## 🍝 Marinara Engine
 
 **Role:** AI Systems Architect & Open-Source Developer  
-**Stack:** TypeScript · React · Node.js · pnpm · local AI · image/video generation
+**Stack:** TypeScript · React · Node.js · pnpm · local AI · multimodal generation · persistent world state
 
-Marinara is a local-first AI chat, roleplay, and game engine. I have authored **15+ merged pull requests** across the client, server, shared contracts, persistence, prompt orchestration, documentation, testing, and release-facing product workflows.
+Marinara is a local-first AI chat, roleplay, and game engine. I’ve authored **30+ merged pull requests** spanning client and server architecture, shared contracts, transactional persistence, downloadable capability APIs, prompt orchestration, multimodal media, responsive UI, regression testing, and documentation.
 
-### Selected shipped work
+### Selected systems I’ve shipped
 
-- **[Game Mode storyboards and scene-video workflows](https://github.com/Pasta-Devs/Marinara-Engine/pull/3192)** — built the narrative-to-keyframe pipeline, image/video generation flow, galleries, and responsive storyboard viewer.
-- **[Provider-aware multi-character prompting](https://github.com/Pasta-Devs/Marinara-Engine/pull/3414)** — added structured NovelAI character captions, prompt controls, request serialization, regressions, and documentation.
-- **[Anime-oriented generation pipeline](https://github.com/Pasta-Devs/Marinara-Engine/pull/3460)** — introduced separate narration, storyboard-planning, still-image, and video prompt presets with setup-time controls.
-- **[Deterministic completed-session replay](https://github.com/Pasta-Devs/Marinara-Engine/pull/3466)** — reconstructed narration, choices, media cues, and read-only playback without invoking the model again.
-- **[Editable media-prompt review and queue reliability](https://github.com/Pasta-Devs/Marinara-Engine/pull/3544)** — added preflight prompt review, timeout/re-entry protection, negative-prompt preservation, and per-provider request queues.
-
-**Currently building:** [hierarchical maps and bounded spatial context](https://github.com/Pasta-Devs/Marinara-Engine/pull/3565) plus a clearer separation between storyboard planning and final provider prompts.
+- **[Hierarchical world state & spatial context](https://github.com/Pasta-Devs/Marinara-Engine/pull/3565)** — built persistent nested locations, graph validation, atomic/idempotent movement, snapshots/checkpoints, bounded prompt projection, AI map drafting/expansion, lore grounding, and responsive authoring UI.
+- **[Capability API 1.3 host services](https://github.com/Pasta-Devs/Marinara-Engine/pull/3693)** — exposed safe package access to model routing, resources, persistence, transactions, history/checkpoints, logging, and client contribution lifecycle without leaking private Engine internals.
+- **[Storyboards for Roleplay](https://github.com/Pasta-Devs/Marinara-Engine/pull/4326)** — extended multimodal storytelling beyond Game Mode with episode cadence, inline still/video playback, provider-neutral motion planning, prompt libraries, and per-chat generation controls.
+- **[Shared World Maps artwork](https://github.com/Pasta-Devs/Marinara-Engine/pull/4279)** — added account-owned visual references across chats with guarded deletion, transactional lifecycle locks, race-safe reference creation, and shared-world integration.
+- **[Unified travel & recovery](https://github.com/Pasta-Devs/Marinara-Engine/pull/4623)** — implemented server-owned route validation, step-by-step/instant travel, one canonical movement mutation per accepted turn, command-ID recovery, retry preservation, and deterministic spatial regressions.
+- **[Hidden directive stream/persistence hardening](https://github.com/Pasta-Devs/Marinara-Engine/pull/4545)** — sanitized model-only movement directives across streaming, rewriting, impersonation, and persistence while preserving authoritative state transitions.
 
 [View all Marinara pull requests →](https://github.com/Pasta-Devs/Marinara-Engine/pulls?q=is%3Apr+author%3Athetopham)
+
+## Engineering focus
+
+- **AI systems:** LLM integrations, agent/runtime architecture, prompt composition, image/video generation, provider-aware pipelines
+- **State & reliability:** transactions, idempotency, revision conflicts, race handling, snapshots/checkpoints, recovery paths
+- **Full stack:** TypeScript, React, Node.js, REST, WebSockets, React Query, responsive/PWA interfaces
+- **Extensibility:** versioned capability contracts, package lifecycle/readiness, host APIs, shared resource boundaries
+- **Validation:** deterministic regressions, Playwright, lint/type/build gates, container validation, browser QA
 
 ## Other projects
 
 ### [School of the Ancients](https://github.com/School-of-the-Ancients)
-Voice-driven Socratic learning across web and VR. Built with React, TypeScript, Supabase/Postgres, Node.js, real-time voice AI, and Unity XR prototypes.
+Voice-driven Socratic learning across web and VR, built with React, TypeScript, Supabase/Postgres, Node.js, real-time voice AI, and Unity XR prototypes.
 
 ### [AI Radar](https://github.com/thetopham/ai-radar)
 Python and GitHub Actions pipeline that ingests RSS feeds, filters and summarizes AI research/news with LLMs, and publishes a concise daily brief.
 
 ### [NASA SUITS 2026](https://github.com/nasa-suits-challenge/suits-2026)
-Contributed to an AI/VR system prototype involving assistant workflows, rover autonomy concepts, and AR overlays.
-
-## Technical focus
-
-- **Languages:** TypeScript, JavaScript, Python, SQL, Bash
-- **Frontend:** React, Vite, Tailwind CSS, responsive web apps, PWAs
-- **Backend & data:** Node.js, Express, Supabase, Postgres, REST, WebSockets, SignalR
-- **AI systems:** LLM integrations, prompt architecture, agents, multimodal image/video pipelines, local AI
-- **Delivery:** Git, GitHub Actions, Docker, Linux, pnpm, Vercel, regression testing
+Contributed to an AI/VR prototype involving assistant workflows, rover-autonomy concepts, and AR overlays.
 
 ## Education
 

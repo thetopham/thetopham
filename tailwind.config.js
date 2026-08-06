@@ -2,11 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		"./app/**/*.{js,ts,jsx,tsx}",
-		"./mdx-components.tsx",
-		"content/**/*.mdx",
-	],
+	content: ["./app/**/*.{js,ts,jsx,tsx}"],
 
 	theme: {
 		extend: {
@@ -59,7 +55,6 @@ module.exports = {
 						transform: "translateX(100%)",
 						opacity: "0%",
 					},
-
 					"30%": {
 						transform: "translateX(0%)",
 						opacity: "100%",
@@ -73,7 +68,6 @@ module.exports = {
 						transform: "translateX(-100%)",
 						opacity: "0%",
 					},
-
 					"30%": {
 						transform: "translateX(0%)",
 						opacity: "100%",
@@ -95,7 +89,6 @@ module.exports = {
 					"80%": {
 						opacity: "100%",
 					},
-
 					"100%": {
 						"line-height": "100%",
 						opacity: "100%",

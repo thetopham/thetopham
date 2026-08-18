@@ -11,10 +11,12 @@ export const metadata: Metadata = {
     default: "thetopham.com",
     template: "%s | thetopham.com",
   },
-  description: "Computer Science Student",
+  description:
+    "Matthew Topham — AI systems architect building persistent worlds, multimodal storytelling pipelines, local AI experiments, and interactive software.",
   openGraph: {
     title: "thetopham.com",
-    description: "Computer Science Student ",
+    description:
+      "AI systems, persistent worlds, multimodal storytelling, local AI, and experimental software by Matthew Topham.",
     url: "https://thetopham.com",
     siteName: "thetopham.com",
     images: [
@@ -40,6 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "thetopham",
+    description: "AI systems · persistent worlds · multimodal storytelling",
     card: "summary_large_image",
   },
   icons: {

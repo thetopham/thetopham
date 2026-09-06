@@ -1,62 +1,90 @@
 # Matthew Topham
 
-### AI Systems & Full-Stack Developer · CU Boulder CS
+### Building AI for stories, everyday memory, and my own computers
 
-I’m a computer science student at the University of Colorado Boulder building **AI applications, wearable assistants, and local AI infrastructure**. My work connects the interfaces people use with the state, services, and compute behind them.
+I’m Matt, a computer science student at CU Boulder. I’m building tools that turn roleplay into animation, help me remember my day, and keep my AI projects running on computers I manage at home.
 
 [Portfolio](https://thetopham.github.io/) · [Résumé](https://thetopham.github.io/views/resume.html) · [LinkedIn](https://www.linkedin.com/in/mrtopham) · [Email](mailto:thetopham@gmail.com) · [Matrix mode](https://thetopham.com/)
 
-> Open to AI engineering, full-stack development, local AI infrastructure, and interactive-media opportunities compatible with completing my degree.
+## Marinara — Bring our roleplays to life
 
-## Marinara Engine + Agents — Open-source AI applications
+**We already write scripts every day in our roleplays. Why not turn them into animation and anime?**
 
-**TypeScript · React · Node.js · ComfyUI · local AI**
+I contribute to [Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine) and [Marinara Agents](https://github.com/Pasta-Devs/Marinara-Agents). Right now I’m working on a MiniMax H3 workflow in ComfyUI, a visual tool for connecting AI image and video steps. The dream is an anime that grows and changes with the story we’re playing.
 
-Contributed **100 merged pull requests across Marinara Engine and Marinara Agents**: 68 in Engine and 32 in Agents, verified September 5, 2026. The work spans persistent worlds, downloadable agent capabilities, multimodal generation, UI, and regression testing.
+The workflow I’m building uses each character’s sheet as a visual reference, alongside their persona or written description. World Maps supplies pictures of the places in the story. Together, those references are meant to keep characters recognizable and backgrounds consistent—including locations that look like the fictional worlds fans know.
 
-- **[Roleplay-to-animation](https://github.com/Pasta-Devs/Marinara-Engine/pull/4840):** connected storyboards, character/location references, generated keyframes, image-aware motion planning, and local image-to-video generation.
-- **[World-state infrastructure](https://github.com/Pasta-Devs/Marinara-Engine/pull/3565):** nested locations, graph validation, snapshots/checkpoints, bounded prompt context, and recoverable movement.
-- **[Capability host APIs](https://github.com/Pasta-Devs/Marinara-Engine/pull/3693):** versioned interfaces for model routing, resources, persistence, transactions, and package-owned client features.
-- **[Storyboards](https://github.com/Pasta-Devs/Marinara-Engine/pull/4326), [shared artwork](https://github.com/Pasta-Devs/Marinara-Engine/pull/4279), and [travel recovery](https://github.com/Pasta-Devs/Marinara-Engine/pull/4623):** media workflows backed by persistent references, validation, and retry handling.
+Our roleplay narration becomes the script. AI breaks it into a storyboard—a scene-by-scene plan—and prepares keyframes, the still images that guide the animation. ComfyUI brings the character and location references, keyframes, and motion instructions together to generate the video.
 
-[Engine contributions](https://github.com/Pasta-Devs/Marinara-Engine/pulls?q=is%3Apr+is%3Amerged+author%3Athetopham) · [Agents contributions](https://github.com/Pasta-Devs/Marinara-Agents/pulls?q=is%3Apr+is%3Amerged+author%3Athetopham)
+**Still in development:** I’m exploring MiniMax H3 for animation on my own hardware. Getting closer to Seedance-style action quality locally is a goal, not a result I’ve demonstrated.
 
-## [Manfred](https://github.com/thetopham/manfred) — Wearable AI assistant prototype
+<details>
+<summary>Code, contributions, and technical details</summary>
 
-**Flutter / Android · Bluetooth LE · Python · transcription**
+My contributions include tools that remember where characters are, reuse character and location images, plan animated scenes, and recover when an operation fails.
 
-Building a wearable-to-phone-to-service pipeline for audio and visual context, rather than another standalone chat window.
+- [Animation workflow](https://github.com/Pasta-Devs/Marinara-Engine/pull/4840)
+- [World Maps and location tracking](https://github.com/Pasta-Devs/Marinara-Engine/pull/3565)
+- [Tools for downloadable AI agents](https://github.com/Pasta-Devs/Marinara-Engine/pull/3693)
 
-- Android/Flutter companion with a BLE audio bridge, durable upload buffering, and capture controls.
-- Python services for audio ingestion, voice activity detection, transcription, searchable archives, retention/deletion, and image-centered episodes.
-- Explicit export contracts and independent validation separate wearable services from knowledge and compute management.
+100 merged pull requests across Engine (68) and Agents (32), verified September 5, 2026. [Engine contributions](https://github.com/Pasta-Devs/Marinara-Engine/pulls?q=is%3Apr+is%3Amerged+author%3Athetopham) · [Agents contributions](https://github.com/Pasta-Devs/Marinara-Agents/pulls?q=is%3Apr+is%3Amerged+author%3Athetopham)
 
-**Status:** Development prototype. EyeVue/E09 photo capture is experimental; source validation is not a claim of reliable end-to-end hardware operation or instant high-resolution Bluetooth transfer.
+Built with TypeScript, React, Node.js, model integrations, ComfyUI, and automated tests. The current animation experiment builds on earlier contributions; it is not a finished one-click anime generator.
 
-## Demerzel — Local AI infrastructure and task orchestration
+</details>
 
-**Python · durable queues · worker lifecycle · local inference**
+## [Manfred](https://github.com/thetopham/manfred) — AI ears and eyes for everyday life
 
-Developed a system for turning selected work into bounded worker runs and reviewable artifacts. The engineering focus is task queues, sandboxed execution, heartbeats, stall handling, preemption, review bundles, and an operator-facing control center.
+Manfred is my wearable assistant project. An Omi wearable provides the audio for daily transcription and lifelogging: turning recordings into a searchable record of conversations and moments I want to remember.
 
-Knowledge management, task execution, and fleet control are separate components connected through validated interfaces. This keeps hardware control and personal context outside the worker implementation.
+I’m also connecting E09 smart glasses to ChatGPT Live for voice conversations and photo uploads. The idea is to talk to AI through the glasses and share what I’m looking at, rather than stop and type everything into my phone.
 
-**Status:** Development project. Worker dispatch is paused following the architectural separation, pending runtime acceptance. Implementation and personal operational data remain private; public descriptions are architecture summaries, not live service claims.
+**The glasses work for voice; photo capture and sharing are still being made more reliable.** This is a prototype, not a finished always-on assistant. Recording needs to respect the people around me, and personal recordings are not published here.
 
-## Other work
+<details>
+<summary>Technical details</summary>
 
-- **[School of the Ancients](https://github.com/School-of-the-Ancients):** voice-driven Socratic learning across web and VR, using React/TypeScript, Node.js, Supabase/Postgres, and Unity XR prototypes.
-- **[AI Radar](https://github.com/thetopham/ai-radar):** Python and GitHub Actions pipeline for RSS ingestion, LLM-assisted filtering/summarization, and daily AI briefs.
-- **[NASA SUITS 2026 prototype](https://github.com/nasa-suits-challenge/suits-2026):** contributions to AI/VR assistant workflows, rover-autonomy concepts, and AR overlays.
+Android/Flutter companion, Bluetooth audio, Python transcription and search, phone-side upload buffering, and Tasker automation. The app can hold a captured image until it is ready to send. [Photo setup and limitations](https://github.com/thetopham/manfred/blob/main/docs/eyevue-photos.md)
 
-## Engineering focus
+</details>
 
-**Applications:** TypeScript, React, Node.js, Python, SQL, REST, WebSockets, Flutter.  
-**AI systems:** model integration, local inference, multimodal orchestration, persistent state, wearable data pipelines.  
-**Reliability:** transactions, idempotency, retries, validation, regression tests, Playwright, Linux, Docker, GitHub Actions.
+## Demerzel — My AI helper behind the scenes
 
-## Education
+Demerzel brings together daily AI briefs, a personal wiki built from my daily conversations, and management of the computers that run my AI projects.
+
+The goal is simple: keep useful information from getting lost, give me a daily overview, and help manage which AI programs are running on which machine.
+
+### The home AI fleet
+
+“Fleet” just means the group of computers I use together:
+
+| Machine | What I use it for |
+| --- | --- |
+| AMD Radeon AI PRO R9700 system | Larger local AI models and MiniMax H3 animation experiments, switching between jobs that share the graphics card. |
+| Dual NVIDIA RTX 3060 system | Local language models and a separate machine for coding and research experiments. |
+| Single NVIDIA RTX 3060 system | ComfyUI image-generation workflows. |
+
+The management tools check what is running, start or stop supported AI programs, and prevent jobs from fighting over the same graphics card. That supports the other projects instead of making each one manage the hardware itself.
+
+The separate automatic coding/research workers are currently paused while I check recent changes. That is one part of Demerzel—not its whole purpose. Personal wiki content, recordings, and machine access details remain private.
+
+## Other things I’m building
+
+**[School of the Ancients](https://github.com/School-of-the-Ancients):** learn through conversations with AI historical mentors, on the web and in VR prototypes.
+
+**[AI Radar](https://github.com/thetopham/ai-radar):** collect AI news and research and turn it into a shorter daily read.
+
+**[NASA SUITS 2026 prototype](https://github.com/nasa-suits-challenge/suits-2026):** contributed to an experimental assistant and augmented-reality interface for a student project.
+
+<details>
+<summary>Skills and education</summary>
+
+**Tools:** Python, TypeScript, JavaScript, SQL, React, Node.js, Flutter, Linux, Docker, GitHub Actions, Playwright, and ComfyUI.
 
 - **University of Colorado Boulder** — B.A. Computer Science, expected May 2027
 - **Front Range Community College** — A.S. Computer Science, 2025
 - **NVIDIA-Certified Associate** — AI Infrastructure & Operations, August 2025
+
+</details>
+
+Open to software and AI development opportunities alongside finishing my degree.

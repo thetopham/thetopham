@@ -2,7 +2,7 @@
 
 ### AI Systems Architect · Full-Stack Software Engineer
 
-I build **interactive AI products, persistent world systems, local AI infrastructure, and multimodal pipelines that turn AI roleplay into reference-grounded animated scenes** across the full stack. I’m an active developer on **[Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine)** and a computer science student at the University of Colorado Boulder.
+I build **interactive AI products, persistent world systems, and multimodal pipelines that turn AI roleplay into reference-grounded animated scenes** across the full stack. I’m an active developer on **[Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine)** and a computer science student at the University of Colorado Boulder.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=githubpages&logoColor=white)](https://thetopham.github.io)
 [![Resume](https://img.shields.io/badge/Resume-FACC15?style=for-the-badge&logo=readthedocs&logoColor=111827)](https://thetopham.github.io/views/resume.html)
@@ -27,25 +27,15 @@ Marinara is a local-first AI chat, roleplay, and game engine. I’ve authored **
 - **[Shared World Maps artwork](https://github.com/Pasta-Devs/Marinara-Engine/pull/4279)** — added account-owned visual references across chats with guarded deletion, transactional lifecycle locks, race-safe reference creation, and shared-world integration.
 - **[Unified travel & recovery](https://github.com/Pasta-Devs/Marinara-Engine/pull/4623)** — implemented server-owned route validation, step-by-step/instant travel, one canonical movement mutation per accepted turn, command-ID recovery, retry preservation, and deterministic spatial regressions.
 
-[View Marinara Engine contributions →](https://github.com/Pasta-Devs/Marinara-Engine/pulls?q=is%3Apr+author%3Athetopham) · [Marinara Agents →](https://github.com/Pasta-Devs/Marinara-Agents)
-
-## 🖥️ Local AI fleet
-
-Built a **multi-node local AI control plane** across Linux and Windows hosts for inference, media generation, and application services.
-
-- Orchestrates logical `server`, `comfy`, and `ai` roles over **SSH/Tailscale** from a central controller.
-- Uses reusable **PowerShell + Windows Task Scheduler bridges** so remotely launched GPU workloads stay persistent outside an SSH session.
-- Switches shared R9700 compute between **Qwen3.8 27B** serving and **MiniMax H3 / ComfyUI** workloads instead of leaving competing stacks resident.
-- Verifies readiness through both process state and service APIs, then runs repeatable switch diagnostics before declaring a workload healthy.
+[View all Marinara pull requests →](https://github.com/Pasta-Devs/Marinara-Engine/pulls?q=is%3Apr+author%3Athetopham)
 
 ## Engineering focus
 
-- **AI systems:** LLM integrations, agent/runtime architecture, local inference orchestration, reference-grounded storyboard pipelines, image-aware motion planning
-- **Infrastructure:** SSH/Tailscale fleet control, PowerShell automation, Windows/Linux service orchestration, GPU workload lifecycle
+- **AI systems:** LLM integrations, agent/runtime architecture, reference-grounded storyboard orchestration, image-aware motion planning, local image/video generation
 - **State & reliability:** transactions, idempotency, revision conflicts, race handling, snapshots/checkpoints, recovery paths
 - **Full stack:** TypeScript, React, Node.js, REST, WebSockets, React Query, responsive/PWA interfaces
 - **Extensibility:** versioned capability contracts, package lifecycle/readiness, host APIs, shared resource boundaries
-- **Validation:** deterministic regressions, Playwright, lint/type/build gates, container validation, API health checks, browser QA
+- **Validation:** deterministic regressions, Playwright, lint/type/build gates, container validation, browser QA
 
 ## Other projects
 

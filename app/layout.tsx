@@ -9,11 +9,11 @@ import MatrixRainingCode from "./components/MatrixRainingCode";
 export const metadata: Metadata = {
   title: { default: "thetopham.com", template: "%s | thetopham.com" },
   description:
-    "Matthew Topham — AI systems architect building persistent worlds, multi-node local AI infrastructure, multimodal storytelling pipelines, and interactive software.",
+    "Matthew Topham — CU Boulder computer science student building AI applications, wearable assistants, local AI infrastructure, and persistent worlds.",
   openGraph: {
     title: "thetopham.com",
     description:
-      "AI systems, persistent worlds, multi-node local inference, multimodal storytelling, and experimental software by Matthew Topham.",
+      "Marinara, Manfred, and Demerzel: open-source AI applications, wearable prototypes, and local AI infrastructure by Matthew Topham.",
     url: "https://thetopham.com",
     siteName: "thetopham.com",
     images: [{ url: "https://thetopham.com/og1.png", width: 1200, height: 630 }],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "thetopham",
-    description: "AI systems · persistent worlds · local AI fleet · multimodal storytelling",
+    description: "AI applications · wearable assistants · local AI infrastructure",
     card: "summary_large_image",
   },
   icons: { shortcut: "/favicon.png" },

@@ -2,21 +2,19 @@
 
 ### Building AI for stories, everyday memory, and my own computers
 
-I’m Matt, a computer science student at CU Boulder. I’m building tools that turn roleplay into animation, help me remember my day, and keep my AI projects running on computers I manage at home.
+I’m Matt, a computer science student at CU Boulder. I’m building tools that turn roleplay into animation, assist with projects and lifelogging, and keep my AI projects running on computers I manage at home.
 
 [Portfolio](https://thetopham.github.io/) · [Résumé](https://thetopham.github.io/views/resume.html) · [LinkedIn](https://www.linkedin.com/in/mrtopham) · [Email](mailto:thetopham@gmail.com) · [Matrix mode](https://thetopham.com/)
 
-## Marinara — Bring our roleplays to life
+## Marinara — Bring roleplays to life
 
-**We already write scripts every day in our roleplays. Why not turn them into animation and anime?**
+**We already write scripts every day in roleplay. Why not turn them into animation and anime?**
 
-I contribute to [Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine) and [Marinara Agents](https://github.com/Pasta-Devs/Marinara-Agents). Right now I’m working on a MiniMax H3 workflow in ComfyUI, a visual tool for connecting AI image and video steps. The dream is an anime that grows and changes with the story we’re playing.
+I contribute to [Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine) and [Marinara Agents](https://github.com/Pasta-Devs/Marinara-Agents). I've created a MiniMax H3 workflow in ComfyUI, a visual tool for connecting AI image and video steps. The dream is an anime that grows and changes with the story we’re playing.
 
-The workflow I’m building uses each character’s sheet as a visual reference, alongside their persona or written description. World Maps supplies pictures of the places in the story. Together, those references are meant to keep characters recognizable and backgrounds consistent—including locations that look like the fictional worlds fans know.
+The workflow I built uses each character’s sheet as a visual reference, alongside their persona or written description. World Maps supplies pictures of the places in the story. Together, those references are meant to keep characters recognizable and backgrounds consistent—including locations that look like the fictional worlds fans know.
 
-Our roleplay narration becomes the script. AI breaks it into a storyboard—a scene-by-scene plan—and prepares keyframes, the still images that guide the animation. ComfyUI brings the character and location references, keyframes, and motion instructions together to generate the video.
-
-**Still in development:** I’m exploring MiniMax H3 for animation on my own hardware. Getting closer to Seedance-style action quality locally is a goal, not a result I’ve demonstrated.
+Roleplay narration becomes the script. AI breaks it into a storyboard—a scene-by-scene plan—and prepares keyframes, the still images that guide the animation. ComfyUI brings the character and location references, keyframes, and motion instructions together to generate the video.
 
 <details>
 <summary>Code, contributions, and technical details</summary>
@@ -35,11 +33,11 @@ Built with TypeScript, React, Node.js, model integrations, ComfyUI, and automate
 
 ## [Manfred](https://github.com/thetopham/manfred) — AI ears and eyes for everyday life
 
-Manfred is my wearable assistant project. An Omi wearable provides the audio for daily transcription and lifelogging: turning recordings into a searchable record of conversations and moments I want to remember.
+Manfred is my wearable assistant project. An Omi wearable provides the audio for daily transcription and lifelogging: turning recordings into a searchable record of conversations for ingestion into the daily LLM wiki upload.
 
-I’m also connecting E09 smart glasses to ChatGPT Live for voice conversations and photo uploads. The idea is to talk to AI through the glasses and share what I’m looking at, rather than stop and type everything into my phone.
+I’m also connecting E09 smart glasses to ChatGPT Live for voice conversations and photo uploads. The idea is to interface with gpt live voice through the users gpt account that contains all the users context built up over years instead of a blank api through the glasses audio and img to share in a more natural way.
 
-**The glasses work for voice; photo capture and sharing are still being made more reliable.** This is a prototype, not a finished always-on assistant. Recording needs to respect the people around me, and personal recordings are not published here.
+**The glasses work for voice; photo capture and sharing are still being made more reliable.** This is a prototype, not a finished always-on assistant. 
 
 <details>
 <summary>Technical details</summary>
@@ -48,7 +46,7 @@ Android/Flutter companion, Bluetooth audio, Python transcription and search, pho
 
 </details>
 
-## Demerzel — My AI helper behind the scenes
+## Demerzel — My local AI fleet manager 
 
 Demerzel brings together daily AI briefs, a personal wiki built from my daily conversations, and management of the computers that run my AI projects.
 
@@ -66,7 +64,7 @@ The goal is simple: keep useful information from getting lost, give me a daily o
 
 The management tools check what is running, start or stop supported AI programs, and prevent jobs from fighting over the same graphics card. That supports the other projects instead of making each one manage the hardware itself.
 
-The separate automatic coding/research workers are currently paused while I check recent changes. That is one part of Demerzel—not its whole purpose. Personal wiki content, recordings, and machine access details remain private.
+The separate automatic coding/research workers are a work in progress. Personal wiki content, recordings, and machine access details remain private.
 
 ## Other things I’m building
 

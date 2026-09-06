@@ -9,11 +9,11 @@ import MatrixRainingCode from "./components/MatrixRainingCode";
 export const metadata: Metadata = {
   title: { default: "thetopham.com", template: "%s | thetopham.com" },
   description:
-    "Matthew Topham — CU Boulder computer science student building AI applications, wearable assistants, local AI infrastructure, and persistent worlds.",
+    "I’m Matt, a CU Boulder computer science student building roleplay animation, wearable memory, and an AI helper running on my home computers.",
   openGraph: {
-    title: "thetopham.com",
+    title: "thetopham.com — Stories, memory, and AI at home",
     description:
-      "Marinara, Manfred, and Demerzel: open-source AI applications, wearable prototypes, and local AI infrastructure by Matthew Topham.",
+      "Marinara brings roleplay toward animation. Manfred is wearable memory. Demerzel connects daily briefs, a personal wiki, and my home AI computers.",
     url: "https://thetopham.com",
     siteName: "thetopham.com",
     images: [{ url: "https://thetopham.com/og1.png", width: 1200, height: 630 }],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "thetopham",
-    description: "AI applications · wearable assistants · local AI infrastructure",
+    description: "Roleplay into animation · wearable memory · AI at home",
     card: "summary_large_image",
   },
   icons: { shortcut: "/favicon.png" },

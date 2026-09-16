@@ -14,7 +14,7 @@ My recent work connects the story we write during roleplay to a **working MiniMa
 
 The H3 flow is implemented and has produced a successful multi-shot clip with synchronized motion and audio. The packaged Storyboard prompts reuse that tested workflow. [Animation pipeline](https://github.com/Pasta-Devs/Marinara-Engine/pull/4840) · [MiniMax H3 prompts](https://github.com/Pasta-Devs/Marinara-Agents/pull/365)
 
-### Why I’m building it
+### Why I built it
 
 Roleplayers already create scripts every day through dialogue and narration. The next step is to let those stories become illustrations and animated scenes without losing the characters and locations that make the world recognizable.
 

@@ -1,16 +1,30 @@
 # Matthew Topham
 
-### AI systems for interactive stories, wearable context, and local compute
+### AI tools for spatial creation and wearable context
 
-I’m Matt, a computer science student at CU Boulder. I build end-to-end AI projects that connect models to real interfaces: interactive storytelling, wearable lifelogging, and a small local AI fleet that runs my own models and media workflows.
+I’m Matt, a computer science student at CU Boulder. I build AI tools for spatial creation and wearable context. My latest project is Matrix: a persistent world you can create and edit with AI, then enter from a browser, VR, or AR.
 
-[Portfolio](https://thetopham.github.io/) · [Résumé](https://thetopham.github.io/views/resume.html) · [LinkedIn](https://www.linkedin.com/in/mrtopham) · [Email](mailto:thetopham@gmail.com) · [Matrix mode](https://thetopham.com/)
+[Portfolio](https://thetopham.github.io/) · [Résumé](https://thetopham.github.io/views/resume.html) · [LinkedIn](https://www.linkedin.com/in/mrtopham) · [Email](mailto:thetopham@gmail.com) · [Personal site](https://thetopham.com/)
 
-## Marinara — From roleplay to animation
+## [Matrix Loading Operator](https://github.com/School-of-the-Ancients/matrix-loading-operator) · Voice-to-creation in WebXR
 
-I’m an active contributor to [Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine) and [Marinara Agents](https://github.com/Pasta-Devs/Marinara-Agents), a local-first AI roleplay and game platform.
+Describe what you want to build, work with Operator, then step into the result. Matrix connects a Three.js/WebXR world to Codex, procedural creation, and Blender asset workflows. The same saved world can be explored on desktop, in VR, or through AR.
 
-My recent work connects the story we write during roleplay to a **working MiniMax H3 animation pipeline**. Roleplay narration becomes a storyboard; character sheets and personas ground who is in the scene; World Maps artwork grounds where it happens; generated keyframes establish each shot; and ComfyUI sends the grounded frame and motion plan into MiniMax H3 for animation.
+- **Create and edit:** use voice or text, review changes, and refine objects with context from the current scene.
+- **Place in AR:** select a point on a measured support surface, move a whole layout relative to the room, then save and reopen it.
+- **Keep a world running:** a PC-hosted AI Citizens prototype explores persistent routines, needs, memory, and bounded interactions.
+
+**Released:** [v1.1.0](https://github.com/School-of-the-Ancients/matrix-loading-operator/releases/tag/v1.1.0), September 29, 2026. It adds active-turn steering, precise placement points, and room-relative AR layout controls. v1.2 work is in progress.
+
+[Watch the 2½-minute demo](https://www.youtube.com/watch?v=RJhQpiS-w2o) · [Source and setup](https://github.com/School-of-the-Ancients/matrix-loading-operator) · [Release evidence and limits](https://github.com/School-of-the-Ancients/matrix-loading-operator/releases/tag/v1.1.0)
+
+**Stack:** TypeScript, Three.js, WebXR, Python, Codex, Blender, and automated regression tests. Local services need setup; the release notes distinguish desktop/package checks from Quest wearer testing.
+
+## Marinara · From roleplay to animation
+
+I contributed to [Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine) and [Marinara Agents](https://github.com/Pasta-Devs/Marinara-Agents), a local-first AI roleplay and game platform.
+
+My work connects the story we write during roleplay to a **working MiniMax H3 animation pipeline**. Roleplay narration becomes a storyboard; character sheets and personas ground who is in the scene; World Maps artwork grounds where it happens; generated keyframes establish each shot; and ComfyUI sends the grounded frame and motion plan into MiniMax H3 for animation.
 
 The H3 flow is implemented and has produced a successful multi-shot clip with synchronized motion and audio. The packaged Storyboard prompts reuse that tested workflow. [Animation pipeline](https://github.com/Pasta-Devs/Marinara-Engine/pull/4840) · [MiniMax H3 prompts](https://github.com/Pasta-Devs/Marinara-Agents/pull/365)
 
@@ -72,7 +86,7 @@ The wiki keeps useful context from disappearing into old chats. Daily briefs sur
 | **Dual NVIDIA RTX 3060** | Local language-model serving plus coding/research experiments. |
 | **Single NVIDIA RTX 3060** | ComfyUI image-generation workflows. |
 
-The point is not just owning several GPUs; it is treating them as a small managed compute pool that other projects can use without each project reinventing hardware control.
+I use the machines as a small managed compute pool so each project does not have to reinvent hardware control.
 
 Separate autonomous coding/research workers are still being refined. Personal wiki content, recordings, credentials, and machine-access details remain private.
 
@@ -90,7 +104,7 @@ Separate autonomous coding/research workers are still being refined. Personal wi
 **Software:** Python, TypeScript, JavaScript, SQL, React, Node.js, Flutter, REST/WebSockets.  
 **AI / infrastructure:** local inference, ComfyUI, Linux, Docker, GitHub Actions, Playwright, GPU workload management.
 
-- **University of Colorado Boulder** — B.A. Computer Science, expected May 2027
+- **University of Colorado Boulder** — B.A. Computer Science, in progress
 - **Front Range Community College** — A.S. Computer Science, 2025
 - **NVIDIA-Certified Associate** — AI Infrastructure & Operations, August 2025
 

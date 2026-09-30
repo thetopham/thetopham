@@ -11,38 +11,50 @@ const navigation = [
 
 const projects = [
   {
-    name: "Marinara",
-    tagline: "Working roleplay-to-animation pipeline",
+    name: "Matrix Loading Operator",
+    tagline: "Latest work · v1.1 released",
     description:
-      "Marinara is a local-first AI roleplay and game platform. I implemented a MiniMax H3 / ComfyUI pipeline that turns roleplay narration into a storyboard, grounds characters with their sheets and personas, grounds locations with World Maps artwork, generates keyframes, and animates the resulting shots.",
+      "A persistent Three.js/WebXR world you can create and edit with AI, then enter from desktop, VR, or AR. Operator connects voice and text requests to Codex, procedural creation, and Blender asset workflows.",
     detail:
-      "The H3 flow already works and has produced a multi-shot clip with synchronized motion and audio. The broader direction is an interactive anime / multiverse experience where characters, worlds, roleplay and game modes can be combined, choices shape the story, and later conversations can continue in the context of recent adventures.",
+      "v1.1 adds active-turn steering, precise placement points, and room-relative AR layout controls. Save a world and return to it; a separate PC-hosted AI Citizens prototype explores routines and bounded interactions.",
     status:
-      "Working today: the animation pipeline. Still evolving: the larger interactive world around it. Seedance-like local action quality remains an experiment, not a claimed result.",
+      "Released September 29, 2026. Local services require setup. v1.2 work is in progress.",
+    href: "https://thetopham.github.io/views/projects.html#matrix",
+    link: "project and release evidence",
+  },
+  {
+    name: "Manfred",
+    tagline: "Wearable AI · Prototype",
+    description:
+      "An Android/Flutter companion and Python services for wearable audio, transcription, search, and visual context. Omi audio and E09 smart glasses connect daily context to a personal knowledge system.",
+    detail:
+      "The glasses support voice conversations through ChatGPT Live. Experimental photo capture and phone-side upload buffering connect what the wearer sees to the conversation.",
+    status:
+      "Voice works; photo delivery and confirmation still need reliability work. This remains a prototype.",
+    href: "https://github.com/thetopham/manfred",
+    link: "source and current limits",
+  },
+  {
+    name: "Marinara",
+    tagline: "Open-source contributions · Interactive storytelling",
+    description:
+      "A local-first AI roleplay and game platform. I contributed persistent world state, reusable character and location references, agent capability APIs, and a roleplay-to-animation workflow.",
+    detail:
+      "The MiniMax H3 / ComfyUI flow turns narration into storyboards and keyframes, then uses those frames to ground each shot’s motion. The tested prompt chain is packaged as reusable Storyboard choices.",
+    status:
+      "The flow produced a multi-shot clip with synchronized motion and audio. The broader interactive-anime experience is still a longer-term direction.",
     href: "https://thetopham.github.io/views/projects.html#marinara",
     link: "roleplay to animation",
   },
   {
-    name: "Manfred",
-    tagline: "Wearable AI memory and context",
-    description:
-      "Manfred connects an Omi wearable, daily audio transcription, a personal LLM wiki, and E09 smart glasses. The glasses use ChatGPT Live for voice and can capture and upload images through the phone, giving the assistant both spoken and visual context.",
-    detail:
-      "The goal is a more natural wearable interface to the user’s normal ChatGPT experience rather than a blank API session: talk through the glasses, share what you’re seeing, and let useful daily context feed back into the personal knowledge system.",
-    status:
-      "Voice works today; photo capture and delivery are still being made more reliable. Personal recordings and private context are not published.",
-    href: "https://github.com/thetopham/manfred",
-    link: "meet Manfred",
-  },
-  {
     name: "Demerzel",
-    tagline: "Personal AI operations and local compute",
+    tagline: "Personal AI operations · Local compute",
     description:
-      "Demerzel combines daily AI briefs, LLM wiki ingestion from my conversations, and management of the machines running local AI workloads. It keeps useful context organized while also handling the practical problem of which service should run on which GPU.",
+      "Daily AI briefs, conversation-to-wiki ingestion, and tools for the computers running my local AI workloads. It connects useful context with the practical work of running models and media pipelines.",
     detail:
-      "My home fleet includes an AMD Radeon AI PRO R9700 for larger local models and MiniMax H3 video work, a dual RTX 3060 system for local language models and coding/research experiments, and a single RTX 3060 system for ComfyUI image generation.",
+      "The home fleet includes an AMD Radeon AI PRO R9700, a dual RTX 3060 system, and a single RTX 3060 system. Service health checks and workload controls help avoid GPU contention.",
     status:
-      "Fleet monitoring and workload controls support the other projects; separate autonomous coding/research workers are still being refined. Private wiki data and machine-access details stay private.",
+      "Separate autonomous coding and research workers are still being refined.",
     href: "https://thetopham.github.io/views/projects.html#demerzel",
     link: "AI operations and fleet",
   },
@@ -77,28 +89,29 @@ export default function Home() {
 
       <main className="z-10 flex w-full max-w-6xl flex-col items-center text-center">
         <p className="mb-5 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-green-300 sm:text-sm">
-          Interactive stories · wearable AI · local compute
+          Spatial creation · wearable AI · interactive worlds
         </p>
         <h1 className="cursor-default whitespace-nowrap bg-white bg-clip-text text-5xl text-transparent duration-1000 text-edge-outline animate-title font-display sm:text-7xl md:text-9xl">
           thetopham
         </h1>
         <p className="mt-7 max-w-3xl text-xl leading-8 text-zinc-100 sm:text-2xl">
-          Building AI that moves between stories, everyday life, and my own machines.
+          AI tools for worlds you can step into.
         </p>
         <p className="mt-3 max-w-2xl text-base leading-7 text-zinc-300">
-          I’m Matt, a computer science student at CU Boulder. My projects connect
-          model-driven software to real interfaces: animated roleplay, wearable context,
-          and a small local AI fleet.
+          I’m Matt, a computer science student at CU Boulder. My latest project is
+          Matrix: describe what you want to create, build it with AI, and explore
+          the same persistent world in a browser, VR, or AR.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href="https://thetopham.github.io/" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-green-400/50 bg-green-400/10 px-5 py-3 font-mono text-sm font-bold text-green-300 transition hover:bg-green-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300">professional portfolio ↗</a>
+          <a href="https://www.youtube.com/watch?v=RJhQpiS-w2o" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-green-400/50 bg-green-400/10 px-5 py-3 font-mono text-sm font-bold text-green-300 transition hover:bg-green-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300">watch the Matrix demo ↗</a>
+          <a href="https://github.com/School-of-the-Ancients/matrix-loading-operator/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer" className={actionClass}>v1.1 release ↗</a>
           <a href="https://thetopham.github.io/views/resume.html" target="_blank" rel="noopener noreferrer" className={actionClass}>résumé ↗</a>
           <a href="https://www.linkedin.com/in/mrtopham" target="_blank" rel="noopener noreferrer" className={actionClass}>LinkedIn ↗</a>
         </div>
 
         <section aria-labelledby="current-work" className="mt-12 w-full text-left">
-          <h2 id="current-work" className="mb-5 text-center font-mono text-sm uppercase tracking-widest text-green-300">Current projects</h2>
-          <div className="grid gap-5 lg:grid-cols-3">
+          <h2 id="current-work" className="mb-5 text-center font-mono text-sm uppercase tracking-widest text-green-300">Selected projects</h2>
+          <div className="grid gap-5 md:grid-cols-2">
             {projects.map((project) => (
               <article key={project.name} className="flex min-w-0 flex-col rounded-xl border border-green-400/20 bg-black/70 p-6">
                 <p className="font-mono text-xs leading-5 text-green-300">{project.tagline}</p>

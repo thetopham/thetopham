@@ -73,7 +73,7 @@ Software Development; Python; TypeScript; JavaScript; React; Node.js; SQL; Flutt
 
 ## Education and certification
 
-University of Colorado Boulder — B.A. Computer Science, in progress.  
+University of Colorado Boulder — B.A. Computer Science, in progress.\
 Front Range Community College — A.S. Computer Science, 2025.  
 NVIDIA-Certified Associate — AI Infrastructure & Operations, August 2025.
 

@@ -104,7 +104,7 @@ Separate autonomous coding/research workers are still being refined. Personal wi
 **Software:** Python, TypeScript, JavaScript, SQL, React, Node.js, Flutter, REST/WebSockets.  
 **AI / infrastructure:** local inference, ComfyUI, Linux, Docker, GitHub Actions, Playwright, GPU workload management.
 
-- **University of Colorado Boulder** — B.A. Computer Science, expected May 2027
+- **University of Colorado Boulder** — B.A. Computer Science, in progress
 - **Front Range Community College** — A.S. Computer Science, 2025
 - **NVIDIA-Certified Associate** — AI Infrastructure & Operations, August 2025
 

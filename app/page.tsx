@@ -11,16 +11,40 @@ const navigation = [
 
 const projects = [
   {
+    name: "School of the Ancients",
+    tagline: "Latest work · Quest 3 mixed reality",
+    description:
+      "Ask a question, create an exhibit, and explore the answer with an AI teacher in your room. School connects an ongoing learning conversation to Matrix and Blender authoring.",
+    detail:
+      "The demo moves from Leonardo’s flying machines to Dyson swarms, Faraday induction and Tesla’s coils, showing original and GPT live voice + Decisions API implementations.",
+    status:
+      "A project developed across years of web, Horizon Worlds and learning-system prototypes. The current report documents the October 2026 Professor integration.",
+    href: "https://thetopham.github.io/views/school-of-the-ancients.html",
+    link: "demo, report, slides and project history",
+  },
+  {
     name: "Matrix Loading Operator",
-    tagline: "Latest work · v1.1 released",
+    tagline: "Spatial creation · WebXR",
     description:
       "A persistent Three.js/WebXR world you can create and edit with AI, then enter from desktop, VR, or AR. Operator connects voice and text requests to Codex, procedural creation, and Blender asset workflows.",
     detail:
-      "v1.1 adds active-turn steering, precise placement points, and room-relative AR layout controls. Save a world and return to it; a separate PC-hosted AI Citizens prototype explores routines and bounded interactions.",
+      "Create procedural objects or request custom Blender assets, inspect and manipulate them in the room, then save the world and continue later. The Professor integration builds a learning experience on this foundation.",
     status:
-      "Released September 29, 2026. Local services require setup. v1.2 work is in progress.",
-    href: "https://thetopham.github.io/views/projects.html#matrix",
-    link: "project and release evidence",
+      "The Project 1 report preserves the September 2026 submission; later release history documents ongoing development. Local services require setup.",
+    href: "https://thetopham.github.io/views/matrix-loading-operator.html",
+    link: "demo, report and source",
+  },
+  {
+    name: "Orbital Guardian",
+    tagline: "Unity · PC VR · Zero gravity",
+    description:
+      "A zero-gravity exploration and station-defense prototype: equip handjets, grab a rotating station, intercept asteroids and pilot a spacecraft.",
+    detail:
+      "Earlier Unity space experiments became a playable encounter through scene repair and integration. The technical work coordinates player movement, tools, ship travel and recovery.",
+    status:
+      "September 2026 Demo Day project. The report credits the existing assets, interaction framework and Codex-assisted work.",
+    href: "https://thetopham.github.io/views/orbital-guardian.html",
+    link: "demo, report and walkthrough",
   },
   {
     name: "Manfred",
@@ -98,13 +122,13 @@ export default function Home() {
           AI tools for worlds you can step into.
         </p>
         <p className="mt-3 max-w-2xl text-base leading-7 text-zinc-300">
-          I’m Matt, a computer science student at CU Boulder. My latest project is
-          Matrix: describe what you want to create, build it with AI, and explore
-          the same persistent world in a browser, VR, or AR.
+          I’m Matt, a computer science student at CU Boulder. I build AI systems you
+          can step into: learning with historical teachers, creating worlds through
+          conversation, and exploring ideas beyond a chat window.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href="https://www.youtube.com/watch?v=RJhQpiS-w2o" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-green-400/50 bg-green-400/10 px-5 py-3 font-mono text-sm font-bold text-green-300 transition hover:bg-green-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300">watch the Matrix demo ↗</a>
-          <a href="https://github.com/School-of-the-Ancients/matrix-loading-operator/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer" className={actionClass}>v1.1 release ↗</a>
+          <a href="https://www.youtube.com/watch?v=zFG1tiifpe4" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-green-400/50 bg-green-400/10 px-5 py-3 font-mono text-sm font-bold text-green-300 transition hover:bg-green-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300">watch the School demo ↗</a>
+          <a href="https://thetopham.github.io/views/school-of-the-ancients.html" target="_blank" rel="noopener noreferrer" className={actionClass}>report, slides &amp; history ↗</a>
           <a href="https://thetopham.github.io/views/resume.html" target="_blank" rel="noopener noreferrer" className={actionClass}>résumé ↗</a>
           <a href="https://www.linkedin.com/in/mrtopham" target="_blank" rel="noopener noreferrer" className={actionClass}>LinkedIn ↗</a>
         </div>

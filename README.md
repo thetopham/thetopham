@@ -2,9 +2,21 @@
 
 ### AI tools for spatial creation and wearable context
 
-I’m Matt, a computer science student at CU Boulder. I build AI tools for spatial creation and wearable context. My latest project is Matrix: a persistent world you can create and edit with AI, then enter from a browser, VR, or AR.
+I’m Matt, a computer science student at CU Boulder. I build AI tools for spatial creation and wearable context. My latest project is School of the Ancients: ask a question, create an exhibit, and explore the answer with an AI teacher in Quest mixed reality. It builds on Matrix Loading Operator, the persistent spatial world underneath it.
 
 [Portfolio](https://thetopham.github.io/) · [Résumé](https://thetopham.github.io/views/resume.html) · [LinkedIn](https://www.linkedin.com/in/mrtopham) · [Email](mailto:thetopham@gmail.com) · [Personal site](https://thetopham.com/)
+
+## [School of the Ancients](https://thetopham.github.io/views/school-of-the-ancients.html) · Questions become exhibits
+
+Start in a blank world. Ask a historically inspired teacher a question, request a model, and explore the result in your room. School connects the learning conversation to Matrix, Blender authoring, embodied teachers, and optional GPT live voice with the Decisions API.
+
+The current Quest 3 demo follows Leonardo’s aerial screw and ornithopter, Dyson-swarm and Faraday examples, then a full Tesla conversation. The original and live-voice clips show two implementations; the report explains the editing and what the recordings demonstrate.
+
+This has been a work in progress for years: Cosmos inspiration, a 2024 web prototype, the 2025 Horizon Worlds competition entry, alpha/beta learning experiments, Matrix, and the current Professor integration. Ryo Suzuki’s 2025 AR/AI colloquium helped shape the spatial direction.
+
+[Watch the 7:53 demo](https://www.youtube.com/watch?v=zFG1tiifpe4) · [Report and slides](https://thetopham.github.io/views/school-of-the-ancients.html#downloads) · [Project history](https://thetopham.github.io/views/school-of-the-ancients.html#history) · [Professor source](https://github.com/School-of-the-Ancients/sota-professor)
+
+**Stack:** TypeScript, Three.js, WebXR, Python, Blender, embodied voice and tool-driven creation. A host PC runs the services; Quest Browser provides the mixed reality interface.
 
 ## [Matrix Loading Operator](https://github.com/School-of-the-Ancients/matrix-loading-operator) · Voice-to-creation in WebXR
 
@@ -14,11 +26,19 @@ Describe what you want to build, work with Operator, then step into the result. 
 - **Place in AR:** select a point on a measured support surface, move a whole layout relative to the room, then save and reopen it.
 - **Keep a world running:** a PC-hosted AI Citizens prototype explores persistent routines, needs, memory, and bounded interactions.
 
-**Released:** [v1.1.0](https://github.com/School-of-the-Ancients/matrix-loading-operator/releases/tag/v1.1.0), September 29, 2026. It adds active-turn steering, precise placement points, and room-relative AR layout controls. v1.2 work is in progress.
+**Development:** the September Project 1 submission established the spatial creation workflow. Later paired Matrix/Professor builds support School of the Ancients; the [October rc.7 checkpoint](https://github.com/School-of-the-Ancients/matrix-loading-operator/releases/tag/v1.3.0-rc.7) documents that integration.
 
-[Watch the 2½-minute demo](https://www.youtube.com/watch?v=RJhQpiS-w2o) · [Source and setup](https://github.com/School-of-the-Ancients/matrix-loading-operator) · [Release evidence and limits](https://github.com/School-of-the-Ancients/matrix-loading-operator/releases/tag/v1.1.0)
+[Watch the 2½-minute demo](https://www.youtube.com/watch?v=RJhQpiS-w2o) · [Source and setup](https://github.com/School-of-the-Ancients/matrix-loading-operator) · [Project 1 report and slides](https://thetopham.github.io/views/matrix-loading-operator.html#downloads)
 
 **Stack:** TypeScript, Three.js, WebXR, Python, Codex, Blender, and automated regression tests. Local services need setup; the release notes distinguish desktop/package checks from Quest wearer testing.
+
+## [Orbital Guardian](https://thetopham.github.io/views/orbital-guardian.html) · Zero-gravity exploration and station defense
+
+Earlier Unity space experiments became a PC VR prototype: equip handjets, move around a rotating station, intercept asteroids, pilot a spacecraft and explore the planetary scene. The September 2026 assignment brought existing scene and interaction work together with Codex-assisted repair and integration.
+
+**Engineering focus:** coordinate EVA movement, moving handholds, tools and ship piloting within one playable encounter. Built with Unity 6, BNG VR Interaction Framework and credited asset packages.
+
+[Watch the demo](https://www.youtube.com/watch?v=-C2nF0jtC0Q) · [Report and walkthrough](https://thetopham.github.io/views/orbital-guardian.html#downloads)
 
 ## Marinara · From roleplay to animation
 
@@ -91,8 +111,6 @@ I use the machines as a small managed compute pool so each project does not have
 Separate autonomous coding/research workers are still being refined. Personal wiki content, recordings, credentials, and machine-access details remain private.
 
 ## Other projects
-
-**[School of the Ancients](https://github.com/School-of-the-Ancients):** conversational learning with AI historical mentors across web and VR prototypes.
 
 **[AI Radar](https://github.com/thetopham/ai-radar):** automated AI news/research collection and daily briefing.
 

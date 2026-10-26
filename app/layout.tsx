@@ -9,11 +9,11 @@ import MatrixRainingCode from "./components/MatrixRainingCode";
 export const metadata: Metadata = {
   title: { default: "thetopham.com", template: "%s | thetopham.com" },
   description:
-    "Matthew Topham builds AI tools for spatial creation and wearable context. Explore Matrix, a persistent Three.js/WebXR world for desktop, VR, and AR.",
+    "Matthew Topham builds School of the Ancients, Matrix spatial creation, wearable AI and interactive worlds. Explore demos, project reports, slides and source code.",
   openGraph: {
     title: "Matthew Topham · Spatial AI and interactive worlds",
     description:
-      "Matrix connects voice-driven creation to desktop, VR, and AR. Manfred explores wearable context. Marinara turns roleplay into grounded animation.",
+      "School of the Ancients turns questions into exhibits in Quest mixed reality. Explore Matrix, Orbital Guardian, wearable AI and interactive storytelling.",
     url: "https://thetopham.com",
     siteName: "thetopham.com",
     images: [{ url: "https://thetopham.com/og1.png", width: 1200, height: 630 }],

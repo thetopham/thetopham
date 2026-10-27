@@ -9,7 +9,7 @@ import MatrixRainingCode from "./components/MatrixRainingCode";
 export const metadata: Metadata = {
   title: { default: "thetopham.com", template: "%s | thetopham.com" },
   description:
-    "Matthew Topham builds School of the Ancients, Matrix spatial creation, wearable AI and interactive worlds. Explore demos, project reports, slides and source code.",
+    "Matthew Topham builds School of the Ancients, Matrix spatial creation, wearable AI and interactive worlds. Explore demos, project reports, slides and collaboration opportunities.",
   openGraph: {
     title: "Matthew Topham · Spatial AI and interactive worlds",
     description:

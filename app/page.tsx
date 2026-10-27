@@ -30,9 +30,9 @@ const projects = [
     detail:
       "Create procedural objects or request custom Blender assets, inspect and manipulate them in the room, then save the world and continue later. The Professor integration builds a learning experience on this foundation.",
     status:
-      "The Project 1 report preserves the September 2026 submission; later release history documents ongoing development. Local services require setup.",
+      "The Project 1 report documents the September 2026 submission. The current implementation powers School of the Ancients; development repositories are private.",
     href: "https://thetopham.github.io/views/matrix-loading-operator.html",
-    link: "demo, report and source",
+    link: "demo, report and slides",
   },
   {
     name: "Orbital Guardian",
@@ -84,8 +84,19 @@ const projects = [
   },
 ];
 
+const projectImages: Record<string, { src: string; alt: string }> = {
+  "School of the Ancients": {
+    src: "https://thetopham.github.io/resources/projects/leonardo.png",
+    alt: "Leonardo and interactive exhibits in Quest mixed reality",
+  },
+  "Matrix Loading Operator": {
+    src: "https://thetopham.github.io/resources/projects/matrix.png",
+    alt: "Matrix objects and creation controls in a physical room",
+  },
+};
+
 const navClass =
-  "nav-link text-sm sm:text-base font-bold text-white hover:text-green-400 transition-transform transform hover:scale-105 bg-black/60 px-3 sm:px-4 py-2 rounded-lg text-shadow border border-white/10 hover:border-green-400/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300";
+  "nav-link inline-flex min-h-11 items-center text-sm sm:text-base font-bold text-white hover:text-green-400 transition-transform transform hover:scale-105 bg-black/60 px-3 sm:px-4 py-2 rounded-lg text-shadow border border-white/10 hover:border-green-400/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300";
 const actionClass =
   "rounded-lg border border-zinc-600 bg-black/50 px-5 py-3 font-mono text-sm font-bold text-zinc-200 transition hover:border-zinc-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300";
 
@@ -93,7 +104,7 @@ export default function Home() {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black px-5 pb-8">
       <nav aria-label="Primary" className="z-20 mb-12 mt-8 animate-fade-in sm:mb-16">
-        <ul className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+        <ul className="grid grid-cols-2 items-center gap-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
           {navigation.map((item) => (
             <li key={item.href}>
               {item.external ? (
@@ -115,7 +126,7 @@ export default function Home() {
         <p className="mb-5 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-green-300 sm:text-sm">
           Spatial creation · wearable AI · interactive worlds
         </p>
-        <h1 className="cursor-default whitespace-nowrap bg-white bg-clip-text text-5xl text-transparent duration-1000 text-edge-outline animate-title font-display sm:text-7xl md:text-9xl">
+        <h1 className="cursor-default max-w-full bg-white bg-clip-text text-5xl text-transparent duration-1000 text-edge-outline animate-title font-display sm:text-7xl md:text-9xl">
           thetopham
         </h1>
         <p className="mt-7 max-w-3xl text-xl leading-8 text-zinc-100 sm:text-2xl">
@@ -137,11 +148,26 @@ export default function Home() {
           <h2 id="current-work" className="mb-5 text-center font-mono text-sm uppercase tracking-widest text-green-300">Selected projects</h2>
           <div className="grid gap-5 md:grid-cols-2">
             {projects.map((project) => (
-              <article key={project.name} className="flex min-w-0 flex-col rounded-xl border border-green-400/20 bg-black/70 p-6">
+              <article key={project.name} className="flex min-w-0 flex-col rounded-xl border border-green-400/20 bg-black/80 p-5 sm:p-6">
+                {projectImages[project.name] && (
+                  <a href={project.href} className="mb-5 block overflow-hidden rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300">
+                    <img
+                      src={projectImages[project.name].src}
+                      alt={projectImages[project.name].alt}
+                      width="1280"
+                      height="720"
+                      loading="lazy"
+                      className="aspect-video w-full object-cover"
+                    />
+                  </a>
+                )}
                 <p className="font-mono text-xs leading-5 text-green-300">{project.tagline}</p>
                 <h3 className="mt-2 text-2xl font-semibold text-white">{project.name}</h3>
                 <p className="mt-4 text-base leading-7 text-zinc-200">{project.description}</p>
-                <p className="mt-4 text-sm leading-6 text-zinc-300">{project.detail}</p>
+                <details className="mt-4 text-sm leading-6 text-zinc-300">
+                  <summary className="cursor-pointer py-2 font-semibold text-green-300">Build notes</summary>
+                  <p className="mt-2">{project.detail}</p>
+                </details>
                 <p className="mb-6 mt-4 text-sm leading-6 text-zinc-400">{project.status}</p>
                 <a href={project.href} target="_blank" rel="noopener noreferrer" className="mt-auto text-sm font-semibold text-green-300 underline decoration-green-400/40 underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300">{project.link} ↗</a>
               </article>

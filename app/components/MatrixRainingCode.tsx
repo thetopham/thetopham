@@ -9,6 +9,8 @@ const MatrixRainingCode: React.FC = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
@@ -43,6 +45,7 @@ const MatrixRainingCode: React.FC = () => {
 };
 
 
+    let animationFrame = 0;
     const animate = () => {
       const currentTime = Date.now();
       const elapsedTime = currentTime - lastFrameTime;
@@ -52,7 +55,7 @@ const MatrixRainingCode: React.FC = () => {
         lastFrameTime = currentTime;
       }
 
-      requestAnimationFrame(animate);
+      animationFrame = requestAnimationFrame(animate);
     };
 
     animate();
@@ -64,19 +67,15 @@ const MatrixRainingCode: React.FC = () => {
       drops = Array(columns).fill(1);
     };
 
-    const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
-    if (!isMobileDevice) {
-      window.addEventListener("resize", handleResize);
-    }
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      if (!isMobileDevice) {
-        window.removeEventListener("resize", handleResize);
-      }
+      cancelAnimationFrame(animationFrame);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  return <canvas className="matrix-canvas fixed top-0 left-0 z-[-1]" ref={canvasRef}></canvas>;
+  return <canvas aria-hidden="true" className="matrix-canvas fixed top-0 left-0 z-[-1]" ref={canvasRef}></canvas>;
 };
 
 export default MatrixRainingCode;

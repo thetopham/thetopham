@@ -17,3 +17,12 @@
   z-index: -1; /* Keeps it behind page content */
   pointer-events: none; /* Allows clicking through the canvas */
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-title,
+  .animate-fade-in,
+  .animate-fade-left,
+  .animate-fade-right {
+    animation: none;
+  }
+}

@@ -14,11 +14,11 @@ The current Quest 3 demo follows Leonardo’s aerial screw and ornithopter, Dyso
 
 This has been a work in progress for years: Cosmos inspiration, a 2024 web prototype, the 2025 Horizon Worlds competition entry, alpha/beta learning experiments, Matrix, and the current Professor integration. Ryo Suzuki’s 2025 AR/AI colloquium helped shape the spatial direction.
 
-[Watch the 7:53 demo](https://www.youtube.com/watch?v=zFG1tiifpe4) · [Report and slides](https://thetopham.github.io/views/school-of-the-ancients.html#downloads) · [Project history](https://thetopham.github.io/views/school-of-the-ancients.html#history) · [Professor source](https://github.com/School-of-the-Ancients/sota-professor)
+[Watch the 7:53 demo](https://www.youtube.com/watch?v=zFG1tiifpe4) · [Report and slides](https://thetopham.github.io/views/school-of-the-ancients.html#downloads) · [Project history](https://thetopham.github.io/views/school-of-the-ancients.html#history) · [Project website](https://schooloftheancients.com/)
 
 **Stack:** TypeScript, Three.js, WebXR, Python, Blender, embodied voice and tool-driven creation. A host PC runs the services; Quest Browser provides the mixed reality interface.
 
-## [Matrix Loading Operator](https://github.com/School-of-the-Ancients/matrix-loading-operator) · Voice-to-creation in WebXR
+## [Matrix Loading Operator](https://thetopham.github.io/views/matrix-loading-operator.html) · Voice-to-creation in WebXR
 
 Describe what you want to build, work with Operator, then step into the result. Matrix connects a Three.js/WebXR world to Codex, procedural creation, and Blender asset workflows. The same saved world can be explored on desktop, in VR, or through AR.
 
@@ -26,9 +26,9 @@ Describe what you want to build, work with Operator, then step into the result. 
 - **Place in AR:** select a point on a measured support surface, move a whole layout relative to the room, then save and reopen it.
 - **Keep a world running:** a PC-hosted AI Citizens prototype explores persistent routines, needs, memory, and bounded interactions.
 
-**Development:** the September Project 1 submission established the spatial creation workflow. Later paired Matrix/Professor builds support School of the Ancients; the [October rc.7 checkpoint](https://github.com/School-of-the-Ancients/matrix-loading-operator/releases/tag/v1.3.0-rc.7) documents that integration.
+**Development:** the September Project 1 submission established the spatial creation workflow. Later paired Matrix/Professor builds support School of the Ancients. Development repositories are private; public demos and project reports document the work.
 
-[Watch the 2½-minute demo](https://www.youtube.com/watch?v=RJhQpiS-w2o) · [Source and setup](https://github.com/School-of-the-Ancients/matrix-loading-operator) · [Project 1 report and slides](https://thetopham.github.io/views/matrix-loading-operator.html#downloads)
+[Watch the 2½-minute demo](https://www.youtube.com/watch?v=RJhQpiS-w2o) · [Project overview](https://schooloftheancients.com/) · [Project 1 report and slides](https://thetopham.github.io/views/matrix-loading-operator.html#downloads)
 
 **Stack:** TypeScript, Three.js, WebXR, Python, Codex, Blender, and automated regression tests. Local services need setup; the release notes distinguish desktop/package checks from Quest wearer testing.
 

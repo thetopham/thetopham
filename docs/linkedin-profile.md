@@ -1,24 +1,22 @@
-# LinkedIn profile update
+# LinkedIn profile
 
-Suggested replacement copy for review. This file does not change the live LinkedIn profile.
+The headline and About section below were published on November 18, 2026. The School project leads the Featured section. The project and experience notes later in this file are reference material. [Matthew Topham on LinkedIn](https://www.linkedin.com/in/mrtopham)
 
 ## Headline
 
-Computer Science Student | AI Systems & Full-Stack Developer | Interactive Storytelling, Wearable AI & Local Compute
+AI Systems & Full-Stack Developer | WebXR, Three.js & Python | Creator of School of the Ancients | Computer Science at CU Boulder
 
 ## About
 
-I’m Matt, a computer science student at CU Boulder building AI systems that connect models to real interfaces: interactive storytelling, wearable lifelogging, and local AI infrastructure.
+I build software that connects AI conversations to things people can see and handle. In my latest Quest demo, I asked for a spaceship with solar panels and an ion engine. When it appeared in my room, I picked it up, pointed at a wing, and talked through why the engine needs both electricity and propellant.
 
-My current open-source focus is Marinara Engine + Agents, a local-first AI roleplay and game platform. I implemented a working MiniMax H3 / ComfyUI animation flow that turns roleplay narration into a storyboard, uses character sheets and personas to ground characters, uses World Maps artwork to ground locations, generates keyframes for each shot, and produces animated clips. The flow has already produced a successful multi-shot result with synchronized motion and audio.
+I built School of the Ancients around that interaction. A WebXR client connects hand tracking and live voice to a Blender exhibit builder. The Professor service follows what the learner explains across the conversation, saves progress, and suggests the next question. Learners can also begin with an exhibit from the School Library. I submitted the invitation-only build to the 2026 Meta VR Start Developer Competition.
 
-The larger idea is to make roleplay more visual and interactive. We already create scripts through dialogue and narration; I want those stories to become illustrations and animated scenes while preserving the characters and places that make the world recognizable. Longer term, that points toward an interactive anime / multiverse experience where characters, worlds, roleplay and game modes can be combined, choices shape the story, and later conversations can continue in the context of recent adventures.
+My other work includes Manfred, a Flutter and Python prototype that buffers and transcribes wearable audio, and contributions to Marinara Engine and Agents. There I built persistent World Maps, versioned APIs for downloadable agents, and tools that carry character and location references into animated storyboards. I run model-serving and GPU workloads on a small local compute fleet.
 
-Manfred is my wearable AI project. An Omi wearable provides daily audio for transcription and lifelogging, with transcripts feeding a personal LLM wiki. I’m also connecting E09 smart glasses to ChatGPT Live for voice conversations and image uploads so AI can be accessed more naturally from a wearable interface. Voice works today; photo capture and delivery are still being made more reliable.
+I’m finishing my B.A. in Computer Science at CU Boulder and am open to AI systems, full-stack development, and interactive media roles.
 
-Demerzel is the operations layer behind the projects: daily AI briefs, LLM wiki ingestion from daily conversations, and management of a home AI fleet built around an AMD Radeon AI PRO R9700, a dual RTX 3060 system, and a single RTX 3060 system. I’ve built tools to check services, start and stop supported workloads, and keep jobs from competing for the same GPU.
-
-I’ve contributed 100 merged pull requests across Marinara Engine and Agents, verified September 5, 2026. I’m interested in software and AI roles where I can combine product thinking, full-stack development, model integration, and practical infrastructure.
+[Quest demo and project story](https://devpost.com/software/school-of-the-ancients-t275sh) · [Portfolio and résumé](https://thetopham.github.io/)
 
 ## Open-source experience
 
@@ -54,14 +52,13 @@ Built tools to monitor supported services, start/stop workloads, and avoid GPU c
 
 Project overview: https://thetopham.github.io/views/projects.html#demerzel
 
-## Project: School of the Ancients
+## Project notes for School of the Ancients
 
-A conversational learning project where people explore ideas with AI historical mentors. Built web experiences and VR prototypes using React, TypeScript, Node.js, Supabase/Postgres, real-time voice AI, and Unity.
-
-Project: https://github.com/School-of-the-Ancients
+A WebXR learning experience for desktop, mobile and Quest. Learners can ask for a new Blender exhibit or open one from the School Library. Live voice and hand selection connect the physical parts to the explanation. The lesson uses evidence from the conversation to track objectives and offer follow-up questions. [Contest case study](https://devpost.com/software/school-of-the-ancients-t275sh)
 
 ## Featured links
 
+- [School of the Ancients](https://schooloftheancients.com/) leads to the public contest demo and waitlist.
 - **Portfolio / current work:** https://thetopham.github.io/
 - **Marinara — roleplay to animation:** https://thetopham.github.io/views/projects.html#marinara
 - **Manfred wearable AI:** https://github.com/thetopham/manfred

@@ -1,131 +1,26 @@
 # Matthew Topham
 
-### AI tools for spatial creation and wearable context
+I’m a computer science student at CU Boulder. I build software that lets people talk to an AI system and work with what it creates. My projects span mixed reality, wearable audio, and open-source tools for interactive stories.
 
-I’m Matt, a computer science student at CU Boulder. I build AI tools for spatial creation and wearable context. My latest project is School of the Ancients: ask a question, create an exhibit, and explore the answer with an AI teacher in Quest mixed reality. It builds on Matrix Loading Operator, the persistent spatial world underneath it.
+[Portfolio](https://thetopham.github.io/) · [Résumé](https://thetopham.github.io/views/resume.html) · [LinkedIn](https://www.linkedin.com/in/mrtopham) · [Personal site](https://thetopham.com/) · [Email](mailto:thetopham@gmail.com)
 
-[Portfolio](https://thetopham.github.io/) · [Résumé](https://thetopham.github.io/views/resume.html) · [LinkedIn](https://www.linkedin.com/in/mrtopham) · [Email](mailto:thetopham@gmail.com) · [Personal site](https://thetopham.com/)
+## School of the Ancients
 
-## [School of the Ancients](https://thetopham.github.io/views/school-of-the-ancients.html) · Questions become exhibits
+I asked for a spaceship with solar panels and an ion engine. In my Quest headset I could pick up the ship, point at a solar wing, and talk through why the engine needs electricity *and* propellant. The lesson saved my explanation and suggested three questions I could explore next.
 
-Start in a blank world. Ask a historically inspired teacher a question, request a model, and explore the result in your room. School connects the learning conversation to Matrix, Blender authoring, embodied teachers, and optional GPT live voice with the Decisions API.
+I built the learning service and its connection to Matrix Loading Operator, my Three.js/WebXR creation platform. A learner can open a finished School Library exhibit or ask for a new one. Blender builds the model in the background. Live voice, object selection, and lesson progress stay connected as the exhibit arrives. The invitation-only build was submitted to the **2026 Meta VR Start Developer Competition**.
 
-The current Quest 3 demo follows Leonardo’s aerial screw and ornithopter, Dyson-swarm and Faraday examples, then a full Tesla conversation. The original and live-voice clips show two implementations; the report explains the editing and what the recordings demonstrate.
+[Watch the 2:59 Quest demo](https://www.youtube.com/watch?v=K5-2K7kUySo) · [Devpost entry](https://devpost.com/software/school-of-the-ancients-t275sh) · [Engineering case study and earlier demos](https://thetopham.github.io/views/school-of-the-ancients.html) · [School waitlist](https://schooloftheancients.com/#early-access)
 
-This has been a work in progress for years: Cosmos inspiration, a 2024 web prototype, the 2025 Horizon Worlds competition entry, alpha/beta learning experiments, Matrix, and the current Professor integration. Ryo Suzuki’s 2025 AR/AI colloquium helped shape the spatial direction.
+## Selected engineering work
 
-[Watch the 7:53 demo](https://www.youtube.com/watch?v=zFG1tiifpe4) · [Report and slides](https://thetopham.github.io/views/school-of-the-ancients.html#downloads) · [Project history](https://thetopham.github.io/views/school-of-the-ancients.html#history) · [Project website](https://schooloftheancients.com/)
+| Project | What I built | Where to look |
+| --- | --- | --- |
+| Matrix Loading Operator | Voice and text controls for creating, placing, and restoring objects in a persistent WebXR world. | [Technical walkthrough](https://thetopham.github.io/views/matrix-loading-operator.html) |
+| Marinara Engine and Agents | Persistent World Maps, versioned APIs for downloadable agents, and storyboards that carry character and location references into animation. I contributed 68 merged pull requests to Engine and 32 to Agents. | [World Maps](https://github.com/Pasta-Devs/Marinara-Engine/pull/3565) · [Agent APIs](https://github.com/Pasta-Devs/Marinara-Engine/pull/3693) · [Animation](https://github.com/Pasta-Devs/Marinara-Engine/pull/4840) |
+| Manfred | An Android/Flutter companion that buffers wearable audio and sends it to Python services for transcription and search. Smart-glasses photo capture is experimental. | [Repository](https://github.com/thetopham/manfred) |
+| Orbital Guardian | A Unity PC VR prototype with handjet movement, moving handholds, ship piloting, and station defense. | [Demo and project report](https://thetopham.github.io/views/orbital-guardian.html) |
 
-**Stack:** TypeScript, Three.js, WebXR, Python, Blender, embodied voice and tool-driven creation. A host PC runs the services; Quest Browser provides the mixed reality interface.
+I run local model-serving and GPU workloads through Demerzel, the compute setup behind these projects. I also built [AI Radar](https://github.com/thetopham/ai-radar) and contributed to a [NASA SUITS student prototype](https://github.com/nasa-suits-challenge/suits-2026).
 
-## [Matrix Loading Operator](https://thetopham.github.io/views/matrix-loading-operator.html) · Voice-to-creation in WebXR
-
-Describe what you want to build, work with Operator, then step into the result. Matrix connects a Three.js/WebXR world to Codex, procedural creation, and Blender asset workflows. The same saved world can be explored on desktop, in VR, or through AR.
-
-- **Create and edit:** use voice or text, review changes, and refine objects with context from the current scene.
-- **Place in AR:** select a point on a measured support surface, move a whole layout relative to the room, then save and reopen it.
-- **Keep a world running:** a PC-hosted AI Citizens prototype explores persistent routines, needs, memory, and bounded interactions.
-
-**Development:** the September Project 1 submission established the spatial creation workflow. Later paired Matrix/Professor builds support School of the Ancients. Development repositories are private; public demos and project reports document the work.
-
-[Watch the 2½-minute demo](https://www.youtube.com/watch?v=RJhQpiS-w2o) · [Project overview](https://schooloftheancients.com/) · [Project 1 report and slides](https://thetopham.github.io/views/matrix-loading-operator.html#downloads)
-
-**Stack:** TypeScript, Three.js, WebXR, Python, Codex, Blender, and automated regression tests. Local services need setup; the release notes distinguish desktop/package checks from Quest wearer testing.
-
-## [Orbital Guardian](https://thetopham.github.io/views/orbital-guardian.html) · Zero-gravity exploration and station defense
-
-Earlier Unity space experiments became a PC VR prototype: equip handjets, move around a rotating station, intercept asteroids, pilot a spacecraft and explore the planetary scene. The September 2026 assignment brought existing scene and interaction work together with Codex-assisted repair and integration.
-
-**Engineering focus:** coordinate EVA movement, moving handholds, tools and ship piloting within one playable encounter. Built with Unity 6, BNG VR Interaction Framework and credited asset packages.
-
-[Watch the demo](https://www.youtube.com/watch?v=-C2nF0jtC0Q) · [Report and walkthrough](https://thetopham.github.io/views/orbital-guardian.html#downloads)
-
-## Marinara · From roleplay to animation
-
-I contributed to [Marinara Engine](https://github.com/Pasta-Devs/Marinara-Engine) and [Marinara Agents](https://github.com/Pasta-Devs/Marinara-Agents), a local-first AI roleplay and game platform.
-
-My work connects the story we write during roleplay to a **working MiniMax H3 animation pipeline**. Roleplay narration becomes a storyboard; character sheets and personas ground who is in the scene; World Maps artwork grounds where it happens; generated keyframes establish each shot; and ComfyUI sends the grounded frame and motion plan into MiniMax H3 for animation.
-
-The H3 flow is implemented and has produced a successful multi-shot clip with synchronized motion and audio. The packaged Storyboard prompts reuse that tested workflow. [Animation pipeline](https://github.com/Pasta-Devs/Marinara-Engine/pull/4840) · [MiniMax H3 prompts](https://github.com/Pasta-Devs/Marinara-Agents/pull/365)
-
-### Why I built it
-
-Roleplayers already create scripts every day through dialogue and narration. The next step is to let those stories become illustrations and animated scenes without losing the characters and locations that make the world recognizable.
-
-- **Character continuity:** character-sheet artwork and persona data provide visual and written references for each character.
-- **Location continuity:** World Maps artwork gives scenes a persistent visual reference for recurring places, including fandom settings.
-- **Story to animation:** narration becomes a scene plan, keyframes, motion instructions, and then an animated clip.
-
-The broader direction is an **interactive anime / multiverse experience**: combine characters, worlds, roleplay and game modes, make choices, and continue talking with characters who can respond in the context of recent adventures. That larger experience is the direction of the project; the working H3 animation pipeline is one piece already in place.
-
-I’m also interested in how far local video models can go on consumer/pro hardware. Reaching Seedance-like action quality locally is an experiment and goal, not a claim of demonstrated parity.
-
-<details>
-<summary>More engineering details</summary>
-
-My Marinara work spans persistent world state, reusable character/location references, storyboard orchestration, package APIs, recovery paths, UI, and automated validation.
-
-- [World Maps and spatial state](https://github.com/Pasta-Devs/Marinara-Engine/pull/3565)
-- [Capability APIs for downloadable agents](https://github.com/Pasta-Devs/Marinara-Engine/pull/3693)
-- [Roleplay storyboards](https://github.com/Pasta-Devs/Marinara-Engine/pull/4326)
-- [Shared World Maps artwork](https://github.com/Pasta-Devs/Marinara-Engine/pull/4279)
-- [Travel and recovery](https://github.com/Pasta-Devs/Marinara-Engine/pull/4623)
-
-100 merged pull requests across Engine (68) and Agents (32), verified September 5, 2026. [Engine contributions](https://github.com/Pasta-Devs/Marinara-Engine/pulls?q=is%3Apr+is%3Amerged+author%3Athetopham) · [Agents contributions](https://github.com/Pasta-Devs/Marinara-Agents/pulls?q=is%3Apr+is%3Amerged+author%3Athetopham)
-
-**Stack:** TypeScript, React, Node.js, model integrations, ComfyUI, local inference, Playwright, and automated regression tests.
-
-</details>
-
-## [Manfred](https://github.com/thetopham/manfred) — Wearable AI memory and context
-
-Manfred is my wearable AI project. An Omi wearable captures daily audio for transcription and lifelogging; those transcripts can feed the personal LLM wiki I use to organize conversations, project notes, and recurring context.
-
-I’m also connecting E09 smart glasses to ChatGPT Live for voice conversations and image uploads. The goal is to use the normal ChatGPT account experience—rather than a blank, stateless API session—so a wearable interface can benefit from context already available there while letting the user speak naturally and share what they are seeing.
-
-Voice through the glasses works. Photo capture and delivery have been tested and are still being made more reliable. This is a prototype, not a finished always-on assistant.
-
-<details>
-<summary>Technical details</summary>
-
-Android/Flutter companion, Bluetooth audio, Python transcription/search services, durable phone-side upload buffering, and Tasker automation. [Photo setup and limitations](https://github.com/thetopham/manfred/blob/main/docs/eyevue-photos.md)
-
-</details>
-
-## Demerzel — Personal AI operations and fleet management
-
-Demerzel is the layer behind my other projects: **daily AI briefs, LLM wiki ingestion from daily conversations, and management of the machines running local AI workloads**.
-
-The wiki keeps useful context from disappearing into old chats. Daily briefs surface what changed and what needs attention. Fleet tools track what is running, start and stop supported services, and keep workloads from competing for the same GPU.
-
-### Home AI fleet
-
-| Machine | Primary role |
-| --- | --- |
-| **AMD Radeon AI PRO R9700** | Larger local language models and MiniMax H3 video experiments; workloads can be switched when they share the GPU. |
-| **Dual NVIDIA RTX 3060** | Local language-model serving plus coding/research experiments. |
-| **Single NVIDIA RTX 3060** | ComfyUI image-generation workflows. |
-
-I use the machines as a small managed compute pool so each project does not have to reinvent hardware control.
-
-Separate autonomous coding/research workers are still being refined. Personal wiki content, recordings, credentials, and machine-access details remain private.
-
-## Other projects
-
-**[AI Radar](https://github.com/thetopham/ai-radar):** automated AI news/research collection and daily briefing.
-
-**[NASA SUITS 2026 prototype](https://github.com/nasa-suits-challenge/suits-2026):** contributed to an experimental AI/VR assistant, rover-autonomy concepts, and augmented-reality interfaces for a student project.
-
-<details>
-<summary>Skills and education</summary>
-
-**Software:** Python, TypeScript, JavaScript, SQL, React, Node.js, Flutter, REST/WebSockets.  
-**AI / infrastructure:** local inference, ComfyUI, Linux, Docker, GitHub Actions, Playwright, GPU workload management.
-
-- **University of Colorado Boulder** — B.A. Computer Science, in progress
-- **Front Range Community College** — A.S. Computer Science, 2025
-- **NVIDIA-Certified Associate** — AI Infrastructure & Operations, August 2025
-
-</details>
-
-Open to software and AI development opportunities alongside finishing my degree.
+I’m open to AI systems, full-stack development, and interactive media roles while finishing my B.A. in Computer Science. I hold an A.S. in Computer Science from Front Range Community College and the NVIDIA Certified Associate credential in AI Infrastructure and Operations.

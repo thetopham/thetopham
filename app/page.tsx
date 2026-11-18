@@ -11,18 +11,6 @@ const navigation = [
 
 const projects = [
   {
-    name: "School of the Ancients",
-    tagline: "Latest work · Quest 3 mixed reality",
-    description:
-      "Ask a question, create an exhibit, and explore the answer with an AI teacher in your room. School connects an ongoing learning conversation to Matrix and Blender authoring.",
-    detail:
-      "The demo moves from Leonardo’s flying machines to Dyson swarms, Faraday induction and Tesla’s coils, showing original and GPT live voice + Decisions API implementations.",
-    status:
-      "A project developed across years of web, Horizon Worlds and learning-system prototypes. The current report documents the October 2026 Professor integration.",
-    href: "https://thetopham.github.io/views/school-of-the-ancients.html",
-    link: "demo, report, slides and project history",
-  },
-  {
     name: "Matrix Loading Operator",
     tagline: "Spatial creation · WebXR",
     description:
@@ -85,10 +73,6 @@ const projects = [
 ];
 
 const projectImages: Record<string, { src: string; alt: string }> = {
-  "School of the Ancients": {
-    src: "https://thetopham.github.io/resources/projects/leonardo.png",
-    alt: "Leonardo and interactive exhibits in Quest mixed reality",
-  },
   "Matrix Loading Operator": {
     src: "https://thetopham.github.io/resources/projects/matrix.png",
     alt: "Matrix objects and creation controls in a physical room",
@@ -103,7 +87,7 @@ const actionClass =
 export default function Home() {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black px-5 pb-8">
-      <nav aria-label="Primary" className="z-20 mb-12 mt-8 animate-fade-in sm:mb-16">
+      <nav aria-label="Primary" className="z-20 mb-8 mt-6 sm:mb-12">
         <ul className="grid grid-cols-2 items-center gap-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
           {navigation.map((item) => (
             <li key={item.href}>
@@ -123,26 +107,38 @@ export default function Home() {
       <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
 
       <main className="z-10 flex w-full max-w-6xl flex-col items-center text-center">
-        <p className="mb-5 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-green-300 sm:text-sm">
-          Spatial creation · wearable AI · interactive worlds
-        </p>
-        <h1 className="cursor-default max-w-full bg-white bg-clip-text text-5xl text-transparent duration-1000 text-edge-outline animate-title font-display sm:text-7xl md:text-9xl">
-          thetopham
-        </h1>
-        <p className="mt-7 max-w-3xl text-xl leading-8 text-zinc-100 sm:text-2xl">
-          AI tools for worlds you can step into.
-        </p>
-        <p className="mt-3 max-w-2xl text-base leading-7 text-zinc-300">
-          I’m Matt, a computer science student at CU Boulder. I build AI systems you
-          can step into: learning with historical teachers, creating worlds through
-          conversation, and exploring ideas beyond a chat window.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href="https://www.youtube.com/watch?v=zFG1tiifpe4" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-green-400/50 bg-green-400/10 px-5 py-3 font-mono text-sm font-bold text-green-300 transition hover:bg-green-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-300">watch the School demo ↗</a>
-          <a href="https://thetopham.github.io/views/school-of-the-ancients.html" target="_blank" rel="noopener noreferrer" className={actionClass}>report, slides &amp; history ↗</a>
-          <a href="https://thetopham.github.io/views/resume.html" target="_blank" rel="noopener noreferrer" className={actionClass}>résumé ↗</a>
-          <a href="https://www.linkedin.com/in/mrtopham" target="_blank" rel="noopener noreferrer" className={actionClass}>LinkedIn ↗</a>
-        </div>
+        <header className="grid w-full items-center gap-8 text-left md:grid-cols-2 lg:gap-14">
+          <div>
+            <p className="mb-4 font-mono text-sm text-green-300">Matthew Topham · Boulder, Colorado</p>
+            <h1 className="font-display text-6xl leading-none text-white sm:text-7xl lg:text-8xl">thetopham</h1>
+            <p className="mt-6 max-w-xl text-xl leading-8 text-zinc-100 sm:text-2xl">
+              I build software for mixed reality, wearable audio, and interactive stories.
+            </p>
+            <p className="mt-4 max-w-xl text-base leading-7 text-zinc-300">
+              In School of the Ancients I ask for an ion-powered spaceship, pick it up in my room,
+              and point to a wing while an AI professor and I trace where the engine gets its power.
+              I built it while studying computer science at CU Boulder.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <a href="https://www.youtube.com/watch?v=K5-2K7kUySo" className="rounded-lg border border-green-300 bg-green-300 px-5 py-3 text-sm font-bold text-black hover:bg-green-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-300">Watch the 2:59 Quest demo</a>
+              <a href="https://thetopham.github.io/views/school-of-the-ancients.html" className={actionClass}>Engineering case study ↗</a>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-zinc-200">
+              <a href="https://thetopham.github.io/views/resume.html" className="underline underline-offset-4 hover:text-green-300">Résumé</a>
+              <a href="https://github.com/thetopham" className="underline underline-offset-4 hover:text-green-300">GitHub</a>
+              <a href="https://www.linkedin.com/in/mrtopham" className="underline underline-offset-4 hover:text-green-300">LinkedIn</a>
+            </div>
+          </div>
+          <figure className="overflow-hidden rounded-2xl border border-green-400/30 bg-zinc-950">
+            <a href="https://devpost.com/software/school-of-the-ancients-t275sh" className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-green-300">
+              <img src="/quest-ion-ship.jpg" alt="A solar wing selected on the learner’s spaceship in Quest passthrough" width="1200" height="800" fetchPriority="high" className="aspect-[3/2] w-full object-cover" />
+            </a>
+            <figcaption className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-4">
+                <span className="text-sm font-semibold text-zinc-100">School of the Ancients on Quest 3</span>
+              <a href="https://devpost.com/software/school-of-the-ancients-t275sh" className="font-mono text-xs text-green-300 underline-offset-4 hover:underline">Contest entry ↗</a>
+            </figcaption>
+          </figure>
+        </header>
 
         <section aria-labelledby="current-work" className="mt-12 w-full text-left">
           <h2 id="current-work" className="mb-5 text-center font-mono text-sm uppercase tracking-widest text-green-300">Selected projects</h2>
